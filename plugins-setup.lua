@@ -1,0 +1,98 @@
+-- packer setup
+local ensure_packer = function()
+	local fn = vim.fn
+	local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
+
+	if fn.empty(fn.glob(install_path)) > 0 then
+		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+		theme = lualine_nightfly
+		vim.cmd([[ packadd packer.nvim ]])
+		return true
+	end
+
+	return false
+end
+
+local packer_bootstrap = ensure_packer() -- true if packer was just installed
+-- autocommand that reloads neovim whenever you save this file
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
+  augroup end
+]])
+
+-- call packer in safety mode
+local status, packer = pcall(require, "packer")
+if not status then
+	return
+end
+
+-- plugins
+return packer.startup(function(use)
+	-- general
+	use("wbthomason/packer.nvim") -- packer
+	use("nvim-lua/plenary.nvim") -- lua functions library
+
+	-- ide
+	use("nvim-tree/nvim-tree.lua") -- file explorer
+	use("nvim-lualine/lualine.nvim") -- status line
+	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- telescope finder
+	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- fzf sorter for telescope
+	use("lukas-reineke/indent-blankline.nvim") -- indentation lines
+
+	-- autocompletion
+	use("hrsh7th/nvim-cmp") -- completion
+	use("hrsh7th/cmp-buffer") -- words completion for the current buffer
+	use("hrsh7th/cmp-path") -- path completion
+
+	-- lsp servers managers
+	use("williamboman/mason.nvim") -- package manager for lsp servers
+	use("williamboman/mason-lspconfig.nvim") -- easier integration for mason and lsp servers
+
+	-- lsp servers configurations
+	use("neovim/nvim-lspconfig") -- lsp servers quickstart configurations
+	use("hrsh7th/cmp-nvim-lsp") -- lsp servers integration with cmp autocompletion
+	use("glepnir/lspsaga.nvim", { branch = "main" }) -- enhanced lsp server autocompletion for cmp ui
+	use("jose-elias-alvarez/typescript.nvim") -- further functionallity for the typescript lsp server
+	use("onsails/lspkind.nvim") -- vscode like icons for the cmp autocompletion window
+
+	-- formatting and linting
+	use("jose-elias-alvarez/null-ls.nvim")
+	use("jayp0521/mason-null-ls.nvim")
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		run = function()
+			require("nvim-treesitter.install").update({ with_sync = true })
+		end,
+	})
+
+	-- utils
+	use("christoomey/vim-tmux-navigator") -- tmux navigation
+	use("szw/vim-maximizer") -- maximizes and restores the current pane
+	use("tpope/vim-surround") -- surrounds words inside characters and replaces them
+	use("numToStr/Comment.nvim") -- comments
+	use("windwp/nvim-autopairs") -- auto close parenthesis, brackers, quotes, etc
+	use("windwp/nvim-ts-autotag") -- auto close html tags
+	use("folke/todo-comments.nvim") -- todo comments
+	use("ethanholz/nvim-lastplace") -- keep last cursor position in buffer
+
+	-- snippets
+	use("L3MON4D3/LuaSnip") -- snippet engine
+	use("saadparwaiz1/cmp_luasnip") -- for snippets autocompletion
+	use("rafamadriz/friendly-snippets") -- useful snippets
+
+	-- integration
+	use("lewis6991/gitsigns.nvim") -- git signs for buffer
+	use("akinsho/toggleterm.nvim", { tag = "*" }) -- termimal
+
+	-- themes
+	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+
+	-- icons
+	use("nvim-tree/nvim-web-devicons") -- devicons
+
+	if packer_bootstrap then
+		require("packer").sync()
+	end
+end)
