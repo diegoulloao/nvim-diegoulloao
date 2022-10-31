@@ -5,7 +5,6 @@ local ensure_packer = function()
 
 	if fn.empty(fn.glob(install_path)) > 0 then
 		fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
-		theme = lualine_nightfly
 		vim.cmd([[ packadd packer.nvim ]])
 		return true
 	end
@@ -40,6 +39,7 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- telescope finder
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- fzf sorter for telescope
 	use("lukas-reineke/indent-blankline.nvim") -- indentation lines
+	use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "kyazdani42/nvim-web-devicons" }) -- buffer tabs
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion
@@ -58,14 +58,14 @@ return packer.startup(function(use)
 	use("onsails/lspkind.nvim") -- vscode like icons for the cmp autocompletion window
 
 	-- formatting and linting
-	use("jose-elias-alvarez/null-ls.nvim")
-	use("jayp0521/mason-null-ls.nvim")
+	use("jose-elias-alvarez/null-ls.nvim") -- improve cmp lsp to add diagnostics, formatters, code-actions
+	use("jayp0521/mason-null-ls.nvim") -- integration of null-ls for mason
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = function()
 			require("nvim-treesitter.install").update({ with_sync = true })
 		end,
-	})
+	}) -- improve code highlighting
 
 	-- utils
 	use("christoomey/vim-tmux-navigator") -- tmux navigation
@@ -75,7 +75,8 @@ return packer.startup(function(use)
 	use("windwp/nvim-autopairs") -- auto close parenthesis, brackers, quotes, etc
 	use("windwp/nvim-ts-autotag") -- auto close html tags
 	use("folke/todo-comments.nvim") -- todo comments
-	use("ethanholz/nvim-lastplace") -- keep last cursor position in buffer
+	use("ethanholz/nvim-lastplace") -- memorize last cursor position in the buffer
+	use("norcalli/nvim-colorizer.lua") -- colorize hex, rgb, rgba in the buffer
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
@@ -85,6 +86,8 @@ return packer.startup(function(use)
 	-- integration
 	use("lewis6991/gitsigns.nvim") -- git signs for buffer
 	use("akinsho/toggleterm.nvim", { tag = "*" }) -- termimal
+	use("gpanders/editorconfig.nvim") -- editor config
+	use("rcarriga/nvim-notify") -- notifications
 
 	-- themes
 	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme

@@ -13,6 +13,7 @@ keymap.set("n", "--", "<C-W>=") -- equals panes
 keymap.set("n", "<leader>rr", "<cmd>source $MYVIMRC<CR>") -- reload neovim config
 keymap.set("n", "x", '"_x') -- delete character without copy to clipboard
 keymap.set("n", "<leader><CR>", ":nohl<CR>") -- clean status line
+keymap.set("n", "<leader>rr", "<cmd>luafile %<CR>") -- reload lua configuration
 
 -- tabs navigation
 keymap.set("n", "<leader>j", "<cmd>tabp<CR>") -- go to previous tab
