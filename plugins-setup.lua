@@ -72,8 +72,8 @@ return packer.startup(function(use)
 	use("szw/vim-maximizer") -- maximizes and restores the current pane
 	use("tpope/vim-surround") -- surrounds words inside characters and replaces them
 	use("numToStr/Comment.nvim") -- comments
-	use({ "windwp/nvim-autopairs", after = "nvim-treesitter" }) -- auto close parenthesis, brackers, quotes, etc
-	use("windwp/nvim-ts-autotag") -- auto close html tags
+	use("windwp/nvim-autopairs") -- auto close parenthesis, brackers, quotes, etc
+	use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- auto close html tags
 	use("folke/todo-comments.nvim") -- todo comments
 	use("ethanholz/nvim-lastplace") -- memorize last cursor position in the buffer
 	use("norcalli/nvim-colorizer.lua") -- colorize hex, rgb, rgba in the buffer

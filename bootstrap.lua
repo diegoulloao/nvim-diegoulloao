@@ -7,6 +7,7 @@ require("diegoulloao.core.keymaps")
 require("diegoulloao.core.colorscheme")
 
 -- plugins
+require("diegoulloao.plugins.notify")
 require("diegoulloao.plugins.comment")
 require("diegoulloao.plugins.nvim-tree")
 require("diegoulloao.plugins.lualine")
@@ -24,4 +25,3 @@ require("diegoulloao.plugins.nvim-lastplace")
 require("diegoulloao.plugins.toggleterm")
 require("diegoulloao.plugins.nvim-colorizer")
 require("diegoulloao.plugins.bufferline")
-require("diegoulloao.plugins.notify")
