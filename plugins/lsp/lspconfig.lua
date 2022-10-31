@@ -26,8 +26,8 @@ local on_attach = function(client, bufnr)
 	-- set go to keybinds
 	keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts) -- go to definition
 	keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts) -- go to references
-	keymap.set("n", "gD", "<cmd>Lspsaga vim.lsp.buf.declaration()<CR>", opts) -- go to declaration
-	keymap.set("n", "gi", "<cmd>Lspsaga vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
+	keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts) -- go to declaration
+	keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
 
 	-- set rename keybind
 	keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts) -- rename symbol
@@ -43,7 +43,7 @@ local on_attach = function(client, bufnr)
 
 	-- typescript specific keybinds
 	if client.name == "tsserver" then
-		keymap.set("n", "<leader>mv", ":TypescriptRenameFile<CR>") -- rename ts symbol
+		keymap.set("n", "<leader>mv", "<cmd>TypescriptRenameFile<CR>") -- rename ts symbol
 	end
 end
 
