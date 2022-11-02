@@ -35,4 +35,13 @@ lualine.setup({
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 	},
+	sections = {
+		lualine_c = {
+			{
+				"filename",
+				-- file_status = true, -- display file status (read only, modified)
+				path = 1, -- 0: just name, 1: relative path, 2: absolute path, 3: absolute path with ~ as home directory
+			},
+		},
+	},
 })

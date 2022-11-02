@@ -18,6 +18,12 @@ keymap.set("n", "<leader>rr", "<cmd>luafile %<CR>") -- reload lua configuration
 -- tabs navigation
 keymap.set("n", "<leader>j", "<cmd>tabp<CR>") -- go to previous tab
 keymap.set("n", "<leader>k", "<cmd>tabn<CR>") -- go to next tab
+-- go to tab [1-5]
+keymap.set("n", "<leader>1", "<cmd>BufferLineGoToBuffer 1<CR>")
+keymap.set("n", "<leader>2", "<cmd>BufferLineGoToBuffer 2<CR>")
+keymap.set("n", "<leader>3", "<cmd>BufferLineGoToBuffer 3<CR>")
+keymap.set("n", "<leader>4", "<cmd>BufferLineGoToBuffer 4<CR>")
+keymap.set("n", "<leader>5", "<cmd>BufferLineGoToBuffer 5<CR>")
 
 -- editing keymaps
 keymap.set("n", "<leader>o", "o<ESC>") -- add empty line down in normal mode
