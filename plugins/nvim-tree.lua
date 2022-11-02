@@ -13,6 +13,9 @@ vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 
 -- custom setup
 nvimtree.setup({
+	view = {
+		width = 40,
+	},
 	renderer = {
 		icons = {
 			glyphs = {

@@ -13,6 +13,7 @@ end
 -- custom setup
 telescope.setup({
 	defaults = {
+		layout_strategy = "vertical", -- vertical layout
 		mappings = {
 			i = {
 				["<C-k>"] = actions.move_selection_previous,
