@@ -17,6 +17,9 @@ nvimtree.setup({
 		width = 40,
 	},
 	renderer = {
+		indent_markers = {
+			enable = true, -- folder level guide
+		},
 		icons = {
 			glyphs = {
 				folder = {

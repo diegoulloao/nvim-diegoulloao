@@ -10,10 +10,20 @@ bufferline.setup({
 		mode = "tabs", -- only show tabs and not all buffers
 		numbers = "ordinal", -- add tabs ordinal numbers
 		show_duplicate_prefix = true, -- show base path if tabs have the same name
+		separator_style = "thick", -- options: slant | thick | custom
 		diagnostics = "nvim_lsp", -- nvim lsp diagnostics integration in tabs
 		diagnostics_indicator = function(count, level) -- diagnostics format
 			local icon = level:match("error") and " " or " "
 			return " " .. icon .. count
 		end,
+		offsets = {
+			-- avoid to show bufferline on top nvim-tree
+			{
+				filetype = "NvimTree",
+				text = "File Explorer", -- title on top
+				highlight = "Directory",
+				separator = true, -- true is the default, or set custom
+			},
+		},
 	},
 })
