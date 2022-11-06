@@ -12,7 +12,7 @@ keymap.set("n", "<leader>i", "<C-W><C-R>") -- invert panes
 keymap.set("n", "--", "<C-W>=") -- equals panes
 keymap.set("n", "x", '"_x') -- delete character without copy to clipboard
 keymap.set("n", "<leader><CR>", ":nohl<CR>") -- clean status line
-keymap.set("n", "<leader>rr", "<cmd>luafile %<CR>") -- reload lua configuration
+-- keymap.set("n", "<leader>rr", "<cmd>luafile %<CR>") -- reload lua configuration
 
 -- nvim-tree keymaps
 keymap.set("n", "<leader>nt", "<cmd>NvimTreeToggle<CR>") -- nvim tree toggle
@@ -53,5 +53,5 @@ keymap.set("n", "<C-[>", "<cmd>Gitsigns next_hunk<CR>") -- go to next change
 keymap.set("n", "<leader>l", "<cmd>IndentBlanklineToggle<CR>") -- toggle indent lines
 
 -- util keymaps
-keymap.set("n", "<leader>L", '<cmd>let @*=join([expand("%"), line(".")], ":")<CR><cmd>nohl<CR>') -- copy buffer path and current line
+-- keymap.set("n", "<leader>L", '<cmd>let @*=join([expand("%"), line(".")], ":")<CR><cmd>nohl<CR>') -- copy buffer path and current line
 keymap.set("n", "<leader>ms", "<cmd>MaximizerToggle<CR>") -- maximize and restore current buffer

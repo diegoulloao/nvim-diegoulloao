@@ -1,7 +1,7 @@
 -- require nvim-tree
 local setup, nvimtree = pcall(require, "nvim-tree")
 if not setup then
-	return
+  return
 end
 
 -- recommended settings from nvim-tree documentation
@@ -13,34 +13,34 @@ vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 
 -- custom setup
 nvimtree.setup({
-	view = {
-		width = 40,
-	},
-	renderer = {
-		indent_markers = {
-			enable = true, -- folder level guide
-		},
-		icons = {
-			glyphs = {
-				folder = {
-					arrow_closed = "",
-					arrow_open = "",
-				},
-			},
-		},
-	},
-	actions = {
-		open_file = {
-			quit_on_open = true,
-			window_picker = {
-				enable = false,
-			},
-		},
-	},
-	update_focused_file = {
-		enable = true,
-	},
-	filters = {
-		dotfiles = true,
-	},
+  view = {
+    width = 40,
+  },
+  renderer = {
+    indent_markers = {
+      enable = true, -- folder level guide
+    },
+    icons = {
+      glyphs = {
+        folder = {
+          arrow_closed = "",
+          arrow_open = "",
+        },
+      },
+    },
+  },
+  actions = {
+    open_file = {
+      quit_on_open = true,
+      window_picker = {
+        enable = false,
+      },
+    },
+  },
+  update_focused_file = {
+    enable = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
 })

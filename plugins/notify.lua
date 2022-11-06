@@ -1,14 +1,14 @@
 -- require notify
 local notify_status, notify = pcall(require, "notify")
 if not notify_status then
-	return
+  return
 end
 
 -- custom setup
 notify.setup({
-	stages = "fade_in_slide_out", -- animation style
-	render = "default", -- notification appearance
-	timeout = 3000, -- time to out
+  stages = "fade_in_slide_out", -- animation style
+  render = "default", -- notification appearance
+  timeout = 3000, -- time to out
 })
 
 -- set notify as the default notification window
