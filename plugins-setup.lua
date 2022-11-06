@@ -95,6 +95,9 @@ return packer.startup(function(use)
   -- icons
   use("nvim-tree/nvim-web-devicons") -- devicons
 
+  -- dev only
+  use("diegoulloao/nvim-file-location")
+
   if packer_bootstrap then
     require("packer").sync()
   end
