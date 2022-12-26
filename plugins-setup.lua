@@ -99,6 +99,9 @@ return packer.startup(function(use)
   -- icons
   use("nvim-tree/nvim-web-devicons") -- devicons
 
+  -- dashboard
+  use("glepnir/dashboard-nvim") -- dashboard
+
   if packer_bootstrap then
     require("packer").sync()
   end

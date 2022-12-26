@@ -1,7 +1,8 @@
 -- require indent blankline
-local indent_blankline_status, indent_blankline = pcall(require, "indent_blankline")
-if not indent_blankline_status then
+local status, indent_blankline = pcall(require, "indent_blankline")
+if not status then
   return
 end
 
+-- custom config
 indent_blankline.setup()
