@@ -45,8 +45,8 @@ keymap.set("n", "<leader>gd", "<cmd>Gitsigns diffthis<CR>") -- git diff
 keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame_line<CR>") -- git blame
 keymap.set("n", "<leader>b", "<cmd>Gitsigns toggle_current_line_blame<CR>") -- current line blame
 keymap.set("n", "<leader>ph", "<cmd>Gitsigns preview_hunk<CR>") -- preview change inline
-keymap.set("n", "<C-s>", "<cmd>Gitsigns prev_hunk<CR>") -- go to prev change
-keymap.set("n", "<C-d>", "<cmd>Gitsigns next_hunk<CR>") -- go to next change
+keymap.set("n", "<C-a>", "<cmd>Gitsigns prev_hunk<CR>") -- go to prev change
+keymap.set("n", "<C-s>", "<cmd>Gitsigns next_hunk<CR>") -- go to next change
 
 -- indent blanklines keymaps
 keymap.set("n", "<leader>l", "<cmd>IndentBlanklineToggle<CR>") -- toggle indent lines
