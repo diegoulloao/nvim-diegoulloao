@@ -85,6 +85,7 @@ return packer.startup(function(use)
   use("ethanholz/nvim-lastplace") -- memorize last cursor position in the buffer
   use("norcalli/nvim-colorizer.lua") -- colorize hex, rgb, rgba in the buffer
   use("diegoulloao/nvim-file-location") -- copy file location and line
+  use("nvim-treesitter/nvim-treesitter-context") -- displays scope context at the top
 
   -- integration
   use("lewis6991/gitsigns.nvim") -- git signs for buffer
