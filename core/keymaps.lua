@@ -20,12 +20,11 @@ keymap.set("n", "<leader>nt", "<cmd>NvimTreeToggle<CR>") -- nvim tree toggle
 -- tabs navigation keymaps
 keymap.set("n", "<leader>j", "<cmd>tabp<CR>") -- go to previous tab
 keymap.set("n", "<leader>k", "<cmd>tabn<CR>") -- go to next tab
--- go to tab [1-5]
-keymap.set("n", "<leader>1", "<cmd>BufferLineGoToBuffer 1<CR>")
-keymap.set("n", "<leader>2", "<cmd>BufferLineGoToBuffer 2<CR>")
-keymap.set("n", "<leader>3", "<cmd>BufferLineGoToBuffer 3<CR>")
-keymap.set("n", "<leader>4", "<cmd>BufferLineGoToBuffer 4<CR>")
-keymap.set("n", "<leader>5", "<cmd>BufferLineGoToBuffer 5<CR>")
+
+-- go to tab [1-9]
+for i = 1, 9, 1 do
+  keymap.set("n", (string.gsub("<leader>@", "@", i)), (string.gsub("<cmd>BufferLineGoToBuffer @<CR>", "@", i)))
+end
 
 -- editing keymaps
 keymap.set("n", "<leader>o", "o<ESC>") -- add empty line down in normal mode
@@ -46,8 +45,8 @@ keymap.set("n", "<leader>gd", "<cmd>Gitsigns diffthis<CR>") -- git diff
 keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame_line<CR>") -- git blame
 keymap.set("n", "<leader>b", "<cmd>Gitsigns toggle_current_line_blame<CR>") -- current line blame
 keymap.set("n", "<leader>ph", "<cmd>Gitsigns preview_hunk<CR>") -- preview change inline
-keymap.set("n", "<C-]>", "<cmd>Gitsigns prev_hunk<CR>") -- go to prev change
-keymap.set("n", "<C-[>", "<cmd>Gitsigns next_hunk<CR>") -- go to next change
+keymap.set("n", "<C-s>", "<cmd>Gitsigns prev_hunk<CR>") -- go to prev change
+keymap.set("n", "<C-d>", "<cmd>Gitsigns next_hunk<CR>") -- go to next change
 
 -- indent blanklines keymaps
 keymap.set("n", "<leader>l", "<cmd>IndentBlanklineToggle<CR>") -- toggle indent lines

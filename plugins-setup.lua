@@ -46,6 +46,12 @@ return packer.startup(function(use)
   use("hrsh7th/cmp-buffer") -- words completion for the current buffer
   use("hrsh7th/cmp-path") -- path completion
 
+  -- snippets
+  use("L3MON4D3/LuaSnip") -- snippet engine
+  use("saadparwaiz1/cmp_luasnip") -- for snippets autocompletion
+  use("rafamadriz/friendly-snippets") -- useful snippets
+  use("quangnguyen30192/cmp-nvim-ultisnips") -- ultisnips integration with cmp
+
   -- lsp servers managers
   use("williamboman/mason.nvim") -- package manager for lsp servers
   use("williamboman/mason-lspconfig.nvim") -- easier integration for mason and lsp servers
@@ -63,6 +69,7 @@ return packer.startup(function(use)
   use({
     "nvim-treesitter/nvim-treesitter",
     run = function()
+      -- ts update
       require("nvim-treesitter.install").update({ with_sync = true })
     end,
   }) -- improve code highlighting
@@ -77,15 +84,11 @@ return packer.startup(function(use)
   use("folke/todo-comments.nvim") -- todo comments
   use("ethanholz/nvim-lastplace") -- memorize last cursor position in the buffer
   use("norcalli/nvim-colorizer.lua") -- colorize hex, rgb, rgba in the buffer
-
-  -- snippets
-  use("L3MON4D3/LuaSnip") -- snippet engine
-  use("saadparwaiz1/cmp_luasnip") -- for snippets autocompletion
-  use("rafamadriz/friendly-snippets") -- useful snippets
+  use("diegoulloao/nvim-file-location") -- copy file location and line
 
   -- integration
   use("lewis6991/gitsigns.nvim") -- git signs for buffer
-  use("akinsho/toggleterm.nvim", { tag = "*" }) -- termimal
+  use("akinsho/toggleterm.nvim", { tag = "*" }) -- terminal
   use("gpanders/editorconfig.nvim") -- editor config
   use("rcarriga/nvim-notify") -- notifications
 
@@ -94,9 +97,6 @@ return packer.startup(function(use)
 
   -- icons
   use("nvim-tree/nvim-web-devicons") -- devicons
-
-  -- dev only
-  use("diegoulloao/nvim-file-location")
 
   if packer_bootstrap then
     require("packer").sync()

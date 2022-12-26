@@ -17,7 +17,7 @@ if not lspkind_status then
 end
 
 -- load friendly-snippets
-require("luasnip/loaders/from_vscode").lazy_load()
+require("luasnip.loaders.from_vscode").lazy_load()
 
 -- for conciseness
 local opt = vim.opt -- vim options
@@ -27,8 +27,15 @@ opt.completeopt = "menu,menuone,noselect"
 
 -- custom setup
 cmp.setup({
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+      vim.fn["UltiSnips#Anon"](args.body)
+    end,
+  },
   mapping = cmp.mapping.preset.insert({
     ["<C-k>"] = cmp.mapping.select_prev_item(), -- select previous suggestion
+    ["<S-tab>"] = cmp.mapping.select_prev_item(), -- select previous suggestion (2)
     ["<C-j>"] = cmp.mapping.select_next_item(), -- select next suggestion
     ["<tab>"] = cmp.mapping.select_next_item(), -- select next suggestion (2)
     ["<C-h>"] = cmp.mapping.scroll_docs(-4), -- scroll docs down
@@ -39,6 +46,8 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = "nvim_lsp" }, -- lsp
+    { name = "luasnip" }, -- luasnips
+    { name = "ultisnips" }, -- ultisnips
     { name = "buffer" }, -- text within the current buffer
     { name = "path" }, -- file system paths
   }),
@@ -48,10 +57,5 @@ cmp.setup({
       maxwidth = 50,
       ellipsis_char = "...",
     }),
-  },
-  snippet = {
-    expand = function(args)
-      luasnip.lsp_expand(args.body)
-    end,
   },
 })

@@ -35,3 +35,9 @@ opt.splitbelow = true
 
 -- dash as part of the word
 opt.iskeyword:append("-")
+
+-- no backups
+opt.swapfile = false
+
+-- autoread files when it changes
+opt.autoread = true

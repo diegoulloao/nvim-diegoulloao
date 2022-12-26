@@ -90,6 +90,7 @@ lspconfig["emmet_ls"].setup({
     "css",
     "sass",
     "scss",
+    "svelte",
   },
   init_options = {
     html = {
@@ -121,3 +122,6 @@ lspconfig["sumneko_lua"].setup({
     },
   },
 })
+
+-- disable inline diagnostics globally
+vim.diagnostic.config({ virtual_text = false })
