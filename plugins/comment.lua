@@ -10,7 +10,10 @@ comment.setup({
   toggler = {
     -- line comment toggle keymap
     line = "<leader>c<leader>",
-    -- TODO: add block keymap
-    -- block = "<leader>v<leader>",
+  },
+  -- opleader mappings in visual mode
+  opleader = {
+    -- multiline comment toogle keymap
+    block = "<leader>v<leader>",
   },
 })
