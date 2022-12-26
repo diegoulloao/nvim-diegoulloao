@@ -50,7 +50,6 @@ return packer.startup(function(use)
   use("L3MON4D3/LuaSnip") -- snippet engine
   use("saadparwaiz1/cmp_luasnip") -- for snippets autocompletion
   use("rafamadriz/friendly-snippets") -- useful snippets
-  use("quangnguyen30192/cmp-nvim-ultisnips") -- ultisnips integration with cmp
 
   -- lsp servers managers
   use("williamboman/mason.nvim") -- package manager for lsp servers

@@ -30,7 +30,6 @@ cmp.setup({
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
-      vim.fn["UltiSnips#Anon"](args.body)
     end,
   },
   mapping = cmp.mapping.preset.insert({
@@ -47,7 +46,6 @@ cmp.setup({
   sources = cmp.config.sources({
     { name = "nvim_lsp" }, -- lsp
     { name = "luasnip" }, -- luasnips
-    { name = "ultisnips" }, -- ultisnips
     { name = "buffer" }, -- text within the current buffer
     { name = "path" }, -- file system paths
   }),
