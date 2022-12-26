@@ -29,4 +29,9 @@ treesitter.setup({
     "regex",
   },
   auto_install = true,
+  -- support for nvim-ts-context-commentstring
+  context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
+  },
 })

@@ -81,6 +81,7 @@ return packer.startup(function(use)
   use("windwp/nvim-autopairs") -- auto close parenthesis, brackers, quotes, etc
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- auto close html tags
   use("folke/todo-comments.nvim") -- todo comments
+  use("JoosepAlviste/nvim-ts-context-commentstring") -- comments on different contexts support
   use("ethanholz/nvim-lastplace") -- memorize last cursor position in the buffer
   use("norcalli/nvim-colorizer.lua") -- colorize hex, rgb, rgba in the buffer
   use("diegoulloao/nvim-file-location") -- copy file location and line
