@@ -5,4 +5,4 @@ if not status then
 end
 
 -- status line msg area text color
-vim.cmd([[ hi MsgArea guifg=#7c8f8f ]])
+vim.cmd([[ hi MsgArea guifg=#627373 ]])

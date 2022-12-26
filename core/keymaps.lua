@@ -20,7 +20,6 @@ keymap.set("n", "<leader>nt", "<cmd>NvimTreeToggle<CR>") -- nvim tree toggle
 -- tabs navigation keymaps
 keymap.set("n", "<leader>j", "<cmd>tabp<CR>") -- go to previous tab
 keymap.set("n", "<leader>k", "<cmd>tabn<CR>") -- go to next tab
-
 -- go to tab [1-9]
 for i = 1, 9, 1 do
   keymap.set("n", (string.gsub("<leader>@", "@", i)), (string.gsub("<cmd>BufferLineGoToBuffer @<CR>", "@", i)))
@@ -44,7 +43,7 @@ keymap.set("n", "<leader>gB", "<cmd>Telescope git_branches<CR>") -- git branches
 keymap.set("n", "<leader>gd", "<cmd>Gitsigns diffthis<CR>") -- git diff
 keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame_line<CR>") -- git blame
 keymap.set("n", "<leader>b", "<cmd>Gitsigns toggle_current_line_blame<CR>") -- current line blame
-keymap.set("n", "<leader>ph", "<cmd>Gitsigns preview_hunk<CR>") -- preview change inline
+keymap.set("n", "<leader>h", "<cmd>Gitsigns preview_hunk<CR>") -- preview change inline
 keymap.set("n", "<C-a>", "<cmd>Gitsigns prev_hunk<CR>") -- go to prev change
 keymap.set("n", "<C-s>", "<cmd>Gitsigns next_hunk<CR>") -- go to next change
 

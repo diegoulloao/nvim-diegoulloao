@@ -24,4 +24,5 @@ telescope.setup({
   },
 })
 
+-- use fzf
 telescope.load_extension("fzf")
