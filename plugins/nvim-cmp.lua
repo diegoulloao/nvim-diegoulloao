@@ -49,8 +49,8 @@ cmp.setup({
     ["<S-tab>"] = cmp.mapping.select_prev_item(), -- select previous suggestion (2)
     ["<C-j>"] = cmp.mapping.select_next_item(), -- select next suggestion
     ["<tab>"] = cmp.mapping.select_next_item(), -- select next suggestion (2)
-    ["<C-h>"] = cmp.mapping.scroll_docs(-4), -- scroll docs down
-    ["<C-l>"] = cmp.mapping.scroll_docs(4), -- scroll docs up
+    ["<C-l>"] = cmp.mapping.scroll_docs(-4), -- scroll docs down
+    ["<C-h>"] = cmp.mapping.scroll_docs(4), -- scroll docs up
     ["<C-e>"] = cmp.mapping.abort(), -- close completion window
     ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
     ["<CR>"] = cmp.mapping.confirm({ select = false }), -- confirm suggestion
