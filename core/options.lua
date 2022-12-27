@@ -41,3 +41,6 @@ opt.swapfile = false
 
 -- autoread files when it changes
 opt.autoread = true
+
+-- completion window
+opt.pumheight = 10

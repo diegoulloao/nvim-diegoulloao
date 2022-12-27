@@ -27,6 +27,18 @@ opt.completeopt = "menu,menuone,noselect"
 
 -- custom setup
 cmp.setup({
+  window = {
+    completion = {
+      border = "rounded",
+      -- custom colors
+      winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:CursorLineBG,Search:None",
+    },
+    documentation = {
+      border = "rounded",
+      -- custom colors
+      winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:CursorLineBG,Search:None",
+    },
+  },
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body)
