@@ -83,7 +83,7 @@ return packer.startup(function(use)
   use("folke/todo-comments.nvim") -- todo comments
   use("JoosepAlviste/nvim-ts-context-commentstring") -- comments on different contexts support
   use("ethanholz/nvim-lastplace") -- memorize last cursor position in the buffer
-  use("norcalli/nvim-colorizer.lua") -- colorize hex, rgb, rgba in the buffer
+  use("NvChad/nvim-colorizer.lua") -- colorize hex, rgb, rgba in the buffer
   use("diegoulloao/nvim-file-location") -- copy file location and line
   use("nvim-treesitter/nvim-treesitter-context") -- displays scope context at the top
 

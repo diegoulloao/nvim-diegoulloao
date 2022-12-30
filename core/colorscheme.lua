@@ -5,14 +5,14 @@ if not status then
 end
 
 -- statusline msg area text color
-vim.cmd([[ hi! MsgArea guifg=#7c8f8f ]])
+vim.cmd([[ hi! MsgArea guifg=#4a6275 ]])
 
 -- nvim-cmp custom colors
 vim.cmd([[ hi! BorderBG guibg=NONE guifg=#3EFFDC ]])
-vim.cmd([[ hi! CursorLineBG gui=bold guibg=#3EFFDC guifg=#000000 ]])
+vim.cmd([[ hi! CursorLineBG guibg=#3EFFDC guifg=#000000 ]])
 
 -- telescope custom colors
-vim.cmd([[ hi! TelescopeNormal guifg=#acb4c2 ]])
+vim.cmd([[ hi! TelescopeNormal guifg=#4a6275 ]])
 vim.cmd([[ hi! TelescopePromptBorder guifg=#65D1FF ]])
 vim.cmd([[ hi! TelescopeSelection guibg=#092236 guifg=#acb4c2 ]])
 vim.cmd([[ hi! TelescopeSelectionCaret guifg=#ae81ff ]])
