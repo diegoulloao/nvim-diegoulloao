@@ -53,3 +53,6 @@ keymap.set("n", "<leader>l", "<cmd>IndentBlanklineToggle<CR>") -- toggle indent 
 -- util keymaps
 keymap.set("n", "<leader>ms", "<cmd>MaximizerToggle<CR>") -- maximize and restore current buffer
 keymap.set("n", "<leader>c", "<cmd>TSContextToggle<CR>") -- toggle treesitter context at top
+
+-- todo comments
+keymap.set("n", "<leader>f", "<cmd>TodoQuickFix<CR>") -- show todo comments list

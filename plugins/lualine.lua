@@ -36,12 +36,23 @@ lualine_nightfly.command = {
   },
 }
 
+local lualine_separators = {
+  {
+    section_separators = { left = "", right = "" },
+    component_separators = { left = "", right = "" },
+  },
+  {
+    section_separators = { left = "", right = "" },
+    component_separators = "",
+  },
+}
+
 -- custom setup
 lualine.setup({
   options = {
     theme = lualine_nightfly,
-    component_separators = { left = "", right = "" },
-    section_separators = { left = "", right = "" },
+    component_separators = lualine_separators[2].component_separators,
+    section_separators = lualine_separators[2].section_separators,
     disabled_filetypes = { "NvimTree" },
   },
   sections = {

@@ -9,6 +9,9 @@ bufferline.setup({
   options = {
     mode = "tabs", -- only show tabs and not all buffers
     numbers = "ordinal", -- add tabs ordinal numbers
+    indicator = {
+      -- style = "underline",
+    },
     show_duplicate_prefix = true, -- show base path if tabs have the same name
     separator_style = "thick", -- options: slant | thick | custom
     diagnostics = "nvim_lsp", -- nvim lsp diagnostics integration in tabs
