@@ -8,9 +8,6 @@ end
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
--- arrows color
-vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
-
 -- custom setup
 nvimtree.setup({
   view = {
