@@ -24,3 +24,7 @@ vim.cmd([[ hi! TelescopeMatching gui=bold guifg=#ae81ff ]])
 vim.cmd([[ hi! TelescopePromptTitle guibg=#ae81ff guifg=#000000 ]])
 vim.cmd([[ hi! TelescopeResultsTitle guibg=#65D1FF guifg=#000000 ]])
 vim.cmd([[ hi! TelescopeResultsBorder guifg=#1d3b53 ]])
+
+-- symbols outline colors
+vim.cmd([[ hi! SymbolsOutlineConnector guifg=#3FC5FF ]])
+vim.cmd([[ hi! Comment guifg=#4a6275 ]])
