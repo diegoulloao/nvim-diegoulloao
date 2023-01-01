@@ -7,7 +7,7 @@ end
 -- custom config
 dashboard.custom_center = {
   {
-    icon = "   ",
+    icon = "  ",
     desc = "Recent projects                         ",
     shortcut = "SPC s l",
     action = "Telescope projects",
