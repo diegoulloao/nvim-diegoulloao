@@ -86,6 +86,7 @@ return packer.startup(function(use)
   use("NvChad/nvim-colorizer.lua") -- colorize hex, rgb, rgba in the buffer
   use("diegoulloao/nvim-file-location") -- copy file location and line
   use("nvim-treesitter/nvim-treesitter-context") -- displays scope context at the top
+  use("ahmedkhalf/project.nvim") -- projects extension for telescope
 
   -- integration
   use("lewis6991/gitsigns.nvim") -- git signs for buffer

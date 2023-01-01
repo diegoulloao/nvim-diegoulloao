@@ -26,3 +26,6 @@ telescope.setup({
 
 -- use fzf
 telescope.load_extension("fzf")
+
+-- projects extension integration for telescope
+telescope.load_extension("projects")
