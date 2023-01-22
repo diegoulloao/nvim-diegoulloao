@@ -5,4 +5,7 @@ if not status then
 end
 
 -- custom config
-indent_blankline.setup()
+indent_blankline.setup({
+  -- options: ['|', '¦', '┆', '┊']
+  char = "¦",
+})

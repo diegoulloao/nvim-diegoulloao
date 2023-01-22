@@ -18,15 +18,15 @@ local new_colors = {
 
 -- overwrite default theme colors
 -- normal mode
-lualine_nightfly.normal.a.bg = new_colors.blue
-lualine_nightfly.normal.b.fg = new_colors.blue
+lualine_nightfly.normal.a.bg = new_colors.violet
+lualine_nightfly.normal.b.fg = new_colors.violet
 lualine_nightfly.normal.c.fg = new_colors.blue
 -- visual mode:
-lualine_nightfly.visual.a.bg = new_colors.violet
+lualine_nightfly.visual.a.bg = new_colors.green
 lualine_nightfly.visual.b.fg = new_colors.blue
 -- insert mode
-lualine_nightfly.insert.a.bg = new_colors.green
-lualine_nightfly.insert.b.fg = new_colors.blue
+lualine_nightfly.insert.a.bg = new_colors.blue
+lualine_nightfly.insert.b.fg = new_colors.green
 -- command mode
 lualine_nightfly.command = {
   a = {
@@ -53,7 +53,7 @@ lualine.setup({
     theme = lualine_nightfly,
     component_separators = lualine_separators[2].component_separators,
     section_separators = lualine_separators[2].section_separators,
-    disabled_filetypes = { "NvimTree", "Outline" },
+    disabled_filetypes = { "NvimTree", "lspsagaoutline" },
   },
   sections = {
     lualine_c = {

@@ -57,5 +57,5 @@ keymap.set("n", "<leader>c", "<cmd>TSContextToggle<CR>") -- toggle treesitter co
 -- todo comments
 keymap.set("n", "<leader>f", "<cmd>TodoQuickFix<CR>") -- show todo comments list
 
--- symbols outline
-keymap.set("n", "<leader>s", "<cmd>SymbolsOutline<CR>") -- show symbols pane at the right
+-- lspsaga symbols outline
+keymap.set("n", "<leader>s", "<cmd>Lspsaga outline<CR>") -- show symbols pane at the right

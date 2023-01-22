@@ -41,7 +41,6 @@ return packer.startup(function(use)
   use("lukas-reineke/indent-blankline.nvim") -- indentation lines
   use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "kyazdani42/nvim-web-devicons" }) -- buffer tabs
   use("j-hui/fidget.nvim") -- lsp progress
-  use("simrat39/symbols-outline.nvim") -- show buffer symbols
 
   -- autocompletion
   use("hrsh7th/nvim-cmp") -- completion

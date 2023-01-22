@@ -10,6 +10,7 @@ toggleterm.setup({
   direction = "float", -- vertical | horizontal | tab | float
   float_opts = {
     border = "curved", -- single | double | curved
+    winblend = 0,
   },
   persist_mode = true,
   highlights = {
