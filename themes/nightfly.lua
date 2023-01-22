@@ -23,7 +23,7 @@ vim.cmd([[ hi! TelescopeSelection guibg=#092236 guifg=#acb4c2 ]])
 vim.cmd([[ hi! TelescopeSelectionCaret guifg=#FF61EF ]])
 vim.cmd([[ hi! TelescopeMatching gui=bold guifg=#FF61EF ]])
 vim.cmd([[ hi! TelescopePromptTitle guibg=#FF61EF guifg=#000000 ]])
-vim.cmd([[ hi! TelescopeResultsTitle guibg=#65D1FF guifg=#000000 ]])
+vim.cmd([[ hi! TelescopeResultsTitle guibg=#4a6275 guifg=#000000 ]])
 vim.cmd([[ hi! TelescopeResultsBorder guifg=#1d3b53 ]])
 
 -- lsp saga colors

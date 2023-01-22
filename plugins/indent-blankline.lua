@@ -7,5 +7,5 @@ end
 -- custom config
 indent_blankline.setup({
   -- options: ['|', '¦', '┆', '┊']
-  char = "¦",
+  -- char = "¦",
 })
