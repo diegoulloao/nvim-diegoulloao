@@ -17,17 +17,17 @@ local colors = {
 
 -- custom setup
 saga.setup({
-  move_in_saga = { prev = "<C-k>", next = "<C-j>" },
-  finder_action_keys = { open = "<CR>" },
+  scroll_preview = {
+    scroll_down = "<C-h>",
+    scroll_up = "<C-l>",
+  },
+  finder = { edit = "<CR>" },
   definition = { edit = "<CR>" },
   symbol_in_winbar = {
     enable = true,
     separator = " › ",
-    hide_keyword = true,
     show_file = true,
-    folder_level = 2,
-    respect_root = false,
-    color_mode = true,
+    folder_level = 1,
   },
   ui = {
     theme = "round",
