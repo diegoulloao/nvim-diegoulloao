@@ -8,7 +8,6 @@ end
 vim.cmd([[ highlight IndentBlanklineIndent1 guifg=#1d3b53 gui=nocombine ]])
 
 -- nvim-tree arrows color
--- vim.cmd([[ hi! NvimTreeIndentMarker guifg=#3FC5FF ]])
 vim.cmd([[ hi! NvimTreeIndentMarker guifg=#1d3b53 ]])
 
 -- statusline msg area text color
@@ -31,3 +30,6 @@ vim.cmd([[ hi! TelescopeResultsBorder guifg=#1d3b53 ]])
 
 -- lsp saga colors
 vim.cmd([[ hi! SagaBorder guifg=#FF61EF]])
+
+-- winbar
+vim.cmd([[ hi WinBar guibg=#011627 ]])
