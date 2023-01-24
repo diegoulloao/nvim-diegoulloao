@@ -6,6 +6,9 @@ end
 
 -- custom config
 indent_blankline.setup({
+  char_highlight_list = {
+    "IndentBlanklineIndent1",
+  },
   -- options: ['|', '¦', '┆', '┊']
   -- char = "¦",
 })

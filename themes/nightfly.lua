@@ -4,9 +4,12 @@ if not status then
   vim.notify("Colorscheme not found!", "error")
 end
 
+-- indent blankline
+vim.cmd([[ highlight IndentBlanklineIndent1 guifg=#1d3b53 gui=nocombine ]])
+
 -- nvim-tree arrows color
 -- vim.cmd([[ hi! NvimTreeIndentMarker guifg=#3FC5FF ]])
-vim.cmd([[ hi! NvimTreeIndentMarker guifg=#FF61EF ]])
+vim.cmd([[ hi! NvimTreeIndentMarker guifg=#1d3b53 ]])
 
 -- statusline msg area text color
 vim.cmd([[ hi! MsgArea guifg=#4a6275 ]])
