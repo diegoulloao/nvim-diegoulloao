@@ -4,8 +4,12 @@ if not status then
   vim.notify("Colorscheme not found!", "error")
 end
 
+-- theme highlights
+vim.cmd([[ hi PrimaryColorFG guifg=#FF61EF ]])
+vim.cmd([[ hi SecondaryColorFG guifg=#3EFFDC ]])
+
 -- indent blankline
-vim.cmd([[ highlight IndentBlanklineIndent1 guifg=#1d3b53 gui=nocombine ]])
+vim.cmd([[ hi! IndentBlanklineIndent1 guifg=#1d3b53 gui=nocombine ]])
 
 -- nvim-tree arrows color
 vim.cmd([[ hi! NvimTreeIndentMarker guifg=#1d3b53 ]])
@@ -33,3 +37,12 @@ vim.cmd([[ hi! SagaBorder guifg=#FF61EF]])
 
 -- winbar
 vim.cmd([[ hi WinBar guibg=#011627 ]])
+
+-- dashboard
+vim.cmd([[ hi! DashboardHeader guifg=#3EFFDC ]])
+vim.cmd([[ hi! DashboardShortCut guifg=#FF61EF ]])
+vim.cmd([[ hi! DashboardFooter guifg=#3EFFDC ]])
+vim.cmd([[ hi! DashboardFiles guifg=#65D1FF ]])
+vim.cmd([[ hi! DashboardRecentTitle guifg=#4a6275 ]])
+vim.cmd([[ hi! DashboardRecentProject guifg=#4a6275 ]])
+vim.cmd([[ hi! DashboardProjectIcon guifg=#FF61EF ]])

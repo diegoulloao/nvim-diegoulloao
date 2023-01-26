@@ -10,6 +10,7 @@ dashboard.setup({
     shortcut = {
       { desc = "[ Github]", group = "DashboardShortCut" },
       { desc = "[ diegoulloao]", group = "DashboardShortCut" },
+      { desc = "[  0.2.3]", group = "DashboardShortCut" },
     },
   },
 })
