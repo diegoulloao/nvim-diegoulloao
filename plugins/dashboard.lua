@@ -13,4 +13,7 @@ dashboard.setup({
       { desc = "[  0.2.3]", group = "DashboardShortCut" },
     },
   },
+  hide = {
+    statusline = false,
+  },
 })

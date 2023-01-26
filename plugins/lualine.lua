@@ -53,7 +53,7 @@ lualine.setup({
     theme = lualine_nightfly,
     component_separators = lualine_separators[2].component_separators,
     section_separators = lualine_separators[2].section_separators,
-    disabled_filetypes = { "NvimTree", "lspsagaoutline" },
+    disabled_filetypes = { "NvimTree", "lspsagaoutline", "dashboard" },
   },
   sections = {
     lualine_c = {
