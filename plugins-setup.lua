@@ -96,7 +96,8 @@ return packer.startup(function(use)
   use("rcarriga/nvim-notify") -- notifications
 
   -- themes
-  use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+  use("bluz71/vim-nightfly-guicolors")
+  use("Shatur/neovim-ayu")
 
   -- icons
   use("nvim-tree/nvim-web-devicons") -- devicons

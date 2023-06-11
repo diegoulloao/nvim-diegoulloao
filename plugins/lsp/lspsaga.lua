@@ -5,15 +5,7 @@ if not status then
 end
 
 -- customized colors for lspsaga
-local colors = {
-  normal_bg = "#011627",
-  blue = "#65D1FF",
-  green = "#3EFFDC",
-  magenta = "#FF61EF",
-  yellow = "#FFDA7B",
-  black = "#000000",
-  orange = "#FFFFFF",
-}
+-- local colors = require("diegoulloao.themes.lspsaga.nightfly")
 
 -- custom setup
 saga.setup({
@@ -32,7 +24,7 @@ saga.setup({
   ui = {
     theme = "round",
     border = "rounded",
-    colors = colors,
+    -- colors = colors,
     expand = "",
     collapse = "",
   },

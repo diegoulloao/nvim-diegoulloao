@@ -108,7 +108,7 @@ lspconfig["emmet_ls"].setup({
 })
 
 -- lua
-lspconfig["sumneko_lua"].setup({
+lspconfig["lua_ls"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
   -- custom settings for lua
