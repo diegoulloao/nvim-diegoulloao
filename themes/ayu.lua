@@ -15,8 +15,8 @@ ayu.colorscheme()
 -- customization
 --
 -- indent blankline
-vim.cmd([[ hi! IndentBlanklineIndent1 guifg=#1d3b53 gui=nocombine ]])
--- vim.cmd([[ hi! IndentBlanklineIndent1 guifg=#393F4D gui=nocombine ]])
+vim.cmd([[ hi! IndentBlanklineIndent1 guifg=#453618 gui=nocombine ]])
+-- vim.cmd([[ hi! IndentBlanklineIndent1 guifg=#1d3b53 gui=nocombine ]])
 
 -- nvim-cmp custom colors
 vim.cmd([[ hi! CursorLineBG guibg=#000000 guifg=#FFFFFF ]])
