@@ -9,7 +9,7 @@ end
 
 -- custom setup
 lspsaga.setup({
-  --[[ scroll_preview = {
+  scroll_preview = {
     scroll_down = "<C-h>",
     scroll_up = "<C-l>",
   },
@@ -27,5 +27,5 @@ lspsaga.setup({
     -- colors = colors,
     expand = "",
     collapse = "",
-  }, ]]
+  },
 })
