@@ -1,5 +1,5 @@
 -- require lspsaga
-local status, saga = pcall(require, "lspsaga")
+local status, lspsaga = pcall(require, "lspsaga")
 if not status then
   return
 end
@@ -8,8 +8,8 @@ end
 -- local colors = require("diegoulloao.themes.lspsaga.nightfly")
 
 -- custom setup
-saga.setup({
-  scroll_preview = {
+lspsaga.setup({
+  --[[ scroll_preview = {
     scroll_down = "<C-h>",
     scroll_up = "<C-l>",
   },
@@ -27,5 +27,5 @@ saga.setup({
     -- colors = colors,
     expand = "",
     collapse = "",
-  },
+  }, ]]
 })
