@@ -13,8 +13,16 @@ lspsaga.setup({
     scroll_down = "<C-h>",
     scroll_up = "<C-l>",
   },
-  finder = { edit = "<CR>" },
-  definition = { edit = "<CR>" },
+  finder = {
+    keys = {
+      edit = "<CR>",
+    },
+  },
+  definition = {
+    keys = {
+      edit = "<CR>",
+    },
+  },
   symbol_in_winbar = {
     enable = true,
     separator = " › ",
