@@ -1,6 +1,9 @@
 -- packer plugins setup
 require("diegoulloao.plugins-setup")
 
+-- require autosync when saving this file
+require("diegoulloao.autosync")
+
 -- core
 require("diegoulloao.core.options")
 require("diegoulloao.core.keymaps")

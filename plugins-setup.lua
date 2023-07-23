@@ -1,6 +1,3 @@
--- require autosync when saving this file
-local packer_bootstrap = require("diegoulloao.autosync")
-
 -- call packer in safety mode
 local status, packer = pcall(require, "packer")
 if not status then
@@ -84,8 +81,4 @@ return packer.startup(function(use)
 
   -- dashboard
   use("glepnir/dashboard-nvim") -- dashboard
-
-  if packer_bootstrap then
-    require("packer").sync()
-  end
 end)

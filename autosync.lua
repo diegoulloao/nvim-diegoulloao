@@ -22,4 +22,6 @@ vim.cmd([[
   augroup end
 ]])
 
-return packer_bootstrap
+if packer_bootstrap then
+  require("packer").sync()
+end
