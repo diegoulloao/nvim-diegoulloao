@@ -15,18 +15,39 @@ telescope.setup({
   defaults = {
     layout_strategy = "vertical", -- vertical layout
     sorting_strategy = "ascending",
-    prompt_prefix = " > ",
     results_title = "",
+    prompt_prefix = " > ",
     layout_config = {
       prompt_position = "top",
       width = 0.7,
-      height = 0.5,
+      height = 0.7,
     },
     mappings = {
       i = {
         ["<C-k>"] = actions.move_selection_previous,
         ["<C-j>"] = actions.move_selection_next,
         ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+      },
+    },
+  },
+  pickers = {
+    find_files = {
+      layout_config = {
+        height = 0.5,
+      },
+    },
+    live_grep = {
+      prompt_title = "Global Search",
+      results_title = "Results",
+      layout_config = {
+        prompt_position = "bottom",
+      },
+    },
+    current_buffer_fuzzy_find = {
+      prompt_title = "Search",
+      results_title = "Results",
+      layout_config = {
+        prompt_position = "bottom",
       },
     },
   },

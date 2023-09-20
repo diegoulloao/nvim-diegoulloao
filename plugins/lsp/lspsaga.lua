@@ -32,6 +32,7 @@ lspsaga.setup({
     -- title = false,
     expand = "",
     collapse = "",
+    -- code_action = "👾",
   },
   outline = {
     win_width = 30,

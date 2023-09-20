@@ -40,5 +40,10 @@ lualine.setup({
         path = 1, -- 0: just name, 1: relative path, 2: absolute path, 3: absolute path with ~ as home directory
       },
     },
+    lualine_x = {
+      -- "encoding",
+      "filetype",
+      "fileformat",
+    },
   },
 })
