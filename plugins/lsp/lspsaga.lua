@@ -4,9 +4,6 @@ if not status then
   return
 end
 
--- customized colors for lspsaga
--- local colors = require("diegoulloao.themes.lspsaga.nightfly")
-
 -- custom setup
 lspsaga.setup({
   scroll_preview = {
@@ -32,8 +29,11 @@ lspsaga.setup({
   ui = {
     theme = "round",
     border = "rounded",
-    -- colors = colors,
+    -- title = false,
     expand = "",
     collapse = "",
+  },
+  outline = {
+    win_width = 30,
   },
 })

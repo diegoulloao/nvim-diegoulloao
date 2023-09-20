@@ -13,7 +13,7 @@ bufferline.setup({
       -- style = "underline",
     },
     show_duplicate_prefix = true, -- show base path if tabs have the same name
-    separator_style = "thick", -- options: slant | thick | custom
+    separator_style = "thick", -- options: slant | slope | thick | thin | {"|", "|"}
     diagnostics = "nvim_lsp", -- nvim lsp diagnostics integration in tabs
     diagnostics_indicator = function(count, level) -- diagnostics format
       local icon = level:match("error") and " " or " "

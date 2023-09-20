@@ -11,18 +11,25 @@ vim.g.loaded_netrwPlugin = 1
 -- custom setup
 nvimtree.setup({
   view = {
-    width = 40,
+    width = 38,
   },
   renderer = {
     indent_markers = {
-      enable = false, -- folder level guide
+      enable = true, -- folder level guide
+      --[[ icons = {
+        corner = "└",
+        edge = "┆",
+        item = "┆",
+        bottom = "─",
+        none = " ",
+      }, ]]
     },
     icons = {
       glyphs = {
-        folder = {
+        --[[ folder = {
           arrow_closed = "",
           arrow_open = "",
-        },
+        }, ]]
       },
     },
   },

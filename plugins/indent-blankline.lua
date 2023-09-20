@@ -10,6 +10,7 @@ indent_blankline.setup({
     "IndentBlanklineIndent1",
   },
   filetype_exclude = { "dashboard" },
-  -- options: ['|', '¦', '┆', '┊']
-  -- char = "¦",
+  char = "┆",
 })
+
+-- options: ['|', '¦', '┆', '┊']
