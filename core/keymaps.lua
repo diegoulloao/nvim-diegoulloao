@@ -62,3 +62,6 @@ keymap.set("n", "<leader>f", "<cmd>TodoQuickFix<CR>") -- show todo comments list
 
 -- lspsaga symbols outline
 keymap.set("n", "<leader>s", "<cmd>Lspsaga outline<CR>") -- show symbols pane at the right
+
+-- markdown preview
+keymap.set("n", "<leader><leader>m", "<cmd>MarkdownPreviewToggle<CR>") -- toggle markdown preview

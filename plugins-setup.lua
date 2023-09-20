@@ -71,6 +71,12 @@ return packer.startup(function(use)
   use("akinsho/toggleterm.nvim", { tag = "*" }) -- terminal
   use("gpanders/editorconfig.nvim") -- editor config
   use("rcarriga/nvim-notify") -- notifications
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  }) -- markdown preview
 
   -- themes
   use("bluz71/vim-nightfly-guicolors")
