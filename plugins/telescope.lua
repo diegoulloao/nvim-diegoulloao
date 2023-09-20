@@ -19,8 +19,8 @@ telescope.setup({
     prompt_prefix = " > ",
     layout_config = {
       prompt_position = "top",
-      width = 0.8,
-      height = 0.8,
+      width = 0.7,
+      height = 0.6,
     },
     mappings = {
       i = {
@@ -42,6 +42,8 @@ telescope.setup({
       results_title = "Results",
       layout_config = {
         prompt_position = "bottom",
+        width = 0.8,
+        height = 0.8,
       },
     },
     current_buffer_fuzzy_find = {
@@ -49,6 +51,14 @@ telescope.setup({
       results_title = "Results",
       layout_config = {
         prompt_position = "bottom",
+        width = 0.8,
+        height = 0.8,
+      },
+    },
+    buffers = {
+      layout_config = {
+        width = 0.6,
+        height = 0.5,
       },
     },
     git_bcommits = {
@@ -65,6 +75,7 @@ telescope.setup({
     },
     git_status = {
       layout_config = {
+        prompt_position = "bottom",
         width = 0.6,
         height = 0.5,
       },
