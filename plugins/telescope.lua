@@ -14,6 +14,14 @@ end
 telescope.setup({
   defaults = {
     layout_strategy = "vertical", -- vertical layout
+    sorting_strategy = "ascending",
+    prompt_prefix = " > ",
+    results_title = "",
+    layout_config = {
+      prompt_position = "top",
+      width = 0.7,
+      height = 0.5,
+    },
     mappings = {
       i = {
         ["<C-k>"] = actions.move_selection_previous,
