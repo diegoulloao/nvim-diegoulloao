@@ -19,8 +19,8 @@ telescope.setup({
     prompt_prefix = " > ",
     layout_config = {
       prompt_position = "top",
-      width = 0.7,
-      height = 0.7,
+      width = 0.8,
+      height = 0.8,
     },
     mappings = {
       i = {
@@ -33,6 +33,7 @@ telescope.setup({
   pickers = {
     find_files = {
       layout_config = {
+        width = 0.6,
         height = 0.5,
       },
     },
@@ -48,6 +49,24 @@ telescope.setup({
       results_title = "Results",
       layout_config = {
         prompt_position = "bottom",
+      },
+    },
+    git_bcommits = {
+      layout_config = {
+        width = 0.7,
+        height = 0.6,
+      },
+    },
+    git_commits = {
+      layout_config = {
+        width = 0.7,
+        height = 0.6,
+      },
+    },
+    git_status = {
+      layout_config = {
+        width = 0.6,
+        height = 0.5,
       },
     },
   },
