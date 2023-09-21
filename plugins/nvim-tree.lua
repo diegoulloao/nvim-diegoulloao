@@ -16,13 +16,13 @@ nvimtree.setup({
   renderer = {
     indent_markers = {
       enable = true, -- folder level guide
-      --[[ icons = {
+      icons = {
         corner = "└",
         edge = "┆",
         item = "┆",
         bottom = "─",
         none = " ",
-      }, ]]
+      },
     },
     icons = {
       glyphs = {

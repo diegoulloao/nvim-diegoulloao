@@ -15,7 +15,6 @@ toggleterm.setup({
   persist_mode = true,
   highlights = {
     FloatBorder = {
-      -- guifg = "#059de3",
       guifg = "#FFB454",
     },
   },

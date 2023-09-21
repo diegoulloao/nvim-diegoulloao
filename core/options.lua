@@ -44,3 +44,6 @@ opt.autoread = true
 
 -- completion window
 opt.pumheight = 10
+
+-- hide empty lines symbol ~
+opt.fillchars = { eob = " " }

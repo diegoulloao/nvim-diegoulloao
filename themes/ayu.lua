@@ -13,10 +13,10 @@ ayu.setup({
 ayu.colorscheme()
 
 -- indent blankline
-vim.cmd([[ hi! IndentBlanklineIndent1 guifg=#453618 gui=nocombine ]])
+vim.cmd([[ hi! IndentBlanklineIndent1 guifg=#14191F gui=nocombine ]])
 
 -- nvim-tree arrows color
-vim.cmd([[ hi! NvimTreeIndentMarker guifg=#FFB454 ]])
+vim.cmd([[ hi! NvimTreeIndentMarker guifg=#14191F ]])
 vim.cmd([[ hi! NvimTreeFolderArrowClosed guifg=#acb4c2 gui=bold ]])
 vim.cmd([[ hi! NvimTreeFolderArrowOpen guifg=#acb4c2 gui=bold ]])
 
