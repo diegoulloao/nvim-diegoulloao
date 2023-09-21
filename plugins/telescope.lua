@@ -32,12 +32,14 @@ telescope.setup({
   },
   pickers = {
     find_files = {
+      previewer = false,
       layout_config = {
         width = 0.6,
         height = 0.5,
       },
     },
     live_grep = {
+      previewer = false,
       prompt_title = "Global Search",
       results_title = "Results",
       layout_config = {
@@ -47,6 +49,7 @@ telescope.setup({
       },
     },
     current_buffer_fuzzy_find = {
+      previewer = false,
       prompt_title = "Search",
       results_title = "Results",
       layout_config = {
@@ -56,6 +59,7 @@ telescope.setup({
       },
     },
     buffers = {
+      previewer = false,
       layout_config = {
         width = 0.6,
         height = 0.5,
