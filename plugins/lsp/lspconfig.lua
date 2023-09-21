@@ -10,12 +10,6 @@ if not cmp_nvim_lsp_status then
   return
 end
 
--- require typescript lsp
-local typescript_status, typescript = pcall(require, "typescript")
-if not typescript_status then
-  return
-end
-
 -- for conciseness
 local keymap = vim.keymap
 
@@ -72,11 +66,9 @@ lspconfig["cssls"].setup({
 })
 
 -- typescript
-typescript.setup({
-  server = {
-    capabilities = capabilities,
-    on_attach = on_attach,
-  },
+lspconfig["tsserver"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
 })
 
 -- tailwind css

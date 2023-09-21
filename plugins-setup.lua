@@ -37,7 +37,6 @@ return packer.startup(function(use)
   use("neovim/nvim-lspconfig") -- lsp servers quickstart configurations
   use("hrsh7th/cmp-nvim-lsp") -- lsp servers integration with cmp autocompletion
   use({ "nvimdev/lspsaga.nvim" }) -- enhanced lsp server autocompletion for cmp ui
-  use("jose-elias-alvarez/typescript.nvim") -- further functionallity for the typescript lsp server
   use("onsails/lspkind.nvim") -- vscode like icons for the cmp autocompletion window
 
   -- formatting and linting
