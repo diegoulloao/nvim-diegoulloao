@@ -12,6 +12,12 @@ ayu.setup({
 -- apply colorscheme
 ayu.colorscheme()
 
+-- line number
+vim.cmd([[ hi! LineNr guifg=#14191F ]])
+
+-- comments color
+vim.cmd([[ hi! Comment guifg=#393F4D ]])
+
 -- indent blankline
 vim.cmd([[ hi! IndentBlanklineIndent1 guifg=#14191F gui=nocombine ]])
 

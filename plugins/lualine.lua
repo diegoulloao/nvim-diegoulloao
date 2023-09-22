@@ -30,7 +30,7 @@ lualine.setup({
     theme = lualine_theme,
     component_separators = lualine_separators[1].component_separators,
     section_separators = lualine_separators[1].section_separators,
-    disabled_filetypes = { "NvimTree", "lspsagaoutline", "dashboard", "sagaoutline" },
+    disabled_filetypes = { "NvimTree", "lspsagaoutline", "dashboard", "sagaoutline", "packer" },
   },
   sections = {
     lualine_c = {

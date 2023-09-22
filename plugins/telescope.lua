@@ -66,18 +66,21 @@ telescope.setup({
       },
     },
     git_bcommits = {
+      previewer = false,
       layout_config = {
         width = 0.7,
         height = 0.6,
       },
     },
     git_commits = {
+      previewer = false,
       layout_config = {
         width = 0.7,
         height = 0.6,
       },
     },
     git_status = {
+      previewer = false,
       layout_config = {
         prompt_position = "bottom",
         width = 0.6,
