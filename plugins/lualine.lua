@@ -30,10 +30,16 @@ lualine.setup({
     theme = lualine_theme,
     component_separators = lualine_separators[1].component_separators,
     section_separators = lualine_separators[1].section_separators,
-    disabled_filetypes = { "NvimTree", "lspsagaoutline", "dashboard", "sagaoutline", "packer" },
+    disabled_filetypes = { "lspsagaoutline", "dashboard", "sagaoutline", "packer" },
+    ignore_focus = { "NvimTree", "sagaoutline", "toggleterm" },
   },
   sections = {
     lualine_c = {
+      {
+        "filetype",
+        icon_only = true,
+        padding = { left = 1, right = 0 },
+      },
       {
         "filename",
         file_status = true, -- display file status (read only, modified)
@@ -41,9 +47,10 @@ lualine.setup({
       },
     },
     lualine_x = {
-      -- "encoding",
-      "filetype",
+      "encoding",
+      -- "filetype",
       "fileformat",
     },
   },
+  extensions = { "nvim-tree", "toggleterm" },
 })
