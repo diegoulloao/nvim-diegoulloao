@@ -27,6 +27,13 @@ bufferline.setup({
         highlight = "Directory",
         separator = true, -- true is the default, or set custom
       },
+      -- avoid to show bufferline on top saga outline symbols
+      {
+        filetype = "sagaoutline",
+        text = "Symbols", -- title on top
+        highlight = "Directory",
+        separator = true, -- true is the default, or set custom
+      },
     },
   },
 })
