@@ -28,10 +28,11 @@ local lualine_separators = {
 lualine.setup({
   options = {
     theme = lualine_theme,
+    globalstatus = true,
     component_separators = lualine_separators[1].component_separators,
     section_separators = lualine_separators[1].section_separators,
-    disabled_filetypes = { "lspsagaoutline", "dashboard", "sagaoutline", "packer" },
-    ignore_focus = { "NvimTree", "sagaoutline", "toggleterm" },
+    disabled_filetypes = { "dashboard", "sagaoutline", "packer" },
+    ignore_focus = { "NvimTree", "sagaoutline" },
   },
   sections = {
     lualine_c = {
