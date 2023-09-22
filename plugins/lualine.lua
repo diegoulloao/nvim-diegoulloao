@@ -45,12 +45,18 @@ lualine.setup({
         "filename",
         file_status = true, -- display file status (read only, modified)
         path = 1, -- 0: just name, 1: relative path, 2: absolute path, 3: absolute path with ~ as home directory
+        symbols = {
+          unnamed = "",
+          readonly = "",
+          modified = "",
+        },
       },
     },
     lualine_x = {
       "encoding",
       -- "filetype",
-      "fileformat",
+      -- "bo:filetype",
+      -- "fileformat",
     },
   },
   extensions = { "nvim-tree", "toggleterm" },
