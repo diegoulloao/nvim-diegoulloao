@@ -79,7 +79,6 @@ return packer.startup(function(use)
   }) -- markdown preview
 
   -- themes
-  use("bluz71/vim-nightfly-guicolors")
   use("Shatur/neovim-ayu")
 
   -- icons
