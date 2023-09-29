@@ -11,7 +11,7 @@ keymap.set("n", "<leader>Q", "<cmd>q!<CR>") -- force quit from buffer
 keymap.set("n", "<leader>i", "<C-W><C-R>") -- invert panes
 keymap.set("n", "--", "<C-W>=") -- equals panes
 keymap.set("n", "x", '"_x') -- x: delete character without copy to main register
-keymap.set("n", "X", '"_x') -- capital x: delete character without copy to main register
+keymap.set("n", "X", '"_X') -- capital x: delete character without copy to main register
 keymap.set("n", "<leader><CR>", ":nohl<CR>") -- clean status line
 keymap.set("n", "<leader>rr", "<cmd>luafile %<CR>") -- reload lua configuration
 keymap.set("n", "<leader>v", "<cmd>vsplit<CR>") -- copy buffer in right panel
@@ -59,7 +59,7 @@ keymap.set("n", "<leader>ms", "<cmd>MaximizerToggle<CR>") -- maximize and restor
 keymap.set("n", "<leader>c", "<cmd>TSContextToggle<CR>") -- toggle treesitter context at top
 
 -- todo comments
-keymap.set("n", "<leader>f", "<cmd>TodoQuickFix<CR>") -- show todo comments list
+keymap.set("n", "<leader>f", "<cmd>TodoTelescope previewer=false<CR>") -- show todo comments list
 
 -- lspsaga symbols outline
 keymap.set("n", "<leader>s", "<cmd>Lspsaga outline<CR>") -- show symbols pane at the right

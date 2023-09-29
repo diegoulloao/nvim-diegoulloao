@@ -10,6 +10,12 @@ if not actions_setup then
   return
 end
 
+-- use fzf
+telescope.load_extension("fzf")
+
+-- projects extension integration for telescope
+telescope.load_extension("projects")
+
 -- custom setup
 telescope.setup({
   defaults = {
@@ -18,7 +24,7 @@ telescope.setup({
     results_title = "",
     prompt_prefix = " > ",
     layout_config = {
-      prompt_position = "top",
+      prompt_position = "bottom",
       width = 0.7,
       height = 0.6,
     },
@@ -34,6 +40,7 @@ telescope.setup({
     find_files = {
       previewer = false,
       layout_config = {
+        prompt_position = "top",
         width = 0.6,
         height = 0.5,
       },
@@ -61,6 +68,7 @@ telescope.setup({
     buffers = {
       previewer = false,
       layout_config = {
+        prompt_position = "top",
         width = 0.6,
         height = 0.5,
       },
@@ -68,6 +76,7 @@ telescope.setup({
     git_bcommits = {
       previewer = false,
       layout_config = {
+        prompt_position = "top",
         width = 0.7,
         height = 0.6,
       },
@@ -75,6 +84,7 @@ telescope.setup({
     git_commits = {
       previewer = false,
       layout_config = {
+        prompt_position = "top",
         width = 0.7,
         height = 0.6,
       },
@@ -94,12 +104,10 @@ telescope.setup({
         width = 0.6,
         height = 0.5,
       },
+      -- overwrite default behavior of checking out to dettached HEAD
+      mappings = {
+        i = { ["<cr>"] = actions.git_switch_branch },
+      },
     },
   },
 })
-
--- use fzf
-telescope.load_extension("fzf")
-
--- projects extension integration for telescope
-telescope.load_extension("projects")
