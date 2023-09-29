@@ -34,7 +34,7 @@ local on_attach = function(client, bufnr)
   keymap.set("n", "<leader>D", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts) -- open diagnostics list at bottom
 
   -- set documentation keybind
-  keymap.set("n", "<leader>K", "<cmd>Lspsaga hover_doc ++quiet<CR>", opts) -- show documentation for the cursor
+  keymap.set("n", "<leader>K", "<cmd>Lspsaga hover_doc ++silent<CR>", opts) -- show documentation for the cursor
 
   -- set code formatting by lsp
   keymap.set("n", "<leader>F", function()

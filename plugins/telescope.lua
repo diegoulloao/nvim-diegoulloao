@@ -87,6 +87,14 @@ telescope.setup({
         height = 0.5,
       },
     },
+    git_branches = {
+      previewer = false,
+      layout_config = {
+        prompt_position = "top",
+        width = 0.6,
+        height = 0.5,
+      },
+    },
   },
 })
 

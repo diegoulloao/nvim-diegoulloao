@@ -10,7 +10,8 @@ keymap.set("n", "<leader>q", "<cmd>q<CR>") -- quit from buffer
 keymap.set("n", "<leader>Q", "<cmd>q!<CR>") -- force quit from buffer
 keymap.set("n", "<leader>i", "<C-W><C-R>") -- invert panes
 keymap.set("n", "--", "<C-W>=") -- equals panes
-keymap.set("n", "x", '"_x') -- delete character without copy to clipboard
+keymap.set("n", "x", '"_x') -- x: delete character without copy to main register
+keymap.set("n", "X", '"_x') -- capital x: delete character without copy to main register
 keymap.set("n", "<leader><CR>", ":nohl<CR>") -- clean status line
 keymap.set("n", "<leader>rr", "<cmd>luafile %<CR>") -- reload lua configuration
 keymap.set("n", "<leader>v", "<cmd>vsplit<CR>") -- copy buffer in right panel
