@@ -16,6 +16,9 @@ telescope.load_extension("fzf")
 -- projects extension integration for telescope
 telescope.load_extension("projects")
 
+-- persisted extension for session management
+telescope.load_extension("persisted")
+
 -- custom setup
 telescope.setup({
   defaults = {
@@ -107,6 +110,15 @@ telescope.setup({
       -- overwrite default behavior of checking out to dettached HEAD
       mappings = {
         i = { ["<cr>"] = actions.git_switch_branch },
+      },
+    },
+  },
+  extensions = {
+    persisted = {
+      layout_config = {
+        prompt_position = "top",
+        width = 0.6,
+        height = 0.5,
       },
     },
   },

@@ -86,4 +86,7 @@ return packer.startup(function(use)
 
   -- dashboard
   use("glepnir/dashboard-nvim") -- dashboard
+
+  -- sessions
+  use("olimorris/persisted.nvim")
 end)

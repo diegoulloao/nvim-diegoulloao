@@ -66,3 +66,8 @@ keymap.set("n", "<leader>s", "<cmd>Lspsaga outline<CR>") -- show symbols pane at
 
 -- markdown preview
 keymap.set("n", "<leader><leader>m", "<cmd>MarkdownPreviewToggle<CR>") -- toggle markdown preview
+
+-- persisted (session management)
+keymap.set("n", "<leader>S", "<cmd>Telescope persisted<CR>") -- display persisted session manager
+keymap.set("n", "<leader><leader>s", "<cmd>SessionSave<CR>") -- save current session
+keymap.set("n", "<leader><leader>l", "<cmd>SessionLoad<CR>") -- save current session
