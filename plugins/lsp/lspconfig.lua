@@ -29,6 +29,20 @@ lspconfig["html"].setup({
 lspconfig["cssls"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
+  settings = {
+    css = {
+      lint = {
+        -- fixs unknown @tailwind rule for css files
+        unknownAtRules = "ignore",
+      },
+    },
+    scss = {
+      lint = {
+        -- fixs unknown @tailwind rule for sass files
+        unknownAtRules = "ignore",
+      },
+    },
+  },
 })
 
 -- typescript
@@ -39,6 +53,12 @@ lspconfig["tsserver"].setup({
 
 -- tailwind css
 lspconfig["tailwindcss"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
+-- svelte
+lspconfig["svelte"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })

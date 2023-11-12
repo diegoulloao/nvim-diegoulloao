@@ -27,7 +27,7 @@ telescope.setup({
     results_title = "",
     prompt_prefix = " > ",
     layout_config = {
-      prompt_position = "bottom",
+      prompt_position = "top",
       width = 0.7,
       height = 0.6,
     },
@@ -110,6 +110,15 @@ telescope.setup({
       -- overwrite default behavior of checking out to dettached HEAD
       mappings = {
         i = { ["<cr>"] = actions.git_switch_branch },
+      },
+    },
+    diagnostics = {
+      previewer = false,
+      prompt_title = "Diagnostics",
+      layout_config = {
+        prompt_position = "top",
+        width = 0.6,
+        height = 0.5,
       },
     },
   },

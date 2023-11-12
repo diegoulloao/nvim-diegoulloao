@@ -19,7 +19,7 @@ local on_attach = function(client, bufnr)
   keymap.set("n", "<C-n>", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- next diagnostic
   keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts) -- show code actions
   keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) -- show diagnostics for the cursor
-  keymap.set("n", "<leader>D", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts) -- open diagnostics list at bottom
+  keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics<CR>", opts) -- open diagnostics in telescope
 
   -- set documentation keybind
   keymap.set("n", "<leader>K", "<cmd>Lspsaga hover_doc ++silent<CR>", opts) -- show documentation for the cursor
