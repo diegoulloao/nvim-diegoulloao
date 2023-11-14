@@ -17,7 +17,7 @@ return packer.startup(function(use)
   use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- fzf sorter for telescope
   use({ "lukas-reineke/indent-blankline.nvim", tag = "v2.20.8" }) -- indentation lines
   use("echasnovski/mini.indentscope") -- indentation lines scope
-  use({ "akinsho/bufferline.nvim", tag = "v3.*", requires = "kyazdani42/nvim-web-devicons" }) -- buffer tabs
+  use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" }) -- buffer tabs
   use({ "j-hui/fidget.nvim", tag = "legacy" }) -- lsp progress
 
   -- autocompletion

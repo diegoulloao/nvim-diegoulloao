@@ -85,6 +85,12 @@ lspconfig["emmet_ls"].setup({
   },
 })
 
+-- astro
+lspconfig["astro"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
 -- lua
 lspconfig["lua_ls"].setup({
   capabilities = capabilities,

@@ -28,6 +28,7 @@ mason_lspconfig.setup({
     "tailwindcss",
     "svelte",
     "lua_ls",
+    "astro",
   },
 })
 
