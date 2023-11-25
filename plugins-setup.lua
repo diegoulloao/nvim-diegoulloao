@@ -72,6 +72,11 @@ return packer.startup(function(use)
   use("gpanders/editorconfig.nvim") -- editor config
   use("rcarriga/nvim-notify") -- notifications
   use({
+    "folke/noice.nvim",
+    requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
+  }) -- nvim ui replacements
+
+  use({
     "iamcco/markdown-preview.nvim",
     run = function()
       vim.fn["mkdp#util#install"]()

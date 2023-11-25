@@ -11,6 +11,7 @@ require("diegoulloao.core.colorscheme")
 
 -- plugins
 require("diegoulloao.plugins.notify")
+require("diegoulloao.plugins.noice")
 require("diegoulloao.plugins.comment")
 require("diegoulloao.plugins.nvim-tree")
 require("diegoulloao.plugins.lualine")

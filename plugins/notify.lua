@@ -7,7 +7,7 @@ end
 -- custom setup
 notify.setup({
   stages = "fade_in_slide_out", -- animation style
-  render = "simple", -- notification appearance
+  render = "default", -- notification appearance: default|simple
   timeout = 3000, -- time to out
 })
 

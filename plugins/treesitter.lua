@@ -27,6 +27,7 @@ treesitter.setup({
     "gitignore",
     "comment",
     "regex",
+    "astro",
   },
   auto_install = true,
   -- support for nvim-ts-context-commentstring
