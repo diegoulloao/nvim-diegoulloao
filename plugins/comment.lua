@@ -4,8 +4,10 @@ if not setup then
   return
 end
 
+-- ts-context commentstring
 local context_commentstring_integration_status, context_commentstring_integration =
   pcall(require, "ts_context_commentstring.integrations.comment_nvim")
+
 if not context_commentstring_integration_status then
   return
 end
