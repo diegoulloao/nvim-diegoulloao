@@ -23,7 +23,7 @@ dashboard.setup({
     header = vim.split(string.rep("\n", 2) .. logo, "\n"),
     shortcut = {
       { desc = "[ Github]", group = "DashboardShortCut" },
-      { desc = "[ diegoulloao]", group = "DashboardShortCut" },
+      { desc = "[diegoulloao]", group = "DashboardShortCut" },
     },
   },
   hide = {
