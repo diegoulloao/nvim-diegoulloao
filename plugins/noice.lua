@@ -36,4 +36,15 @@ noice.setup({
       position = "50%",
     },
   },
+  -- filters
+  routes = {
+    {
+      -- avoids annoying message
+      filter = {
+        event = "notify",
+        find = "No information available",
+      },
+      opts = { skip = true },
+    },
+  },
 })
