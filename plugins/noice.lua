@@ -31,29 +31,51 @@ noice.setup({
     -- enabled = false,
   },
   cmdline = {
+    format = {
+      -- fix lost search icons
+      search_down = { icon = " " },
+      search_up = { icon = " " },
+    },
     opts = {
       -- vertically centered
-      position = "50%",
+      -- position = "50%",
     },
   },
   -- filters
   routes = {
-    -- avoids annoying message: lspsaga
     {
+      -- lspsaga: avoids annoying messages in notify
       filter = {
         event = "notify",
         find = "No information available",
       },
       opts = { skip = true },
     },
-    -- avoids messages in notify when changes are detected, use mini instead
     {
+      -- avoids annoying show messages in notify
       filter = {
         event = "msg_show",
         any = {
           { find = "%d+L, %d+B" },
           { find = "; after #%d+" },
           { find = "; before #%d+" },
+          { find = "%d lines yanked" },
+          { find = "%d more lines" },
+          { find = "%d line less" },
+          { find = "%d fewer lines" },
+          { find = "search hit BOTTOM, continuing at TOP" },
+        },
+      },
+      opts = { skip = true },
+    },
+    {
+      -- display annoying message in mini view
+      filter = {
+        event = "msg_show",
+        any = {
+          { find = "Pattern not found:" },
+          { find = "Already at newest change" },
+          { find = "Already at oldest change" },
         },
       },
       view = "mini",
