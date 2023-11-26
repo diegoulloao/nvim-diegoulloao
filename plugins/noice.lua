@@ -52,7 +52,7 @@ noice.setup({
       opts = { skip = true },
     },
     {
-      -- avoids annoying show messages in notify
+      -- avoids annoying messages in notify
       filter = {
         event = "msg_show",
         any = {
@@ -62,6 +62,9 @@ noice.setup({
           { find = "%d lines yanked" },
           { find = "%d more lines" },
           { find = "%d line less" },
+          { find = "%d fewer lines" },
+          { find = "%d lines >ed %d time" },
+          { find = "%d lines <ed %d time" },
           { find = "%d fewer lines" },
           { find = "search hit BOTTOM, continuing at TOP" },
         },
