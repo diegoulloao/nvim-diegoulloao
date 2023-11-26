@@ -41,7 +41,7 @@ return packer.startup(function(use)
   use("onsails/lspkind.nvim") -- vscode like icons for the cmp autocompletion window
 
   -- formatting and linting
-  use("jose-elias-alvarez/null-ls.nvim") -- improve cmp lsp to add diagnostics, formatters, code-actions
+  use("nvimtools/none-ls.nvim") -- improve cmp lsp to add diagnostics, formatters, code-actions
   use("jayp0521/mason-null-ls.nvim") -- integration of null-ls for mason
   use({
     "nvim-treesitter/nvim-treesitter",
