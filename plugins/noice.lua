@@ -27,8 +27,8 @@ noice.setup({
     lsp_doc_border = false, -- add a border to hover docs and signature help
   },
   messages = {
-    -- disable status line messages
-    enabled = false,
+    -- disable all status line messages
+    -- enabled = false,
   },
   cmdline = {
     opts = {
@@ -38,13 +38,25 @@ noice.setup({
   },
   -- filters
   routes = {
+    -- avoids annoying message: lspsaga
     {
-      -- avoids annoying message
       filter = {
         event = "notify",
         find = "No information available",
       },
       opts = { skip = true },
+    },
+    -- avoids messages in notify when changes are detected, use mini instead
+    {
+      filter = {
+        event = "msg_show",
+        any = {
+          { find = "%d+L, %d+B" },
+          { find = "; after #%d+" },
+          { find = "; before #%d+" },
+        },
+      },
+      view = "mini",
     },
   },
 })
