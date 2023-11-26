@@ -59,6 +59,9 @@ vim.cmd([[ hi! DashboardRecentTitle guifg=#4D5566 ]])
 vim.cmd([[ hi! DashboardRecentProject guifg=#4D5566 ]])
 vim.cmd([[ hi! DashboardProjectIcon guifg=#C2D94C ]])
 
+-- Treesitter context border bottom color
+vim.cmd([[ hi! TreesitterContextSeparator gui=none guifg=#FF7733 ]])
+
 --[[
 -- Palette: ayu dark
 #0F1419
