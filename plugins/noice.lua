@@ -66,6 +66,7 @@ noice.setup({
           { find = "%d lines >ed %d time" },
           { find = "%d lines <ed %d time" },
           { find = "%d fewer lines" },
+          { find = "search hit TOP, continuing at BOTTOM" },
           { find = "search hit BOTTOM, continuing at TOP" },
         },
       },
