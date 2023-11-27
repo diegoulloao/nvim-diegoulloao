@@ -24,6 +24,7 @@ return packer.startup(function(use)
   use("hrsh7th/nvim-cmp") -- completion
   use("hrsh7th/cmp-buffer") -- words completion for the current buffer
   use("hrsh7th/cmp-path") -- path completion
+  use("folke/neodev.nvim") -- autocompletion for lua development
 
   -- snippets
   use("L3MON4D3/LuaSnip") -- snippet engine

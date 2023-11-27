@@ -109,6 +109,9 @@ lspconfig["lua_ls"].setup({
           [vim.fn.stdpath("config") .. "/lua"] = true,
         },
       },
+      completion = {
+        callSnippet = "Replace",
+      },
     },
   },
 })
