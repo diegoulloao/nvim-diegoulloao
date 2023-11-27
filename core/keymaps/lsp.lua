@@ -12,7 +12,7 @@ local on_attach = function(client, bufnr)
   keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) -- go to implementation
 
   -- set rename keybind
-  keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts) -- rename symbol
+  -- keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts) -- using inc rename instead this
 
   -- set diagnostics keybinds
   keymap.set("n", "<C-m>", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) -- previous diagnostic

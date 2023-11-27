@@ -65,6 +65,7 @@ return packer.startup(function(use)
   use("diegoulloao/nvim-file-location") -- copy file location and line
   use("nvim-treesitter/nvim-treesitter-context") -- displays scope context at the top
   use("ahmedkhalf/project.nvim") -- projects extension for telescope
+  use("smjonas/inc-rename.nvim") -- multiple renaming
 
   -- integration
   use("lewis6991/gitsigns.nvim") -- git signs for buffer

@@ -31,6 +31,9 @@ end
 -- editing keymaps
 keymap.set("n", "<leader>o", "o<ESC>") -- add empty line down in normal mode
 keymap.set("n", "<leader>O", "O<ESC>") -- add empty line up in normal mode
+keymap.set("n", "<leader>rn", function()
+  return ":IncRename " .. vim.fn.expand("<cword>")
+end, { expr = true }) -- multiple renaming word under the cursor (it replaces lsp rename)
 
 -- telescope keymaps
 keymap.set("n", "<C-p>", "<cmd>Telescope find_files<CR>") -- find file in project
