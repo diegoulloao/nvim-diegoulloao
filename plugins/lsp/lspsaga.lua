@@ -26,13 +26,17 @@ lspsaga.setup({
     show_file = true,
     folder_level = 1,
   },
+  lightbulb = {
+    enable = false, -- enable by default
+    sign = false, -- display sign at the column when code actions are available
+  },
   ui = {
     theme = "round",
     border = "rounded",
     -- title = false,
     expand = "",
     collapse = "",
-    -- code_action = "👾",
+    code_action = "👾",
   },
   outline = {
     win_width = 30,
