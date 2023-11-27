@@ -41,6 +41,16 @@ noice.setup({
       -- position = "50%",
     },
   },
+  views = {
+    popup = {
+      win_options = {
+        winhighlight = {
+          Normal = "NormalFloat",
+          FloatBorder = "BorderBG", -- using same nvim-cmp border hi group
+        },
+      },
+    },
+  },
   -- filters
   routes = {
     {
