@@ -6,6 +6,6 @@ end
 
 -- custom config
 treesitter_context.setup({
-  enable = false,
+  enable = true, -- enable on all buffers by default
   separator = "-",
 })
