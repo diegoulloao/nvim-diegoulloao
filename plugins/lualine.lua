@@ -13,9 +13,8 @@ end
 -- require current theme palette
 local theme_palette = require("diegoulloao.themes.palettes")
 
--- lualine themes
--- local lualine_theme = require("diegoulloao.themes.lualine.nightfly")
-local lualine_theme = require("lualine.themes.ayu")
+-- lualine theme
+local lualine_theme = require("diegoulloao.themes.lualine")
 
 -- customized colors for lualine nightfly theme
 local lualine_separators = {
