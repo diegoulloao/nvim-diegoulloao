@@ -1,8 +1,17 @@
 -- require lualine
-local status, lualine = pcall(require, "lualine")
-if not status then
+local lualine_status, lualine = pcall(require, "lualine")
+if not lualine_status then
   return
 end
+
+-- require noice
+local noice_status, noice = pcall(require, "noice")
+if not noice_status then
+  return
+end
+
+-- require current theme palette
+local theme_palette = require("diegoulloao.themes.palettes")
 
 -- lualine themes
 -- local lualine_theme = require("diegoulloao.themes.lualine.nightfly")
@@ -53,6 +62,11 @@ lualine.setup({
       },
     },
     lualine_x = {
+      {
+        noice.api.statusline.mode.get,
+        cond = noice.api.statusline.mode.has,
+        color = { fg = theme_palette.primary },
+      },
       "encoding",
       -- "filetype",
       -- "bo:filetype",

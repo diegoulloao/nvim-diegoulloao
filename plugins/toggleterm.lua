@@ -4,6 +4,9 @@ if not toggleterm_status then
   return
 end
 
+-- require current theme palette
+local theme_palette = require("diegoulloao.themes.palettes")
+
 -- custom setup
 toggleterm.setup({
   open_mapping = [[<c-t>]],
@@ -15,7 +18,7 @@ toggleterm.setup({
   persist_mode = true,
   highlights = {
     FloatBorder = {
-      guifg = "#FFB454",
+      guifg = theme_palette.primary,
     },
   },
 })
