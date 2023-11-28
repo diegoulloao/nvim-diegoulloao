@@ -78,6 +78,7 @@ noice.setup({
           { find = "%d fewer lines" },
           { find = "search hit TOP, continuing at BOTTOM" },
           { find = "search hit BOTTOM, continuing at TOP" },
+          { find = "E37: No write since last change" },
         },
       },
       opts = { skip = true },
