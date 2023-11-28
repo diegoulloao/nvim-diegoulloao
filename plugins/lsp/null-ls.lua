@@ -10,6 +10,7 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 -- custom setup
 null_ls.setup({
+  border = "single",
   sources = {
     formatting.prettier,
     formatting.stylua,

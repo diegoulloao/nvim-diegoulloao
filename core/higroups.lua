@@ -56,6 +56,9 @@ local function hi_groups(palette)
   vim.cmd(f([[ hi! DashboardRecentProject guifg=%s ]], palette.dimmed4))
   vim.cmd(f([[ hi! DashboardProjectIcon guifg=%s ]], palette.accent))
 
+  -- null-ls
+  vim.cmd(f([[ hi! NullLsInfoBorder guifg=%s ]], palette.primary))
+
   -- Treesitter context border bottom color
   vim.cmd(f([[ hi! TreesitterContextSeparator gui=none guifg=%s ]], palette.highlight))
 end
