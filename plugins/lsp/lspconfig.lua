@@ -118,3 +118,6 @@ lspconfig["lua_ls"].setup({
 
 -- disable inline diagnostics globally
 vim.diagnostic.config({ virtual_text = false })
+
+-- add borders to lsp info window
+require("lspconfig.ui.windows").default_options.border = "single"
