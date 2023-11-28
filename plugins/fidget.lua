@@ -12,6 +12,11 @@ fidget.setup({
   window = {
     border = "rounded", -- single | double | shadow | rounded
   },
+  notification = {
+    window = {
+      normal_hl = "MsgArea",
+    },
+  },
   sources = {
     ["null-ls"] = {
       ignore = true,
