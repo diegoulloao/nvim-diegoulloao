@@ -4,4 +4,4 @@ if not colorizer_status then
   return
 end
 
-colorizer.setup()
+colorizer.setup({})

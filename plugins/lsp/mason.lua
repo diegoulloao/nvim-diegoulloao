@@ -30,6 +30,7 @@ mason_lspconfig.setup({
     "html",
     "emmet_ls",
     "cssls",
+    "jsonls",
     "tailwindcss",
     "svelte",
     "lua_ls",

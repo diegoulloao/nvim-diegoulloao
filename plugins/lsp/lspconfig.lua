@@ -85,6 +85,12 @@ lspconfig["emmet_ls"].setup({
   },
 })
 
+-- json
+lspconfig["jsonls"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
 -- astro
 lspconfig["astro"].setup({
   capabilities = capabilities,
@@ -101,6 +107,7 @@ lspconfig["lua_ls"].setup({
       -- make the language server recognize "vim" global
       diagnostics = {
         globals = { "vim" },
+        disable = { "missing-fields" },
       },
       workspace = {
         -- make the language server aware of runtime files
