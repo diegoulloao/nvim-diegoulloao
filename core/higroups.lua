@@ -59,7 +59,7 @@ local function hi_groups(palette)
   -- null-ls
   vim.cmd(f([[ hi! NullLsInfoBorder guifg=%s ]], palette.primary))
 
-  -- Treesitter context border bottom color
+  -- treesitter context border bottom color
   vim.cmd(f([[ hi! TreesitterContextSeparator gui=none guifg=%s ]], palette.highlight))
 end
 
