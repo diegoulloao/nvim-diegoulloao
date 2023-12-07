@@ -22,7 +22,6 @@ local palette = {
   primary = "#FFB454",
   secondary = "#59C2FF",
   accent = "#C2D94C",
-  highlight = "#FF7733",
   dark = "#000000",
   dark2 = "#14191F",
   dark3 = "#151A1E",
