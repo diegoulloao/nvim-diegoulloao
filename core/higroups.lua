@@ -7,7 +7,7 @@ local function hi_groups(palette)
   local f = string.format
 
   -- line number
-  vim.cmd(f([[ hi! LineNr guifg=%s ]], palette.dark2))
+  vim.cmd(f([[ hi! LineNr guifg=%s ]], palette.dark4))
 
   -- comments color
   vim.cmd(f([[ hi! Comment guifg=%s ]], palette.dimmed2))
