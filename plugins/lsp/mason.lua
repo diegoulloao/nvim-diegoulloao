@@ -41,7 +41,7 @@ mason_lspconfig.setup({
 -- formatters and linters
 mason_null_ls.setup({
   ensure_installed = {
-    "prettier",
+    "prettierd",
     "stylua",
     "eslint_d",
   },

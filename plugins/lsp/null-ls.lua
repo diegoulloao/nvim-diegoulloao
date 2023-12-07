@@ -12,7 +12,9 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
   border = "single",
   sources = {
-    formatting.prettier,
+    formatting.prettierd.with({
+      extra_filetypes = { "svelte", "astro" },
+    }),
     formatting.stylua,
     diagnostics.eslint_d,
   },
@@ -25,10 +27,10 @@ null_ls.setup({
         buffer = bufnr,
         callback = function()
           vim.lsp.buf.format({
-            filter = function(client)
+            --[[ filter = function(client)
               -- only use null-ls for formatting instead of lsp server
               return client.name == "null-ls"
-            end,
+            end, ]]
             bufnr = bufnr,
           })
         end,
