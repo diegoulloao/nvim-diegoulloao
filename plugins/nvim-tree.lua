@@ -21,8 +21,6 @@ nvimtree.setup({
       enable = true, -- folder level guide
       icons = {
         corner = "└",
-        -- edge = "┆",
-        -- item = "┆",
         edge = indentChar,
         item = indentChar,
         bottom = "─",

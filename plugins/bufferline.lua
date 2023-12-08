@@ -35,5 +35,24 @@ bufferline.setup({
         separator = true, -- true is the default, or set custom
       },
     },
+    -- exclude some buffer and file types
+    custom_filter = function(buf_number)
+      local buftype = vim.api.nvim_buf_get_option(buf_number, "buftype")
+      local filetype = vim.api.nvim_buf_get_option(buf_number, "filetype")
+
+      -- exclude list
+      local excluded_filetypes = {
+        ["terminal"] = true,
+        ["TelescopePrompt"] = true,
+        ["NvimTree"] = true,
+        ["sagaoutline"] = true,
+      }
+
+      local excluded_buftypes = {
+        ["terminal"] = true,
+      }
+
+      return not excluded_buftypes[buftype] and not excluded_filetypes[filetype]
+    end,
   },
 })
