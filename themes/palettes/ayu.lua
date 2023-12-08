@@ -1,5 +1,5 @@
 --[[
-  -- Ayu Dark Palette
+-- Ayu Dark Palette
   #0F1419
   #5C6773
   #F07178

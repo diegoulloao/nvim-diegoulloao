@@ -16,3 +16,12 @@ gruvbox.setup({
 
 -- set colorscheme
 vim.cmd([[ colorscheme gruvbox ]])
+
+-- hi groups
+-- nvim-cmp custom colors
+vim.cmd([[ hi! CursorLineBG guibg=#3c3836 ]])
+
+--[[
+-- recommended terminal scheme:
+-- gruvbox dark
+]]

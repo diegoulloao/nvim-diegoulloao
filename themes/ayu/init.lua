@@ -7,7 +7,7 @@ end
 local palette = require("diegoulloao.themes.palettes.ayu")
 
 -- require highlight groups
-local hi_groups = require("diegoulloao.core.higroups")
+local hi_groups = require("diegoulloao.themes.ayu.higroups")
 
 -- set dark background
 vim.opt.background = "dark"
@@ -22,3 +22,8 @@ ayu.colorscheme()
 
 -- highlight groups
 hi_groups(palette)
+
+--[[
+-- recommended terminal scheme:
+-- framer
+]]

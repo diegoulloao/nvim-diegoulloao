@@ -1,5 +1,5 @@
 --------
--- hi groups helper function
+-- hi groups: ayu theme
 -- @param palette table
 -- @return nil
 local function hi_groups(palette)
