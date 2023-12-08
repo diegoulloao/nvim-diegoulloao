@@ -4,10 +4,13 @@ if not status then
   return
 end
 
+-- indent char from settings
+local indentChar = require("diegoulloao.settings").indentChar
+
 -- custom config
 indentscope.setup({
   -- symbol = "│",
-  symbol = "┆",
+  symbol = indentChar,
   options = {
     try_as_border = true,
     indent_at_cursor = false,

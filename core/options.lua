@@ -1,6 +1,9 @@
 -- for conciseness
 local opt = vim.opt -- vim options
 
+-- hide -- INSERT on lualine
+opt.showmode = false
+
 -- line numbers
 opt.relativenumber = true
 opt.number = true

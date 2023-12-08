@@ -4,8 +4,11 @@ if not status then
   return
 end
 
+-- indent char from settings
+local separatorChar = require("diegoulloao.settings").separatorChar
+
 -- custom config
 treesitter_context.setup({
   enable = true, -- enable on all buffers by default
-  separator = "-",
+  separator = separatorChar,
 })

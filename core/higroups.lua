@@ -60,7 +60,10 @@ local function hi_groups(palette)
   vim.cmd(f([[ hi! NullLsInfoBorder guifg=%s ]], palette.primary))
 
   -- treesitter context border bottom color
-  vim.cmd(f([[ hi! TreesitterContextSeparator gui=none guifg=%s ]], palette.primary))
+  vim.cmd(f([[ hi! TreesitterContextSeparator gui=none guifg=%s ]], palette.dark4))
+
+  -- mini.indentscope line color
+  vim.cmd(f([[ hi! MiniIndentscopeSymbol guifg=%s ]], palette.dark4))
 end
 
 return hi_groups

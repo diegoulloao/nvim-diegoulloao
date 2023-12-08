@@ -4,6 +4,9 @@ if not setup then
   return
 end
 
+-- indent char from settings
+local indentChar = require("diegoulloao.settings").indentChar
+
 -- recommended settings from nvim-tree documentation
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
@@ -18,8 +21,10 @@ nvimtree.setup({
       enable = true, -- folder level guide
       icons = {
         corner = "└",
-        edge = "┆",
-        item = "┆",
+        -- edge = "┆",
+        -- item = "┆",
+        edge = indentChar,
+        item = indentChar,
         bottom = "─",
         none = " ",
       },

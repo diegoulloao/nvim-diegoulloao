@@ -33,6 +33,7 @@ local Terminal = toggleterm_terminal.Terminal
 
 -- main terminal
 local main_term = Terminal:new({
+  display_name = "console",
   on_open = function()
     vim.cmd([[ startinsert! ]])
   end,

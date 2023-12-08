@@ -16,7 +16,7 @@ local theme_palette = require("diegoulloao.themes.palettes")
 -- lualine theme
 local lualine_theme = require("diegoulloao.themes.lualine")
 
--- customized colors for lualine nightfly theme
+-- customized separators
 local lualine_separators = {
   {
     section_separators = { left = "", right = "" },
@@ -29,6 +29,10 @@ local lualine_separators = {
   {
     section_separators = { left = "", right = "" },
     component_separators = "",
+  },
+  {
+    section_separators = { left = "", right = "" },
+    component_separators = { left = "", right = "" },
   },
 }
 
@@ -43,6 +47,7 @@ lualine.setup({
     ignore_focus = { "NvimTree", "sagaoutline" },
   },
   sections = {
+    lualine_a = {}, -- disable mode viewer
     lualine_c = {
       {
         "filetype",
