@@ -67,6 +67,7 @@ return packer.startup(function(use)
   use("nvim-treesitter/nvim-treesitter-context") -- displays scope context at the top
   use("ahmedkhalf/project.nvim") -- projects extension for telescope
   use("smjonas/inc-rename.nvim") -- multiple renaming
+  use("roobert/tailwindcss-colorizer-cmp.nvim") -- tailwind colorizer
 
   -- integration
   use("lewis6991/gitsigns.nvim") -- git signs for buffer

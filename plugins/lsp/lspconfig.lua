@@ -61,6 +61,7 @@ lspconfig["tailwindcss"].setup({
 lspconfig["svelte"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
+  filetypes = { "svelte" },
 })
 
 -- emmet

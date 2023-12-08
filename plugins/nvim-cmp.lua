@@ -16,6 +16,12 @@ if not lspkind_status then
   return
 end
 
+-- require tailwindcss-colorizer-cmp
+local tailwindcss_colorizer_cmp_status, tailwindcss_colorizer_cmp = pcall(require, "tailwindcss-colorizer-cmp")
+if not tailwindcss_colorizer_cmp_status then
+  return
+end
+
 -- load friendly-snippets
 require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -66,6 +72,8 @@ cmp.setup({
     format = lspkind.cmp_format({
       maxwidth = 50,
       ellipsis_char = "...",
+      -- prepend tailwindcss-colorizer
+      before = tailwindcss_colorizer_cmp.formatter,
     }),
   },
 })

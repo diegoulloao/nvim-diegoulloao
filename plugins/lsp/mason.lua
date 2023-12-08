@@ -35,6 +35,7 @@ mason_lspconfig.setup({
     "svelte",
     "lua_ls",
     "astro",
+    "bashls",
   },
 })
 
