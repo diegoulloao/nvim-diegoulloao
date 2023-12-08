@@ -79,6 +79,8 @@ return packer.startup(function(use)
     requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" },
   }) -- nvim ui replacements
 
+  use("almo7aya/openingh.nvim") -- open files in github
+
   use({
     "iamcco/markdown-preview.nvim",
     run = function()

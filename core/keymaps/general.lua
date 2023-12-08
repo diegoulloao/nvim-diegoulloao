@@ -23,6 +23,7 @@ keymap.set("n", "<leader>nt", "<cmd>NvimTreeToggle<CR>") -- nvim tree toggle
 -- tabs navigation keymaps
 keymap.set("n", "<leader>j", "<cmd>tabp<CR>") -- go to previous tab
 keymap.set("n", "<leader>k", "<cmd>tabn<CR>") -- go to next tab
+
 -- go to tab [1-9]
 for i = 1, 9, 1 do
   keymap.set("n", (string.gsub("<leader>@", "@", i)), (string.gsub("<cmd>BufferLineGoToBuffer @<CR>", "@", i)))
@@ -76,5 +77,9 @@ keymap.set("n", "<leader><leader>s", "<cmd>SessionSave<CR>") -- save current ses
 keymap.set("n", "<leader><leader>l", "<cmd>SessionLoad<CR>") -- load current session
 
 -- toggleterm
-vim.keymap.set({ "n", "t" }, "<C-t>", "<cmd>lua main_term_toggle()<CR>")
-vim.keymap.set({ "n", "t" }, "<C-y>", "<cmd>lua spotify_toggle()<CR>")
+keymap.set({ "n", "t" }, "<C-t>", "<cmd>lua main_term_toggle()<CR>")
+keymap.set({ "n", "t" }, "<C-y>", "<cmd>lua spotify_toggle()<CR>")
+
+-- github files
+keymap.set("n", "<leader>gf", "<cmd>OpenInGHFile<CR>") -- open current buffer in github
+keymap.set("v", "<leader>gf", "<cmd>OpenInGHFileLines<CR>") -- open current buffer in github + line
