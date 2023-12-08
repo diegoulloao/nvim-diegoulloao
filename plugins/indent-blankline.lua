@@ -1,17 +1,16 @@
 -- require indent blankline
-local status, indent_blankline = pcall(require, "indent_blankline")
+local status, indent_blankline = pcall(require, "ibl")
 if not status then
   return
 end
 
 -- custom config
 indent_blankline.setup({
-  -- show_current_context = true,
-  char_highlight_list = {
-    "IndentBlanklineIndent1",
+  indent = { char = "┆" },
+  exclude = {
+    filetypes = { "dashboard" },
   },
-  filetype_exclude = { "dashboard" },
-  char = "┆",
+  scope = { enabled = false },
 })
 
 -- options: ['|', '¦', '┆', '┊']

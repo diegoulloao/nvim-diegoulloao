@@ -55,7 +55,7 @@ keymap.set("n", "<C-a>", "<cmd>Gitsigns prev_hunk<CR>") -- go to prev change
 keymap.set("n", "<C-s>", "<cmd>Gitsigns next_hunk<CR>") -- go to next change
 
 -- indent blanklines keymaps
-keymap.set("n", "<leader>l", "<cmd>IndentBlanklineToggle<CR>") -- toggle indent lines
+keymap.set("n", "<leader>l", "<cmd>IBLToggle<CR>") -- toggle indent lines
 
 -- util keymaps
 keymap.set("n", "<leader>ms", "<cmd>MaximizerToggle<CR>") -- maximize and restore current buffer

@@ -16,7 +16,7 @@ local function hi_groups(palette)
   vim.cmd(f([[ hi! FloatBorder guibg=NONE guifg=%s ]], palette.secondary))
 
   -- indent blankline
-  vim.cmd(f([[ hi! IndentBlanklineIndent1 guifg=%s gui=nocombine ]], palette.dark2))
+  vim.cmd(f([[ hi! IblIndent  guifg=%s gui=nocombine ]], palette.dark2))
 
   -- nvim-tree arrows color
   vim.cmd(f([[ hi! NvimTreeIndentMarker guifg=%s ]], palette.dark2))

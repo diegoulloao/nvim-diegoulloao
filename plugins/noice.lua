@@ -91,6 +91,7 @@ noice.setup({
           { find = "Pattern not found:" },
           { find = "Already at newest change" },
           { find = "Already at oldest change" },
+          { find = "E21: Cannot make changes, 'modifiable' is off" },
         },
       },
       view = "mini",
