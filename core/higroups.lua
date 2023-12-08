@@ -12,6 +12,9 @@ local function hi_groups(palette)
   -- comments color
   vim.cmd(f([[ hi! Comment guifg=%s ]], palette.dimmed2))
 
+  -- selection color
+  vim.cmd(f([[ hi! Visual guibg=%s gui=none ]], palette.dark3))
+
   -- general border color
   vim.cmd(f([[ hi! FloatBorder guibg=NONE guifg=%s ]], palette.secondary))
 
