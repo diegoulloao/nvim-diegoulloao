@@ -46,6 +46,7 @@ bufferline.setup({
         ["TelescopePrompt"] = true,
         ["NvimTree"] = true,
         ["sagaoutline"] = true,
+        ["sagafinder"] = true,
       }
 
       local excluded_buftypes = {
