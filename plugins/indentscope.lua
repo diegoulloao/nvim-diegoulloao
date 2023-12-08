@@ -5,12 +5,16 @@ if not status then
 end
 
 -- indent char from settings
-local indentChar = require("diegoulloao.settings").indentChar
+local settings = require("diegoulloao.settings")
+
+-- not set plugin if clean mode is enabled
+if settings.aspect == "clean" then
+  return
+end
 
 -- custom config
 indentscope.setup({
-  -- symbol = "│",
-  symbol = indentChar,
+  symbol = settings.indentChar,
   options = {
     try_as_border = true,
     indent_at_cursor = false,

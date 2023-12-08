@@ -5,7 +5,13 @@ if not setup then
 end
 
 -- indent char from settings
-local indentChar = require("diegoulloao.settings").indentChar
+local settings = require("diegoulloao.settings")
+
+-- disable indent guides if aspect is clean
+local enable = true
+if settings.aspect == "clean" then
+  enable = false
+end
 
 -- recommended settings from nvim-tree documentation
 vim.g.loaded = 1
@@ -19,11 +25,11 @@ nvimtree.setup({
   renderer = {
     root_folder_label = false, -- hide root directory at the top
     indent_markers = {
-      enable = true, -- folder level guide
+      enable = enable, -- folder level guide
       icons = {
         corner = "└",
-        edge = indentChar,
-        item = indentChar,
+        edge = settings.indentChar,
+        item = settings.indentChar,
         bottom = "─",
         none = " ",
       },

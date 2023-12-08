@@ -9,6 +9,9 @@ local palette = require("diegoulloao.themes.palettes.ayu")
 -- require highlight groups
 local hi_groups = require("diegoulloao.core.higroups")
 
+-- set dark background
+vim.opt.background = "dark"
+
 -- custom setup
 ayu.setup({
   mirage = false, -- set true to use 'mirage' version instead of 'dark'

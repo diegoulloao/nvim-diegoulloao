@@ -5,11 +5,18 @@ if not status then
 end
 
 -- indent char from settings
-local indentChar = require("diegoulloao.settings").indentChar
+local settings = require("diegoulloao.settings")
+
+-- disable by default if aspect is clean
+local enabled = true
+if settings.aspect == "clean" then
+  enabled = false
+end
 
 -- custom config
 indent_blankline.setup({
-  indent = { char = indentChar },
+  enabled = enabled,
+  indent = { char = settings.indentChar },
   exclude = {
     filetypes = { "dashboard" },
   },

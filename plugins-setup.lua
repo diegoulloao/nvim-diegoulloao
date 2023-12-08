@@ -90,6 +90,7 @@ return packer.startup(function(use)
 
   -- themes
   use("Shatur/neovim-ayu")
+  use("ellisonleao/gruvbox.nvim")
 
   -- icons
   use("nvim-tree/nvim-web-devicons") -- devicons
