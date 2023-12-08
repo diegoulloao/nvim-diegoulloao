@@ -3,7 +3,7 @@ local function get_telescope_name()
   return "Telescope"
 end
 
--- custom extensions
+-- custom extension
 local telescope = {
   sections = {
     lualine_a = {

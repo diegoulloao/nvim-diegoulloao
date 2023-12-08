@@ -46,8 +46,8 @@ lualine.setup({
     globalstatus = true,
     component_separators = lualine_separators[1].component_separators,
     section_separators = lualine_separators[1].section_separators,
-    disabled_filetypes = { "dashboard", "sagaoutline", "packer" },
-    ignore_focus = { "sagaoutline" },
+    disabled_filetypes = { "dashboard", "packer" },
+    ignore_focus = {}, -- add filetypes inside
   },
   sections = {
     lualine_a = {}, -- disable mode viewer
@@ -80,5 +80,12 @@ lualine.setup({
       -- "fileformat",
     },
   },
-  extensions = { "nvim-tree", "toggleterm", "mason", "fzf", extensions.telescope },
+  extensions = {
+    "nvim-tree",
+    "toggleterm",
+    "mason",
+    "fzf",
+    extensions.telescope,
+    extensions.sagaoutline,
+  },
 })
