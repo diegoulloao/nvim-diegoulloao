@@ -1,5 +1,5 @@
 local settings = {
-  theme = "ayu",
+  theme = "ayu", -- options: ayu
   indentChar = "┊", -- options: ['│'. '|', '¦', '┆', '┊']
   separatorChar = "-", -- options: ["─", "-", "."]
 }

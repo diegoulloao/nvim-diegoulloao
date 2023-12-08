@@ -98,5 +98,5 @@ return packer.startup(function(use)
   use("glepnir/dashboard-nvim") -- dashboard
 
   -- sessions
-  use("olimorris/persisted.nvim")
+  use("olimorris/persisted.nvim") -- persist sessions
 end)
