@@ -10,6 +10,9 @@ if not noice_status then
   return
 end
 
+-- require custom extensions
+local extensions = require("diegoulloao.extensions.lualine")
+
 -- require current theme palette
 local theme_palette = require("diegoulloao.themes.palettes")
 
@@ -44,7 +47,7 @@ lualine.setup({
     component_separators = lualine_separators[1].component_separators,
     section_separators = lualine_separators[1].section_separators,
     disabled_filetypes = { "dashboard", "sagaoutline", "packer" },
-    ignore_focus = { "NvimTree", "sagaoutline" },
+    ignore_focus = { "sagaoutline" },
   },
   sections = {
     lualine_a = {}, -- disable mode viewer
@@ -77,5 +80,5 @@ lualine.setup({
       -- "fileformat",
     },
   },
-  extensions = { "nvim-tree", "toggleterm" },
+  extensions = { "nvim-tree", "toggleterm", "mason", "fzf", extensions.telescope },
 })

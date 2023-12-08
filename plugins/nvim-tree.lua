@@ -17,6 +17,7 @@ nvimtree.setup({
     width = 38,
   },
   renderer = {
+    root_folder_label = false, -- hide root directory at the top
     indent_markers = {
       enable = true, -- folder level guide
       icons = {

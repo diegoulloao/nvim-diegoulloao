@@ -53,9 +53,9 @@ telescope.setup({
       prompt_title = "Global Search",
       results_title = "Results",
       layout_config = {
-        prompt_position = "bottom",
-        width = 0.8,
-        height = 0.8,
+        prompt_position = "top",
+        width = 0.7,
+        height = 0.6,
       },
     },
     current_buffer_fuzzy_find = {
@@ -63,9 +63,9 @@ telescope.setup({
       prompt_title = "Search",
       results_title = "Results",
       layout_config = {
-        prompt_position = "bottom",
-        width = 0.8,
-        height = 0.8,
+        prompt_position = "top",
+        width = 0.7,
+        height = 0.6,
       },
     },
     buffers = {
@@ -95,7 +95,7 @@ telescope.setup({
     git_status = {
       previewer = false,
       layout_config = {
-        prompt_position = "bottom",
+        prompt_position = "top",
         width = 0.6,
         height = 0.5,
       },
