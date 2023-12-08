@@ -21,6 +21,9 @@ vim.cmd([[ colorscheme gruvbox ]])
 -- nvim-cmp custom colors
 vim.cmd([[ hi! CursorLineBG guibg=#3c3836 ]])
 
+-- git signs column
+vim.cmd([[ hi! SignColumn guibg=NONE ]])
+
 --[[
 -- recommended terminal scheme:
 -- gruvbox dark
