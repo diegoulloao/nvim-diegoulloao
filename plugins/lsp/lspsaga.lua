@@ -22,7 +22,7 @@ lspsaga.setup({
   },
   symbol_in_winbar = {
     enable = true,
-    separator = " › ",
+    separator = "  ",
     show_file = true,
     folder_level = 0, -- 0: display folder | 1: only file
   },
@@ -33,12 +33,12 @@ lspsaga.setup({
   ui = {
     theme = "round",
     border = "rounded",
-    -- title = false,
-    -- expand = "",
-    -- collapse = "",
+    -- title = false, -- go definition, reference title
+    expand = "", -- shown in sagaoutline
+    collapse = "", -- shown in sagaoutline
     code_action = "👾",
   },
   outline = {
-    win_width = 30,
+    win_width = 35,
   },
 })

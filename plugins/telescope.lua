@@ -25,7 +25,10 @@ telescope.setup({
     layout_strategy = "vertical", -- vertical layout
     sorting_strategy = "ascending",
     results_title = "",
-    prompt_prefix = " > ",
+    prompt_prefix = " › ",
+    selection_caret = " › ",
+    entry_prefix = "   ", -- each entry result prefix
+    -- winblend = 20, -- transparency: 0-100 | recommended: 20
     layout_config = {
       prompt_position = "top",
       width = 0.7,
