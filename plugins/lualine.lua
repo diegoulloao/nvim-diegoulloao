@@ -71,6 +71,7 @@ lualine.setup({
           modified = "",
         },
         padding = { left = 2 },
+        color = { gui = "bold" },
       },
       -- filetype icon
       {
