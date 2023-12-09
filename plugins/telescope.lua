@@ -41,6 +41,17 @@ telescope.setup({
         ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
       },
     },
+    -- result numbers at the right: matches/total
+    get_status_text = function(picker)
+      local total = picker.stats.processed or 0
+      local matches = total - (picker.stats.filtered or 0)
+
+      if matches == 0 and total == 0 then
+        return ""
+      end
+
+      return string.format("%s|%s ", matches, total)
+    end,
   },
   pickers = {
     find_files = {
