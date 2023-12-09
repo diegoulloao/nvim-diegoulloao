@@ -18,12 +18,18 @@ gruvbox.setup({
 -- set colorscheme
 vim.cmd([[ colorscheme gruvbox ]])
 
--- hi groups
 -- nvim-cmp custom colors
 vim.cmd([[ hi! CursorLineBG guibg=#3c3836 ]])
 
--- git signs column
--- vim.cmd([[ hi! SignColumn guibg=NONE ]])
+-- git signs column bg fix
+vim.cmd([[ hi! SignColumn guibg=NONE ]])
+
+-- winbar bg fixes
+vim.cmd([[ hi! WinBar guibg=NONE ]])
+vim.cmd([[ hi! WinBarNC guibg=NONE ]])
+
+-- noice cmd line fix
+vim.cmd([[ hi! NoiceCmdlinePopup guibg=#3c3836 ]])
 
 --[[
 -- recommended terminal scheme:
