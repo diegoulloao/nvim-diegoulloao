@@ -1,6 +1,6 @@
 -- require gruvbox
 local status, gruvbox = pcall(require, "gruvbox")
-if not gruvbox then
+if not status then
   return
 end
 
@@ -12,6 +12,7 @@ gruvbox.setup({
   italic = {
     strings = false,
   },
+  contrast = "", -- options: soft|hard|empty
 })
 
 -- set colorscheme
@@ -22,7 +23,7 @@ vim.cmd([[ colorscheme gruvbox ]])
 vim.cmd([[ hi! CursorLineBG guibg=#3c3836 ]])
 
 -- git signs column
-vim.cmd([[ hi! SignColumn guibg=NONE ]])
+-- vim.cmd([[ hi! SignColumn guibg=NONE ]])
 
 --[[
 -- recommended terminal scheme:
