@@ -24,7 +24,7 @@ lspsaga.setup({
     enable = true,
     separator = " › ",
     show_file = true,
-    folder_level = 1,
+    folder_level = 0, -- 0: display folder | 1: only file
   },
   lightbulb = {
     enable = false, -- enable by default
@@ -34,8 +34,8 @@ lspsaga.setup({
     theme = "round",
     border = "rounded",
     -- title = false,
-    expand = "",
-    collapse = "",
+    -- expand = "",
+    -- collapse = "",
     code_action = "👾",
   },
   outline = {

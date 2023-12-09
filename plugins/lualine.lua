@@ -19,44 +19,48 @@ local theme_palette = require("diegoulloao.themes.palettes")
 -- lualine theme
 local lualine_theme = require("diegoulloao.themes.lualine")
 
+-- require settings
+local settings = require("diegoulloao.settings")
+
 -- customized separators
 local lualine_separators = {
-  {
-    section_separators = { left = "", right = "" },
-    component_separators = { left = "", right = "" },
+  ["rect"] = {
+    section = { left = "", right = "" },
+    component = { left = "", right = "" },
   },
-  {
-    section_separators = { left = "", right = "" },
-    component_separators = { left = "", right = "" },
+  ["triangle"] = {
+    section = { left = "", right = "" },
+    component = { left = "", right = "" },
   },
-  {
-    section_separators = { left = "", right = "" },
-    component_separators = "",
+  ["semitriangle"] = {
+    section = { left = "", right = "" },
+    component = { left = "", right = "" },
   },
-  {
-    section_separators = { left = "", right = "" },
-    component_separators = { left = "", right = "" },
+  ["curve"] = {
+    section = { left = "", right = "" },
+    component = { left = "", right = "" },
   },
 }
+
+-- current separator
+local separators = lualine_separators[settings.lualine_separator]
 
 -- custom setup
 lualine.setup({
   options = {
     theme = lualine_theme,
     globalstatus = true,
-    component_separators = lualine_separators[1].component_separators,
-    section_separators = lualine_separators[1].section_separators,
+    component_separators = separators.component,
+    section_separators = separators.section,
     disabled_filetypes = { "dashboard", "packer" },
     ignore_focus = {}, -- add filetypes inside
   },
+  -- man:124 for sections doc
   sections = {
-    lualine_a = {}, -- disable mode viewer
+    lualine_a = { "progress" }, -- disable vim mode viewer
+    lualine_b = { "branch" },
     lualine_c = {
-      {
-        "filetype",
-        icon_only = true,
-        padding = { left = 1, right = 0 },
-      },
+      -- filename
       {
         "filename",
         file_status = true, -- display file status (read only, modified)
@@ -64,27 +68,44 @@ lualine.setup({
         symbols = {
           unnamed = "",
           readonly = "",
-          modified = "",
+          modified = "",
         },
+        padding = { left = 2 },
+      },
+      -- filetype icon
+      {
+        "filetype",
+        icon_only = true,
+        padding = { left = 1, right = 0 },
       },
     },
     lualine_x = {
+      -- lines added, removed, changed
+      {
+        "diff",
+        colored = true,
+        padding = { right = 2 },
+      },
+      -- status like @recording
       {
         noice.api.statusline.mode.get,
         cond = noice.api.statusline.mode.has,
         color = { fg = theme_palette.primary },
       },
-      "encoding",
+      -- "encoding",
       -- "filetype",
       -- "bo:filetype",
       -- "fileformat",
     },
+    lualine_y = {},
+    lualine_z = { "location" },
   },
   extensions = {
     "nvim-tree",
     "toggleterm",
     "mason",
     "fzf",
+    "quickfix",
     extensions.telescope,
     extensions.sagaoutline,
   },
