@@ -31,14 +31,22 @@ vim.cmd([[ hi! WinBarNC guibg=NONE ]])
 -- noice cmd line bg
 vim.cmd([[ hi! NoiceCmdlinePopup guibg=#3c3836 ]])
 
+-- fix
+-- lsp saga bg
+vim.cmd([[ hi! SagaNormal guibg=#282828 ]])
+
+-- fix
+-- telescope
+vim.cmd([[ hi! TelescopeSelection guibg=#3c3836 guifg=#fe8019 gui=bold ]])
+
 -- nvim-cmp custom colors
 vim.cmd([[ hi! CursorLineBG guibg=#3c3836 ]])
 
 -- selection color
 vim.cmd([[ hi! Visual guibg=#3c3836 gui=none ]])
 
--- telescope
-vim.cmd([[ hi! TelescopeSelection guibg=#3c3836 guifg=#fe8019 gui=bold ]])
+-- lsp saga
+vim.cmd([[ hi! SagaVirtLine guifg=#3c3836 ]])
 
 --[[
   -- NOTE: RECOMMENDED SETTINGS

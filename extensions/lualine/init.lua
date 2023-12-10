@@ -1,11 +1,13 @@
 -- import
 local telescope = require("diegoulloao.extensions.lualine.telescope")
-local sagaoutline = require("diegoulloao.extensions.lualine.sagaoutline")
+local saga = require("diegoulloao.extensions.lualine.saga")
+local lspinfo = require("diegoulloao.extensions.lualine.lspinfo")
 
 -- available extensions
 local extensions = {
   telescope = telescope,
-  sagaoutline = sagaoutline,
+  saga = saga,
+  lspinfo = lspinfo,
 }
 
 -- export

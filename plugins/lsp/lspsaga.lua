@@ -23,7 +23,7 @@ lspsaga.setup({
   symbol_in_winbar = {
     enable = true,
     separator = "  ",
-    show_file = true,
+    show_file = false,
     folder_level = 0, -- 0: display folder | 1: only file
   },
   lightbulb = {

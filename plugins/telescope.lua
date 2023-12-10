@@ -65,7 +65,7 @@ telescope.setup({
     live_grep = {
       previewer = false,
       prompt_title = "Global Search",
-      results_title = "Results",
+      results_title = "", -- results
       layout_config = {
         prompt_position = "top",
         width = 0.7,
@@ -75,7 +75,7 @@ telescope.setup({
     current_buffer_fuzzy_find = {
       previewer = false,
       prompt_title = "Search",
-      results_title = "Results",
+      results_title = "", -- results
       layout_config = {
         prompt_position = "top",
         width = 0.7,

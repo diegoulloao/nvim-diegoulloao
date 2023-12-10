@@ -52,7 +52,7 @@ lualine.setup({
     globalstatus = true,
     component_separators = separators.component,
     section_separators = separators.section,
-    disabled_filetypes = { "dashboard", "packer" },
+    disabled_filetypes = { "dashboard", "packer", "help" },
     ignore_focus = {}, -- add filetypes inside
   },
   -- man:124 for sections doc
@@ -113,7 +113,9 @@ lualine.setup({
     "mason",
     "fzf",
     "quickfix",
+    "man",
     extensions.telescope,
-    extensions.sagaoutline,
+    extensions.lspinfo,
+    extensions.saga,
   },
 })

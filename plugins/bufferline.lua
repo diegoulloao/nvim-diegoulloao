@@ -15,22 +15,11 @@ bufferline.setup({
     style_preset = bufferline.style_preset.default, -- default|minimal
     color_icons = settings.theme ~= "gruvbox",
     tab_size = settings.aspect == "clean" and 22 or 18, -- default: 18
-    indicator = {
-      -- style = "underline",
-    },
+    close_icon = "",
     show_buffer_icons = true,
     show_duplicate_prefix = true, -- show base path if tabs have the same name
     separator_style = "thick", -- slant|slope|thick|thin|{"|", "|"}
     diagnostics = "nvim_lsp", -- nvim lsp diagnostics integration in tabs or false
-    diagnostics_indicator = function(count, level) -- diagnostics format
-      -- display only the number if aspect is clean
-      if settings.aspect == "clean" then
-        return " " .. count
-      end
-
-      local icon = level:match("error") and " " or " "
-      return " " .. icon .. count
-    end,
     offsets = {
       -- avoid to show bufferline on top nvim-tree
       {
@@ -47,6 +36,15 @@ bufferline.setup({
         separator = true, -- true is the default, or set custom
       },
     },
+    diagnostics_indicator = function(count, level) -- diagnostics format
+      -- display only the number if aspect is clean
+      if settings.aspect == "clean" then
+        return " " .. count
+      end
+
+      local icon = level:match("error") and " " or " "
+      return " " .. icon .. count
+    end,
     -- exclude some buffer and file types
     custom_filter = function(buf_number)
       local buftype = vim.api.nvim_buf_get_option(buf_number, "buftype")
