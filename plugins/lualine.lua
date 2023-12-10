@@ -58,8 +58,20 @@ lualine.setup({
   -- man:124 for sections doc
   sections = {
     lualine_a = { "progress" }, -- disable vim mode viewer
-    lualine_b = { "branch" },
+    lualine_b = {
+      {
+        "branch",
+        icon = "", -- disable icon
+        padding = { left = 0, right = 1 },
+      },
+    },
     lualine_c = {
+      -- filetype icon
+      {
+        "filetype",
+        icon_only = true,
+        padding = { left = 2, right = 0 },
+      },
       -- filename
       {
         "filename",
@@ -70,14 +82,8 @@ lualine.setup({
           readonly = "",
           modified = "",
         },
-        padding = { left = 2 },
+        padding = { left = 1 },
         color = { gui = "bold" },
-      },
-      -- filetype icon
-      {
-        "filetype",
-        icon_only = true,
-        padding = { left = 1, right = 0 },
       },
     },
     lualine_x = {

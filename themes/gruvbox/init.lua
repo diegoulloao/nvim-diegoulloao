@@ -37,7 +37,13 @@ vim.cmd([[ hi! CursorLineBG guibg=#3c3836 ]])
 -- selection color
 vim.cmd([[ hi! Visual guibg=#3c3836 gui=none ]])
 
+-- telescope
+vim.cmd([[ hi! TelescopeSelection guibg=#3c3836 guifg=#fe8019 gui=bold ]])
+
 --[[
--- recommended terminal scheme:
--- gruvbox dark
+  -- NOTE: RECOMMENDED SETTINGS
+  -- Terminal scheme: Gruvbox Dark
+  -- Font: Geist Mono
+  -- Size: 15
+  -- Line height: 137
 ]]

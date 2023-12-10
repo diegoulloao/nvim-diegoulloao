@@ -62,6 +62,7 @@ bufferline.setup({
       }
 
       local excluded_buftypes = {
+        ["nofile"] = true,
         ["terminal"] = true,
       }
 

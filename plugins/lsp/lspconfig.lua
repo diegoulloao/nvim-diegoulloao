@@ -124,6 +124,13 @@ lspconfig["lua_ls"].setup({
   },
 })
 
+-- zsh, bash, sh
+lspconfig["bashls"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+  filetypes = { "sh", "zsh", "bash" },
+})
+
 -- disable inline diagnostics globally
 vim.diagnostic.config({ virtual_text = false })
 

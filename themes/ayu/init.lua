@@ -24,6 +24,9 @@ ayu.colorscheme()
 hi_groups(palette)
 
 --[[
--- recommended terminal scheme:
--- framer
+  -- NOTE: RECOMMENDED SETTINGS
+  -- Terminal scheme: --
+  -- Font: Geist Mono
+  -- Size: 15
+  -- Line height: 122
 ]]
