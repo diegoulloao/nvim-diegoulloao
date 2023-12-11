@@ -37,6 +37,7 @@ lspsaga.setup({
     expand = "", -- shown in sagaoutline
     collapse = "", -- shown in sagaoutline
     code_action = "👾",
+    lines = { "└", "├", "│", "─", "┌" },
   },
   outline = {
     win_width = 35,

@@ -28,7 +28,7 @@ telescope.setup({
     prompt_prefix = " › ",
     selection_caret = " › ",
     entry_prefix = "   ", -- each entry result prefix
-    -- winblend = 20, -- transparency: 0-100 | recommended: 20
+    -- winblend = 10, -- transparency: 0-100 | recommended: 10
     layout_config = {
       prompt_position = "top",
       width = 0.7,
