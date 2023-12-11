@@ -61,7 +61,6 @@ else
   vim.cmd([[ hi! SagaBorder guibg=#3c3836 ]])
   vim.cmd([[ hi! Title guibg=#3c3836 ]])
   -- FIX: fix diagnostics border bg and popup bg
-  -- vim.cmd([[ hi! FloatBorder guibg=red ]])
 end
 
 -- nvim-cmp custom colors

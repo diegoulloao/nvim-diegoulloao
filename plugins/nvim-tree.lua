@@ -34,6 +34,19 @@ nvimtree.setup({
         none = " ",
       },
     },
+    icons = {
+      glyphs = {
+        git = {
+          unstaged = "",
+          staged = "",
+          unmerged = "",
+          renamed = "➜",
+          untracked = "★",
+          deleted = "",
+          ignored = "◌",
+        },
+      },
+    },
   },
   actions = {
     open_file = {
