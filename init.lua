@@ -6,6 +6,7 @@ require("diegoulloao.autosync")
 
 -- core
 require("diegoulloao.core.options")
+require("diegoulloao.core.config")
 require("diegoulloao.core.keymaps.general")
 require("diegoulloao.core.colorscheme")
 

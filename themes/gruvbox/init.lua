@@ -8,7 +8,7 @@ end
 vim.opt.background = "dark"
 
 -- options
-local widgets_style = "clean" -- clean|thick
+local widgets_style = "thick" -- clean|thick
 
 -- custom setup
 gruvbox.setup({
@@ -59,7 +59,9 @@ if widgets_style == "clean" then
   vim.cmd([[ hi! SagaNormal guibg=#282828 ]])
 else
   vim.cmd([[ hi! SagaBorder guibg=#3c3836 ]])
-  -- TODO: add title bg here
+  vim.cmd([[ hi! Title guibg=#3c3836 ]])
+  -- FIX: fix diagnostics border bg and popup bg
+  -- vim.cmd([[ hi! FloatBorder guibg=red ]])
 end
 
 -- nvim-cmp custom colors
