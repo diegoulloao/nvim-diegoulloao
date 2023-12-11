@@ -32,13 +32,13 @@ lspconfig["cssls"].setup({
   settings = {
     css = {
       lint = {
-        -- fixs unknown @tailwind rule for css files
+        -- fixes unknown @tailwind rule for css files
         unknownAtRules = "ignore",
       },
     },
     scss = {
       lint = {
-        -- fixs unknown @tailwind rule for sass files
+        -- fixes unknown @tailwind rule for sass files
         unknownAtRules = "ignore",
       },
     },

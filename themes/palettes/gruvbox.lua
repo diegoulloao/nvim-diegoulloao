@@ -56,5 +56,5 @@
   #928374
 ]]
 
--- no palette
+-- no palette (for now)
 return {}

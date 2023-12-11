@@ -29,4 +29,5 @@ hi_groups(palette)
   -- Font: Geist Mono
   -- Size: 15
   -- Line height: 122
+  -- Letter spacing: 100
 ]]

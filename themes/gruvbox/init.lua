@@ -7,6 +7,9 @@ end
 -- set dark background
 vim.opt.background = "dark"
 
+-- options
+local widgets_style = "clean" -- clean|thick
+
 -- custom setup
 gruvbox.setup({
   italic = {
@@ -29,15 +32,35 @@ vim.cmd([[ hi! WinBarNC guibg=NONE ]])
 
 -- fix
 -- noice cmd line bg
-vim.cmd([[ hi! NoiceCmdlinePopup guibg=#3c3836 ]])
-
--- fix
--- lsp saga bg
-vim.cmd([[ hi! SagaNormal guibg=#282828 ]])
+if widgets_style == "clean" then
+  vim.cmd([[ hi! NoiceCmdlinePopup guibg=#282828 ]])
+  vim.cmd([[ hi! NoiceCmdlinePopupBorder guibg=#282828 ]])
+else
+  vim.cmd([[ hi! NoiceCmdlinePopup guibg=#3c3836 ]])
+  vim.cmd([[ hi! NoiceCmdlinePopupBorder guibg=#3c3836 ]])
+  vim.cmd([[ hi! NoiceCmdlinePopupTitle guibg=#3c3836 ]])
+  vim.cmd([[ hi! NoiceCmdlineIcon guibg=#3c3836 ]])
+end
 
 -- fix
 -- telescope
-vim.cmd([[ hi! TelescopeSelection guibg=#3c3836 guifg=#fe8019 gui=bold ]])
+-- vim.cmd([[ hi! TelescopeSelection guibg=#3c3836 guifg=#fe8019 gui=bold ]])
+
+-- fix
+-- diagnostics sign bg
+vim.cmd([[ hi! DiagnosticSignOk guifg=#b8bb26 guibg=#282828 ]])
+vim.cmd([[ hi! DiagnosticSignInfo guifg=#83a598 guibg=#282828 ]])
+vim.cmd([[ hi! DiagnosticSignWarn guifg=#fabd2f guibg=#282828 ]])
+vim.cmd([[ hi! DiagnosticSignError guifg=#fb4934 guibg=#282828 ]])
+
+-- fix
+-- lsp saga bg
+if widgets_style == "clean" then
+  vim.cmd([[ hi! SagaNormal guibg=#282828 ]])
+else
+  vim.cmd([[ hi! SagaBorder guibg=#3c3836 ]])
+  -- TODO: add title bg here
+end
 
 -- nvim-cmp custom colors
 vim.cmd([[ hi! CursorLineBG guibg=#3c3836 ]])
@@ -54,4 +77,5 @@ vim.cmd([[ hi! SagaVirtLine guifg=#3c3836 ]])
   -- Font: Geist Mono
   -- Size: 15
   -- Line height: 137
+  -- Letter spacing: 100
 ]]
