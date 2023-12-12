@@ -62,8 +62,6 @@ else
   vim.cmd([[ hi clear link SagaTitle Title ]])
   vim.cmd([[ hi! SagaTitle guibg=#3c3836 ]])
   -- vim.cmd([[ hi! Title guibg=#3c3836 ]]) -- do not change
-
-  -- FIX: fix diagnostics border bg and popup bg
 end
 
 -- nvim-cmp custom colors

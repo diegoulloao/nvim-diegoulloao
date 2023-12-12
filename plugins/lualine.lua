@@ -92,6 +92,11 @@ lualine.setup({
         "diff",
         colored = true,
         padding = { right = 2 },
+        symbols = {
+          added = "+",
+          modified = "|",
+          removed = "-",
+        },
       },
       -- status like @recording
       {
