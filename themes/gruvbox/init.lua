@@ -59,7 +59,10 @@ if widgets_style == "clean" then
   vim.cmd([[ hi! SagaNormal guibg=#282828 ]])
 else
   vim.cmd([[ hi! SagaBorder guibg=#3c3836 ]])
-  vim.cmd([[ hi! Title guibg=#3c3836 ]])
+  vim.cmd([[ hi clear link SagaTitle Title ]])
+  vim.cmd([[ hi! SagaTitle guibg=#3c3836 ]])
+  -- vim.cmd([[ hi! Title guibg=#3c3836 ]]) -- do not change
+
   -- FIX: fix diagnostics border bg and popup bg
 end
 
