@@ -37,13 +37,13 @@ cmp.setup({
     completion = {
       border = "rounded", -- rounded|none
       -- custom colors
-      winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:CursorLineBG,Search:None",
+      winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:CursorLineBG,Search:None", -- BorderBG|FloatBorder
       side_padding = 1,
     },
     documentation = {
       border = "rounded", -- rounded|none
       -- custom colors
-      winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:CursorLineBG,Search:None",
+      winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:CursorLineBG,Search:None", -- BorderBG|FloatBorder
       side_padding = 1,
     },
   },

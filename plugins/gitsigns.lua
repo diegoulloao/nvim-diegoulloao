@@ -4,5 +4,10 @@ if not status then
   return
 end
 
--- default setup
-gitsigns.setup()
+-- custom setup
+gitsigns.setup({
+  preview_config = {
+    border = "rounded", -- single|rounded
+    style = "minimal",
+  },
+})

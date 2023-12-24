@@ -40,9 +40,10 @@ local main_term = Terminal:new({
 -- secondary terminal
 local secondary_term = Terminal:new({
   -- cmd = "<cmd>",
-  dir = "~/",
+  -- dir = "~/",
   display_name = "secondary terminal",
   hidden = false,
+  direction = "horizontal",
   on_open = function()
     vim.cmd([[ startinsert! ]])
   end,

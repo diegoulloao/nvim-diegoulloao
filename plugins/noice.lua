@@ -45,8 +45,8 @@ noice.setup({
     popup = {
       win_options = {
         winhighlight = {
-          Normal = "NormalFloat",
-          FloatBorder = "BorderBG", -- using same nvim-cmp border hi group
+          Normal = "Normal",
+          FloatBorder = "BorderBG", -- BorderBG|FloatBorder
         },
       },
     },

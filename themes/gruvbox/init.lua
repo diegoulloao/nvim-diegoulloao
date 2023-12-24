@@ -18,30 +18,33 @@ gruvbox.setup({
 -- set colorscheme
 vim.cmd([[ colorscheme gruvbox ]])
 
--- fix
+-- @fix
 -- git signs column bg
 vim.cmd([[ hi! SignColumn guibg=NONE ]])
 
--- fix
+-- @fix
 -- winbar bg
 vim.cmd([[ hi! WinBar guibg=NONE ]])
 vim.cmd([[ hi! WinBarNC guibg=NONE ]])
 
--- fix
+-- @fix
 -- noice cmd line bg
 vim.cmd([[ hi! NoiceCmdlinePopup guibg=#282828 ]])
 vim.cmd([[ hi! NoiceCmdlinePopupBorder guibg=#282828 ]])
 
--- fix
+-- @fix
 -- diagnostics sign bg
 vim.cmd([[ hi! DiagnosticSignOk guifg=#b8bb26 guibg=#282828 ]])
 vim.cmd([[ hi! DiagnosticSignInfo guifg=#83a598 guibg=#282828 ]])
 vim.cmd([[ hi! DiagnosticSignWarn guifg=#fabd2f guibg=#282828 ]])
 vim.cmd([[ hi! DiagnosticSignError guifg=#fb4934 guibg=#282828 ]])
 
--- fix
+-- @fix
 -- lsp saga bg
 vim.cmd([[ hi! SagaNormal guibg=#282828 ]])
+
+-- general
+vim.cmd([[ hi! NormalFloat guibg=#282828 ]]) -- fixes git blame float bg
 
 -- telescope
 vim.cmd([[ hi! TelescopeNormal guibg=#32302f ]])
@@ -56,7 +59,7 @@ vim.cmd([[ hi! TelescopeSelection guifg=#d65d0e gui=bold ]])
 vim.cmd([[ hi! TelescopeSelectionCaret guifg=#d65d0e ]])
 
 -- toggleterm
-vim.cmd([[ hi ToogleTermNormal guibg=#32302f ]])
+vim.cmd([[ hi ToogleTermNormal guibg=#1d2021 ]])
 vim.cmd([[ hi ToggleTermFloatBorder guibg=#282828 guifg=#665c54 ]])
 vim.cmd([[ hi ToogleTermNormalFloat guibg=#282828 ]])
 
@@ -68,6 +71,9 @@ vim.cmd([[ hi! Visual guibg=#3c3836 gui=none ]])
 
 -- lsp saga
 vim.cmd([[ hi! SagaVirtLine guifg=#3c3836 ]])
+
+-- gitsigns
+vim.cmd([[ hi! GitSignsCurrentLineBlame guifg=#7c6f64 ]])
 
 --[[
   -- NOTE: RECOMMENDED SETTINGS
