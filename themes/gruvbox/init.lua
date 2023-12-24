@@ -44,7 +44,16 @@ end
 
 -- fix
 -- telescope selection bg
--- vim.cmd([[ hi! TelescopeSelection guibg=#3c3836 guifg=#fe8019 gui=bold ]])
+vim.cmd([[ hi! TelescopeNormal guibg=#32302f ]])
+vim.cmd([[ hi! TelescopeResultsNormal guibg=#32302f ]])
+vim.cmd([[ hi! TelescopeResultsBorder guibg=#32302f guifg=#32302f ]])
+vim.cmd([[ hi! TelescopePromptNormal guibg=#3c3836 ]])
+vim.cmd([[ hi! TelescopePromptBorder guibg=#3c3836 guifg=#3c3836 ]])
+vim.cmd([[ hi! TelescopePromptTitle guibg=#d65d0e guifg=#3c3836 ]])
+vim.cmd([[ hi! TelescopePromptPrefix guifg=#d65d0e ]])
+vim.cmd([[ hi! TelescopePromptCounter guifg=#83a598 ]])
+vim.cmd([[ hi! TelescopeSelection guifg=#d65d0e gui=bold ]])
+vim.cmd([[ hi! TelescopeSelectionCaret guifg=#d65d0e ]])
 
 -- fix
 -- diagnostics sign bg
