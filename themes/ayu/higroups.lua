@@ -67,6 +67,9 @@ local function hi_groups(palette)
 
   -- mini.indentscope line color
   vim.cmd(f([[ hi! MiniIndentscopeSymbol guifg=%s ]], palette.dark4))
+
+  -- toggleterm
+  vim.cmd(f([[ hi ToggleTermFloatBorder guifg=%s ]], palette.secondary))
 end
 
 return hi_groups

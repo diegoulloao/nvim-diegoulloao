@@ -43,19 +43,6 @@ else
 end
 
 -- fix
--- telescope selection bg
-vim.cmd([[ hi! TelescopeNormal guibg=#32302f ]])
-vim.cmd([[ hi! TelescopeResultsNormal guibg=#32302f ]])
-vim.cmd([[ hi! TelescopeResultsBorder guibg=#32302f guifg=#32302f ]])
-vim.cmd([[ hi! TelescopePromptNormal guibg=#3c3836 ]])
-vim.cmd([[ hi! TelescopePromptBorder guibg=#3c3836 guifg=#3c3836 ]])
-vim.cmd([[ hi! TelescopePromptTitle guibg=#d65d0e guifg=#3c3836 ]])
-vim.cmd([[ hi! TelescopePromptPrefix guifg=#d65d0e ]])
-vim.cmd([[ hi! TelescopePromptCounter guifg=#83a598 ]])
-vim.cmd([[ hi! TelescopeSelection guifg=#d65d0e gui=bold ]])
-vim.cmd([[ hi! TelescopeSelectionCaret guifg=#d65d0e ]])
-
--- fix
 -- diagnostics sign bg
 vim.cmd([[ hi! DiagnosticSignOk guifg=#b8bb26 guibg=#282828 ]])
 vim.cmd([[ hi! DiagnosticSignInfo guifg=#83a598 guibg=#282828 ]])
@@ -73,7 +60,24 @@ else
   -- vim.cmd([[ hi! Title guibg=#3c3836 ]]) -- do not change
 end
 
--- nvim-cmp custom colors
+-- telescope
+vim.cmd([[ hi! TelescopeNormal guibg=#32302f ]])
+vim.cmd([[ hi! TelescopeResultsNormal guibg=#32302f ]])
+vim.cmd([[ hi! TelescopeResultsBorder guibg=#32302f guifg=#32302f ]])
+vim.cmd([[ hi! TelescopePromptNormal guibg=#3c3836 ]])
+vim.cmd([[ hi! TelescopePromptBorder guibg=#3c3836 guifg=#3c3836 ]])
+vim.cmd([[ hi! TelescopePromptTitle guibg=#d65d0e guifg=#3c3836 ]])
+vim.cmd([[ hi! TelescopePromptPrefix guifg=#d65d0e ]])
+vim.cmd([[ hi! TelescopePromptCounter guifg=#83a598 ]])
+vim.cmd([[ hi! TelescopeSelection guifg=#d65d0e gui=bold ]])
+vim.cmd([[ hi! TelescopeSelectionCaret guifg=#d65d0e ]])
+
+-- toggleterm
+vim.cmd([[ hi ToogleTermNormal guibg=#32302f ]])
+vim.cmd([[ hi ToggleTermFloatBorder guibg=#282828 guifg=#665c54 ]])
+vim.cmd([[ hi ToogleTermNormalFloat guibg=#282828 ]])
+
+-- nvim-cmp
 vim.cmd([[ hi! CursorLineBG guibg=#3c3836 ]])
 
 -- selection color

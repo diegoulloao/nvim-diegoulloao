@@ -10,21 +10,19 @@ if not toggleterm_t_status then
   return
 end
 
--- require current theme palette
-local theme_palette = require("diegoulloao.themes.palettes")
-
 -- custom setup
 toggleterm.setup({
-  direction = "float", -- vertical|horizontal|tab|float
+  direction = "float", -- float|horizontal|vertical|tab
   float_opts = {
     border = "curved", -- single|double|curved
     -- winblend = 5, -- transparency, recommended: 5
   },
+  size = 20,
   persist_mode = true,
   highlights = {
-    FloatBorder = {
-      guifg = theme_palette.secondary,
-    },
+    Normal = { link = "ToogleTermNormal" },
+    NormalFloat = { link = "ToogleTermNormalFloat" },
+    FloatBorder = { link = "ToggleTermFloatBorder" },
   },
 })
 

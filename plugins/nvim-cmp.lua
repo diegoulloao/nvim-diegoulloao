@@ -35,14 +35,16 @@ opt.completeopt = "menu,menuone,noselect"
 cmp.setup({
   window = {
     completion = {
-      border = "rounded",
+      border = "rounded", -- rounded|none
       -- custom colors
       winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:CursorLineBG,Search:None",
+      side_padding = 1,
     },
     documentation = {
-      border = "rounded",
+      border = "rounded", -- rounded|none
       -- custom colors
       winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:CursorLineBG,Search:None",
+      side_padding = 1,
     },
   },
   snippet = {
