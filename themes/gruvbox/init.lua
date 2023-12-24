@@ -43,7 +43,7 @@ else
 end
 
 -- fix
--- telescope
+-- telescope selection bg
 -- vim.cmd([[ hi! TelescopeSelection guibg=#3c3836 guifg=#fe8019 gui=bold ]])
 
 -- fix
