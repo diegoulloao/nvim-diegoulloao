@@ -14,10 +14,9 @@ end
 toggleterm.setup({
   direction = "float", -- float|horizontal|vertical|tab
   float_opts = {
-    border = "curved", -- single|double|curved
+    border = "curved", -- single|double|curved|shadow
     -- winblend = 5, -- transparency, recommended: 5
   },
-  size = 20,
   persist_mode = true,
   highlights = {
     Normal = { link = "ToogleTermNormal" },
@@ -44,6 +43,7 @@ local secondary_term = Terminal:new({
   display_name = "secondary terminal",
   hidden = false,
   direction = "horizontal",
+  size = 15,
   on_open = function()
     vim.cmd([[ startinsert! ]])
   end,

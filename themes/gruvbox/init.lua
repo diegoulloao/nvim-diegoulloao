@@ -1,3 +1,12 @@
+--[[
+  -- NOTE: RECOMMENDED SETTINGS
+  -- Terminal scheme: Gruvbox Dark
+  -- Font: Geist Mono
+  -- Size: 15
+  -- Line height: 137
+  -- Letter spacing: 100
+]]
+
 -- require gruvbox
 local status, gruvbox = pcall(require, "gruvbox")
 if not status then
@@ -74,12 +83,3 @@ vim.cmd([[ hi! SagaVirtLine guifg=#3c3836 ]])
 
 -- gitsigns
 vim.cmd([[ hi! GitSignsCurrentLineBlame guifg=#7c6f64 ]])
-
---[[
-  -- NOTE: RECOMMENDED SETTINGS
-  -- Terminal scheme: Gruvbox Dark
-  -- Font: Geist Mono
-  -- Size: 15
-  -- Line height: 137
-  -- Letter spacing: 100
-]]

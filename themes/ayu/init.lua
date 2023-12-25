@@ -1,3 +1,12 @@
+--[[
+  -- NOTE: RECOMMENDED SETTINGS
+  -- Terminal scheme: --
+  -- Font: Geist Mono
+  -- Size: 15
+  -- Line height: 122
+  -- Letter spacing: 100
+]]
+
 -- require colorscheme
 local ayu_status, ayu = pcall(require, "ayu")
 if not ayu_status then
@@ -22,12 +31,3 @@ ayu.colorscheme()
 
 -- highlight groups
 hi_groups(palette)
-
---[[
-  -- NOTE: RECOMMENDED SETTINGS
-  -- Terminal scheme: --
-  -- Font: Geist Mono
-  -- Size: 15
-  -- Line height: 122
-  -- Letter spacing: 100
-]]
