@@ -23,6 +23,10 @@ toggleterm.setup({
     NormalFloat = { link = "ToogleTermNormalFloat" },
     FloatBorder = { link = "ToggleTermFloatBorder" },
   },
+  on_create = function()
+    -- disable sign column (annoying black space at the left)
+    vim.cmd([[ setlocal signcolumn=no ]])
+  end,
 })
 
 -- general toggleterm terminal instance
