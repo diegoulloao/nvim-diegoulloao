@@ -78,7 +78,7 @@ keymap.set("n", "<leader><leader>l", "<cmd>SessionLoad<CR>") -- load current ses
 
 -- toggleterm
 keymap.set({ "n", "t" }, "<C-t>", "<cmd>lua main_term_toggle()<CR>")
-keymap.set({ "n", "t" }, "<leader>T", "<cmd>lua secondary_term_toggle()<CR>")
+keymap.set({ "n", "t" }, "<C-ç>", "<cmd>lua secondary_term_toggle()<CR>")
 
 -- github files
 keymap.set("n", "<leader>gf", "<cmd>OpenInGHFile<CR>") -- open current buffer in github
