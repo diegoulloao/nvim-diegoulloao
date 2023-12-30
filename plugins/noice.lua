@@ -79,6 +79,8 @@ noice.setup({
           { find = "search hit TOP, continuing at BOTTOM" },
           { find = "search hit BOTTOM, continuing at TOP" },
           { find = "E37: No write since last change" },
+          { find = "E433: No tags file" },
+          { find = "E426: tag not found: %s" },
         },
       },
       opts = { skip = true },
