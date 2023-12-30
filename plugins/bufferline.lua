@@ -42,6 +42,7 @@ bufferline.setup({
         return " " .. count
       end
 
+      --- @diagnostic disable-next-line: undefined-field
       local icon = level:match("error") and " " or " "
       return " " .. icon .. count
     end,
