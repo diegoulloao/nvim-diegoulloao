@@ -55,6 +55,10 @@ vim.cmd([[ hi! SagaNormal guibg=#282828 ]])
 -- general
 vim.cmd([[ hi! NormalFloat guibg=#282828 ]]) -- fixes git blame float bg
 
+-- treesitter
+vim.cmd([[ hi clear link TreesitterContext NormalFloat ]])
+vim.cmd([[ hi! TreesitterContext guibg=#3c3836 ]])
+
 -- telescope
 vim.cmd([[ hi! TelescopeNormal guibg=#32302f ]])
 vim.cmd([[ hi! TelescopeResultsNormal guibg=#32302f ]])
