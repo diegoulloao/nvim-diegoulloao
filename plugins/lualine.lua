@@ -1,8 +1,5 @@
--- require noice
--- local noice = require("noice")
-
 -- require custom extensions
--- local extensions = require("diegoulloao.extensions.lualine")
+local extensions = require("diegoulloao.extensions.lualine")
 
 -- require current theme palette
 local theme_palette = require("diegoulloao.themes.palettes")
@@ -35,10 +32,16 @@ local separators = lualine_separators[settings.lualine_separator]
 
 return {
   "nvim-lualine/lualine.nvim",
-  dependencies = { "nvim-tree/nvim-web-devicons" },
+  dependencies = {
+    "folke/noice.nvim",
+    "nvim-tree/nvim-web-devicons",
+  },
   config = function()
     -- lualine theme
     local lualine_theme = require("diegoulloao.themes.lualine")
+
+    -- require noice
+    local noice = require("noice")
 
     -- custom setup
     require("lualine").setup({
@@ -93,13 +96,12 @@ return {
               removed = "-",
             },
           },
-          -- FIXME: status recording
           -- status like @recording
-          --{
-          --  noice.api.statusline.mode.get,
-          --  cond = noice.api.statusline.mode.has,
-          --  color = { fg = theme_palette.primary },
-          --},
+          {
+            noice.api.statusline.mode.get,
+            cond = noice.api.statusline.mode.has,
+            color = { fg = theme_palette.primary },
+          },
           -- "encoding",
           -- "filetype",
           -- "bo:filetype",
@@ -115,10 +117,9 @@ return {
         "fzf",
         "quickfix",
         "man",
-        -- FIXME: extensions
-        --extensions.telescope,
-        --extensions.lspinfo,
-        --extensions.saga,
+        extensions.telescope,
+        extensions.lspinfo,
+        extensions.saga,
       },
     })
   end,

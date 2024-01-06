@@ -9,10 +9,12 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope-fzf-native.nvim",
+    -- addons
+    "ahmedkhalf/project.nvim",
+    "olimorris/persisted.nvim",
   },
   config = function()
     -- require telescope
-    -- TODO: delete warning
     local telescope = require("telescope")
 
     -- require telescope actions
