@@ -10,5 +10,5 @@ return {
         -- "~/.config/nvim",
       },
     })
-  end
+  end,
 }

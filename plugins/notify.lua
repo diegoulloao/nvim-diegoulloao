@@ -16,8 +16,8 @@ return {
     -- custom setup
     notify.setup({
       stages = "fade_in_slide_out", -- animation style
-      render = render,              -- notification appearance: default|simple
-      timeout = 3000,               -- time to out
+      render = render, -- notification appearance: default|simple
+      timeout = 3000, -- time to out
     })
 
     -- set notify as the default notification window

@@ -31,13 +31,13 @@ return {
     cmp.setup({
       window = {
         completion = {
-          border = "rounded",                                                                      -- rounded|none
+          border = "rounded", -- rounded|none
           -- custom colors
           winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:CursorLineBG,Search:None", -- BorderBG|FloatBorder
           side_padding = 1,
         },
         documentation = {
-          border = "rounded",                                                                      -- rounded|none
+          border = "rounded", -- rounded|none
           -- custom colors
           winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:CursorLineBG,Search:None", -- BorderBG|FloatBorder
           side_padding = 1,
@@ -49,21 +49,21 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert({
-        ["<C-k>"] = cmp.mapping.select_prev_item(),         -- select previous suggestion
-        ["<S-tab>"] = cmp.mapping.select_prev_item(),       -- select previous suggestion (2)
-        ["<C-j>"] = cmp.mapping.select_next_item(),         -- select next suggestion
-        ["<tab>"] = cmp.mapping.select_next_item(),         -- select next suggestion (2)
-        ["<C-l>"] = cmp.mapping.scroll_docs(-4),            -- scroll docs down
-        ["<C-h>"] = cmp.mapping.scroll_docs(4),             -- scroll docs up
-        ["<C-e>"] = cmp.mapping.abort(),                    -- close completion window
-        ["<C-Space>"] = cmp.mapping.complete(),             -- show completion suggestions
+        ["<C-k>"] = cmp.mapping.select_prev_item(), -- select previous suggestion
+        ["<S-tab>"] = cmp.mapping.select_prev_item(), -- select previous suggestion (2)
+        ["<C-j>"] = cmp.mapping.select_next_item(), -- select next suggestion
+        ["<tab>"] = cmp.mapping.select_next_item(), -- select next suggestion (2)
+        ["<C-l>"] = cmp.mapping.scroll_docs(-4), -- scroll docs down
+        ["<C-h>"] = cmp.mapping.scroll_docs(4), -- scroll docs up
+        ["<C-e>"] = cmp.mapping.abort(), -- close completion window
+        ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
         ["<CR>"] = cmp.mapping.confirm({ select = false }), -- confirm suggestion
       }),
       sources = cmp.config.sources({
         { name = "nvim_lsp" }, -- lsp
-        { name = "luasnip" },  -- luasnips
-        { name = "buffer" },   -- text within the current buffer
-        { name = "path" },     -- file system paths
+        { name = "luasnip" }, -- luasnips
+        { name = "buffer" }, -- text within the current buffer
+        { name = "path" }, -- file system paths
       }),
       formatting = {
         -- vscode like icons for cmp autocompletion

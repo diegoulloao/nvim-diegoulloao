@@ -8,12 +8,12 @@ if settings.aspect == "clean" then
 end
 
 return {
- "nvim-treesitter/nvim-treesitter-context",
- config = function()
-  -- custom config
-  require("treesitter-context").setup({
-    enable = true, -- enable on all buffers by default
-    separator = separator,
-  })
- end
+  "nvim-treesitter/nvim-treesitter-context",
+  config = function()
+    -- custom config
+    require("treesitter-context").setup({
+      enable = true, -- enable on all buffers by default
+      separator = separator,
+    })
+  end,
 }

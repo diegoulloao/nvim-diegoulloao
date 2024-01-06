@@ -20,5 +20,5 @@ return {
       },
       scope = { enabled = false },
     })
-  end
+  end,
 }

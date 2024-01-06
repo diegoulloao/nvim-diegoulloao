@@ -8,5 +8,5 @@ return {
         style = "minimal",
       },
     })
-  end
+  end,
 }

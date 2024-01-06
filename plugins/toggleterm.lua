@@ -1,5 +1,5 @@
 return {
-  'akinsho/toggleterm.nvim',
+  "akinsho/toggleterm.nvim",
   version = "*",
   config = function()
     -- custom setup
@@ -66,5 +66,5 @@ return {
 
     -- set global toggleterm keymaps
     vim.cmd([[ autocmd! TermOpen term://* lua set_terminal_keymaps() ]])
-  end
+  end,
 }

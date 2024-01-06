@@ -1,4 +1,4 @@
--- require fidget
+-- fidget
 return {
   "j-hui/fidget.nvim",
   version = "legacy",
@@ -22,5 +22,5 @@ return {
         },
       },
     })
-  end
+  end,
 }

@@ -1,5 +1,5 @@
 return {
- "williamboman/mason.nvim",
+  "williamboman/mason.nvim",
   config = function()
     -- custom config
     require("mason").setup({
@@ -9,5 +9,5 @@ return {
         height = 0.8, -- range 0,1
       },
     })
-  end
+  end,
 }
