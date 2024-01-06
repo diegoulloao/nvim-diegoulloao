@@ -1,9 +1,3 @@
--- require dashboard
-local status, dashboard = pcall(require, "dashboard")
-if not status then
-  return
-end
-
 -- ASCII art header
 -- source: https://patorjk.com/software/taag/#p=display&f=Doom&t=diegoulloao
 local logo = [[
@@ -17,16 +11,23 @@ local logo = [[
               |___/                                   
 ]]
 
--- custom config
-dashboard.setup({
-  config = {
-    header = vim.split(string.rep("\n", 2) .. logo, "\n"),
-    shortcut = {
-      { desc = "[ Github]", group = "DashboardShortCut" },
-      { desc = "[diegoulloao]", group = "DashboardShortCut" },
-    },
-  },
-  hide = {
-    statusline = false,
-  },
-})
+return {
+  'nvimdev/dashboard-nvim',
+  event = 'VimEnter',
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  config = function()
+    -- custom config
+    require("dashboard").setup({
+      config = {
+        header = vim.split(string.rep("\n", 2) .. logo, "\n"),
+        shortcut = {
+          { desc = "[ Github]", group = "DashboardShortCut" },
+          { desc = "[diegoulloao]", group = "DashboardShortCut" },
+        },
+      },
+      hide = {
+        statusline = false,
+      },
+    })
+  end,
+}

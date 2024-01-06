@@ -7,25 +7,23 @@
   -- Letter spacing: 100
 ]]
 
--- require gruvbox
-local status, gruvbox = pcall(require, "gruvbox")
-if not status then
-  return
-end
-
 -- set dark background
 vim.opt.background = "dark"
 
--- custom setup
-gruvbox.setup({
-  italic = {
-    strings = false,
-  },
-  contrast = "", -- options: soft|hard|empty
-})
+return {
+  "ellisonleao/gruvbox.nvim",
+  priority = 1000,
+  config = function()
+    -- custom setup
+    require("gruvbox").setup({
+      italic = {
+        strings = false,
+      },
+      contrast = "", -- options: soft|hard|empty
+    })
 
--- set colorscheme
-vim.cmd([[ colorscheme gruvbox ]])
+    -- set colorscheme
+    vim.cmd([[ colorscheme gruvbox ]])
 
 -- @fix
 -- git signs column bg
@@ -73,8 +71,8 @@ vim.cmd([[ hi! TelescopeSelectionCaret guifg=#d65d0e ]])
 
 -- toggleterm
 vim.cmd([[ hi ToogleTermNormal guibg=#1d2021 ]])
-vim.cmd([[ hi ToggleTermFloatBorder guibg=#282828 guifg=#665c54 ]])
-vim.cmd([[ hi ToogleTermNormalFloat guibg=#282828 ]])
+vim.cmd([[ hi ToggleTermFloatBorder guibg=#1d2021 guifg=#1d2021 ]])
+vim.cmd([[ hi ToogleTermNormalFloat guibg=#1d2021 ]])
 
 -- nvim-cmp
 vim.cmd([[ hi! CursorLineBG guibg=#3c3836 ]])
@@ -87,3 +85,5 @@ vim.cmd([[ hi! SagaVirtLine guifg=#3c3836 ]])
 
 -- gitsigns
 vim.cmd([[ hi! GitSignsCurrentLineBlame guifg=#7c6f64 ]])
+  end,
+}

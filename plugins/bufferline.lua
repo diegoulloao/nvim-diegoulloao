@@ -1,18 +1,17 @@
--- require bufferline
-local bufferline_status, bufferline = pcall(require, "bufferline")
-if not bufferline_status then
-  return
-end
-
 -- require settings
 local settings = require("diegoulloao.settings")
 
+return {
+  "akinsho/bufferline.nvim",
+  version = "*",
+  dependencies = "nvim-tree/nvim-web-devicons", -- buffer tabs
+  config = function()
 -- custom setup
-bufferline.setup({
+require("bufferline").setup({
   options = {
     mode = "tabs", -- only show tabs and not all buffers
     numbers = "ordinal", -- add tabs ordinal numbers
-    style_preset = bufferline.style_preset.default, -- default|minimal
+    --style_preset = bufferline.style_preset.default, -- default|minimal
     color_icons = settings.theme ~= "gruvbox",
     tab_size = settings.aspect == "clean" and 22 or 18, -- default: 18
     close_icon = "",
@@ -69,3 +68,5 @@ bufferline.setup({
     end,
   },
 })
+  end
+}

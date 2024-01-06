@@ -1,23 +1,11 @@
--- require lualine
-local lualine_status, lualine = pcall(require, "lualine")
-if not lualine_status then
-  return
-end
-
 -- require noice
-local noice_status, noice = pcall(require, "noice")
-if not noice_status then
-  return
-end
+--local noice = require("noice")
 
 -- require custom extensions
-local extensions = require("diegoulloao.extensions.lualine")
+--local extensions = require("diegoulloao.extensions.lualine")
 
 -- require current theme palette
 local theme_palette = require("diegoulloao.themes.palettes")
-
--- lualine theme
-local lualine_theme = require("diegoulloao.themes.lualine")
 
 -- require settings
 local settings = require("diegoulloao.settings")
@@ -45,8 +33,16 @@ local lualine_separators = {
 -- current separator
 local separators = lualine_separators[settings.lualine_separator]
 
+return {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+
+-- lualine theme
+local lualine_theme = require("diegoulloao.themes.lualine")
+
 -- custom setup
-lualine.setup({
+require("lualine").setup({
   options = {
     theme = lualine_theme,
     globalstatus = true,
@@ -99,11 +95,11 @@ lualine.setup({
         },
       },
       -- status like @recording
-      {
-        noice.api.statusline.mode.get,
-        cond = noice.api.statusline.mode.has,
-        color = { fg = theme_palette.primary },
-      },
+      --{
+      --  noice.api.statusline.mode.get,
+      --  cond = noice.api.statusline.mode.has,
+      --  color = { fg = theme_palette.primary },
+      --},
       -- "encoding",
       -- "filetype",
       -- "bo:filetype",
@@ -119,8 +115,10 @@ lualine.setup({
     "fzf",
     "quickfix",
     "man",
-    extensions.telescope,
-    extensions.lspinfo,
-    extensions.saga,
+    --extensions.telescope,
+    --extensions.lspinfo,
+    --extensions.saga,
   },
 })
+    end
+}

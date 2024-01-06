@@ -1,8 +1,7 @@
--- require projects
-local status, projects = pcall(require, "project_nvim")
-if not status then
-  return
-end
-
--- default setup
-projects.setup()
+return {
+  "ahmedkhalf/project.nvim",
+  config = function()
+    -- default setup
+    require("project_nvim").setup()
+  end,
+}

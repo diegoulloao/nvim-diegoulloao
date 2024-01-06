@@ -1,9 +1,3 @@
--- require nvim-tree
-local setup, nvimtree = pcall(require, "nvim-tree")
-if not setup then
-  return
-end
-
 -- indent char from settings
 local settings = require("diegoulloao.settings")
 
@@ -18,7 +12,15 @@ vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- custom setup
-nvimtree.setup({
+return {
+"nvim-tree/nvim-tree.lua",
+  version = "*",
+  lazy = false,
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
+  config = function()
+require("nvim-tree").setup({
   view = {
     width = 38,
   },
@@ -66,3 +68,5 @@ nvimtree.setup({
   sync_root_with_cwd = true,
   respect_buf_cwd = true,
 })
+  end
+}

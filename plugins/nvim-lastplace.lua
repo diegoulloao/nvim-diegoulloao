@@ -1,7 +1,7 @@
--- require nvim-lastplace
-local nvim_lastplace_status, nvim_lastplace = pcall(require, "nvim-lastplace")
-if not nvim_lastplace_status then
-  return
-end
-
-nvim_lastplace.setup()
+return {
+  "ethanholz/nvim-lastplace",
+  config = function()
+    -- default config
+    require("nvim-lastplace").setup()
+  end,
+}

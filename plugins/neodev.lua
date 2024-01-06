@@ -1,8 +1,7 @@
---require neodev
-local status, neodev = pcall(require, "neodev")
-if not status then
-  return
-end
-
--- default setup
-neodev.setup()
+return {
+  "folke/neodev.nvim",
+  config = function()
+    -- default setup
+    require("neodev").setup()
+  end,
+}

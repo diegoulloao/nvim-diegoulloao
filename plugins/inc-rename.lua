@@ -1,8 +1,7 @@
--- require inc rename
-local status, inc_rename = pcall(require, "inc_rename")
-if not status then
-  return
-end
-
--- default setup
-inc_rename.setup()
+return {
+  "smjonas/inc-rename.nvim",
+  config = function()
+    -- default setup
+    require("inc_rename").setup()
+  end,
+}

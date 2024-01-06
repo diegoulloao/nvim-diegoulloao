@@ -1,14 +1,13 @@
--- require null-ls
-local setup, null_ls = pcall(require, "null-ls")
-if not setup then
-  return
-end
+return {
+  "nvimtools/none-ls.nvim",
+  config = function()
+    local null_ls = require("null-ls")
 
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
--- custom setup
+    -- custom setup
 null_ls.setup({
   border = "single",
   sources = {
@@ -32,3 +31,5 @@ null_ls.setup({
     end
   end,
 })
+  end
+}
