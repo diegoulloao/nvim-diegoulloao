@@ -4,11 +4,8 @@ if not status then
   return vim.notify("lazy is not installed.")
 end
 
--- load plugins with lazy
+-- load with lazy
 lazy.setup({
-  { import = "diegoulloao.themes.gruvbox" },
+  { import = "diegoulloao.core.theme-loader" },
   { import = "diegoulloao.plugins" },
 })
-
--- TODO: migrate ayu theme
---"Shatur/neovim-ayu",

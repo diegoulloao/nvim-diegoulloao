@@ -7,12 +7,7 @@
   -- Letter spacing: 100
 ]]
 
--- require colorscheme
-local ayu_status, ayu = pcall(require, "ayu")
-if not ayu_status then
-  return
-end
-
+-- require palette
 local palette = require("diegoulloao.themes.palettes.ayu")
 
 -- require highlight groups
@@ -21,13 +16,23 @@ local hi_groups = require("diegoulloao.themes.ayu.higroups")
 -- set dark background
 vim.opt.background = "dark"
 
--- custom setup
-ayu.setup({
-  mirage = false, -- set true to use 'mirage' version instead of 'dark'
-})
+return {
+  "Shatur/neovim-ayu",
+  priority = 1000,
+  lazy = false,
+  config = function()
+    -- require ayu
+    local ayu = require("ayu")
 
--- apply colorscheme
-ayu.colorscheme()
+    -- custom setup
+    ayu.setup({
+      mirage = false, -- set true to use 'mirage' version instead of 'dark'
+    })
 
--- highlight groups
-hi_groups(palette)
+    -- apply colorscheme
+    ayu.colorscheme()
+
+    -- highlight groups
+    hi_groups(palette)
+  end,
+}

@@ -1,8 +1,8 @@
--- require active theme name
-local active_theme = require("diegoulloao.settings").theme
+-- require active theme
+local ACTIVE_THEME = require("diegoulloao.settings").theme
 
 -- require lualine theme
-local status, lualine_theme = pcall(require, "lualine.themes." .. active_theme)
+local status, lualine_theme = pcall(require, "lualine.themes." .. ACTIVE_THEME)
 if not status then
   return require("lualine.themes.auto")
 end
