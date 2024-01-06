@@ -1,8 +1,8 @@
 -- require active theme
-local active_theme = require("diegoulloao.settings").theme
+local ACTIVE_THEME = require("diegoulloao.settings").theme
 
 -- require theme palette dynamically
-local status, theme_palette = pcall(require, "diegoulloao.themes.palettes." .. active_theme)
+local status, theme_palette = pcall(require, "diegoulloao.themes.palettes." .. ACTIVE_THEME)
 if not status then
   return {}
 end
