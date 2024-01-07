@@ -86,5 +86,9 @@ return {
 
     -- gitsigns
     vim.cmd([[ hi! GitSignsCurrentLineBlame guifg=#7c6f64 ]])
+
+    -- nvim-tree
+    vim.cmd([[ hi! NvimTreeFolderArrowOpen guifg=#7c6f64 ]])
+    vim.cmd([[ hi! NvimTreeFolderArrowClosed guifg=#7c6f64 ]])
   end,
 }
