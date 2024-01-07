@@ -8,4 +8,9 @@ end
 lazy.setup({
   { import = "diegoulloao.core.theme-loader" },
   { import = "diegoulloao.plugins" },
+}, {
+  -- options
+  ui = {
+    border = "single",
+  },
 })
