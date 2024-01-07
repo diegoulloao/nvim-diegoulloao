@@ -94,5 +94,8 @@ return {
     -- nvim-tree
     vim.cmd([[ hi! NvimTreeFolderArrowOpen guifg=#7c6f64 ]])
     vim.cmd([[ hi! NvimTreeFolderArrowClosed guifg=#7c6f64 ]])
+
+    -- dashboard
+    vim.cmd([[ hi! DashboardHeader guifg=#d65d0e ]])
   end,
 }
