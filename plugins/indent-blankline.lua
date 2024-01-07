@@ -10,15 +10,13 @@ end
 return {
   "lukas-reineke/indent-blankline.nvim",
   main = "ibl",
-  config = function()
-    -- custom config
-    require("ibl").setup({
-      enabled = enabled,
-      indent = { char = settings.indentChar },
-      exclude = {
-        filetypes = { "dashboard" },
-      },
-      scope = { enabled = false },
-    })
-  end,
+  cmd = { "IBLToggle" },
+  opts = {
+    enabled = enabled,
+    indent = { char = settings.indentChar },
+    exclude = {
+      filetypes = { "dashboard" },
+    },
+    scope = { enabled = false },
+  },
 }

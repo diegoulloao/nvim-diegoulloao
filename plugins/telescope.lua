@@ -1,4 +1,5 @@
--- NOTE: if neovim says that fzf is not installed, then:
+-- NOTE:
+-- if neovim says that fzf is not installed, then:
 -- 1. open Lazy
 -- 2. go to fzf native
 -- 3. press gb keys to force build the plugin

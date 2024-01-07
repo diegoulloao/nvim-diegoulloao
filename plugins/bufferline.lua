@@ -4,14 +4,17 @@ local settings = require("diegoulloao.settings")
 return {
   "akinsho/bufferline.nvim",
   version = "*",
-  dependencies = "nvim-tree/nvim-web-devicons", -- buffer tabs
+  dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
+    -- require bufferline
+    local bufferline = require("bufferline")
+
     -- custom setup
-    require("bufferline").setup({
+    bufferline.setup({
       options = {
         mode = "tabs", -- only show tabs and not all buffers
         numbers = "ordinal", -- add tabs ordinal numbers
-        --style_preset = bufferline.style_preset.default, -- default|minimal
+        style_preset = bufferline.style_preset.default, -- default|minimal
         color_icons = settings.theme ~= "gruvbox",
         tab_size = settings.aspect == "clean" and 22 or 18, -- default: 18
         close_icon = "",

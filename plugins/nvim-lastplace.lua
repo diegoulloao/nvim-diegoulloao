@@ -1,7 +1,5 @@
 return {
   "ethanholz/nvim-lastplace",
-  config = function()
-    -- default config
-    require("nvim-lastplace").setup()
-  end,
+  event = { "BufReadPre", "BufNewFile" },
+  config = true,
 }

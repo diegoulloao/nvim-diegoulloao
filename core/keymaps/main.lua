@@ -59,7 +59,6 @@ keymap.set("n", "<C-s>", "<cmd>Gitsigns next_hunk<CR>") -- go to next change
 keymap.set("n", "<leader>l", "<cmd>IBLToggle<CR>") -- toggle indent lines
 
 -- util keymaps
-keymap.set("n", "<leader>ms", "<cmd>MaximizerToggle<CR>") -- maximize and restore current buffer
 keymap.set("n", "<leader>c", "<cmd>TSContextToggle<CR>") -- toggle treesitter context at top
 
 -- todo comments

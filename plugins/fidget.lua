@@ -2,25 +2,22 @@
 return {
   "j-hui/fidget.nvim",
   version = "legacy",
-  config = function()
-    -- custom config
-    require("fidget").setup({
-      text = {
-        spinner = "dots", -- dots | line | dots_scrolling | star
-      },
+  opts = {
+    text = {
+      spinner = "dots", -- dots | line | dots_scrolling | star
+    },
+    window = {
+      border = "rounded", -- single | double | shadow | rounded
+    },
+    notification = {
       window = {
-        border = "rounded", -- single | double | shadow | rounded
+        normal_hl = "MsgArea",
       },
-      notification = {
-        window = {
-          normal_hl = "MsgArea",
-        },
+    },
+    sources = {
+      ["null-ls"] = {
+        ignore = true,
       },
-      sources = {
-        ["null-ls"] = {
-          ignore = true,
-        },
-      },
-    })
-  end,
+    },
+  },
 }

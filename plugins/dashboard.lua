@@ -14,20 +14,18 @@ local logo = [[
 return {
   "nvimdev/dashboard-nvim",
   event = "VimEnter",
+  priority = 1000,
   dependencies = { "nvim-tree/nvim-web-devicons" },
-  config = function()
-    -- custom config
-    require("dashboard").setup({
-      config = {
-        header = vim.split(string.rep("\n", 2) .. logo, "\n"),
-        shortcut = {
-          { desc = "[ Github]", group = "DashboardShortCut" },
-          { desc = "[diegoulloao]", group = "DashboardShortCut" },
-        },
+  opts = {
+    config = {
+      header = vim.split(string.rep("\n", 2) .. logo, "\n"),
+      shortcut = {
+        { desc = "[ Github]", group = "DashboardShortCut" },
+        { desc = "[diegoulloao]", group = "DashboardShortCut" },
       },
-      hide = {
-        statusline = false,
-      },
-    })
-  end,
+    },
+    hide = {
+      statusline = false,
+    },
+  },
 }

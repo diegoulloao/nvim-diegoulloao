@@ -7,10 +7,15 @@ opt.completeopt = "menu,menuone,noselect"
 return {
   "hrsh7th/nvim-cmp",
   dependencies = {
-    "L3MON4D3/LuaSnip",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-path",
     "onsails/lspkind.nvim",
+    "L3MON4D3/LuaSnip",
+    "saadparwaiz1/cmp_luasnip",
+    "rafamadriz/friendly-snippets",
     "roobert/tailwindcss-colorizer-cmp.nvim",
   },
+  event = "InsertEnter",
   config = function()
     -- load friendly-snippets
     require("luasnip.loaders.from_vscode").lazy_load()

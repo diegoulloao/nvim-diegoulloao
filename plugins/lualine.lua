@@ -43,6 +43,9 @@ return {
     -- require noice
     local noice = require("noice")
 
+    -- require lazy extensions
+    local lazy_status = require("lazy.status")
+
     -- custom setup
     require("lualine").setup({
       options = {
@@ -85,7 +88,12 @@ return {
           },
         },
         lualine_x = {
-          -- lines added, removed, changed
+          {
+            lazy_status.updates,
+            cond = lazy_status.has_updates,
+            -- color = { fg = "" },
+          },
+          -- number of changes in file
           {
             "diff",
             colored = true,

@@ -8,6 +8,7 @@ end
 
 return {
   "echasnovski/mini.indentscope",
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
     -- custom config
     require("mini.indentscope").setup({

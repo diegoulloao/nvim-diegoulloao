@@ -3,6 +3,7 @@ return {
   build = function()
     require("nvim-treesitter.install").update({ with_sync = true })
   end,
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
     -- custom setup
     require("nvim-treesitter.configs").setup({

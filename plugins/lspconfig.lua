@@ -3,7 +3,8 @@ local on_attach = require("diegoulloao.core.keymaps.lsp")
 
 return {
   "neovim/nvim-lspconfig",
-  dependencies = "hrsh7th/cmp-nvim-lsp",
+  dependencies = { "hrsh7th/cmp-nvim-lsp" },
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
     -- require lspconfig
     local lspconfig = require("lspconfig")
