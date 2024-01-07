@@ -19,7 +19,7 @@ return {
       header = vim.split(string.rep("\n", 1) .. logo, "\n"),
       shortcut = {
         { desc = "[ Github]", group = "DashboardShortCut" },
-        { desc = "[diegoulloao]", group = "DashboardShortCut" },
+        { desc = "[ diegoulloao]", group = "DashboardShortCut" },
       },
     },
     hide = {
