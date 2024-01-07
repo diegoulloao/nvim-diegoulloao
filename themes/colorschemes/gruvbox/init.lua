@@ -51,6 +51,10 @@ return {
     -- lsp saga bg
     vim.cmd([[ hi! SagaNormal guibg=#282828 ]])
 
+    -- @fix
+    -- bufferline
+    vim.cmd([[ hi! BufferLineOffsetSeparator guibg=#282828 guifg=#665c54 ]])
+
     -- general
     vim.cmd([[ hi! NormalFloat guibg=#282828 ]]) -- fixes git blame float bg
 

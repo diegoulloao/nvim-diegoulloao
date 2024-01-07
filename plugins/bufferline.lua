@@ -22,6 +22,10 @@ return {
         show_duplicate_prefix = true, -- show base path if tabs have the same name
         separator_style = "thick", -- slant|slope|thick|thin|{"|", "|"}
         diagnostics = "nvim_lsp", -- nvim lsp diagnostics integration in tabs or false
+        indicator = {
+          -- icon = "", -- ▎
+          style = "icon", -- icon|underline|none
+        },
         offsets = {
           -- avoid to show bufferline on top nvim-tree
           {
