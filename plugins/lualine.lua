@@ -77,7 +77,7 @@ return {
           {
             "filename",
             file_status = true, -- display file status (read only, modified)
-            path = 1, -- 0: just name, 1: relative path, 2: absolute path, 3: absolute path with ~ as home directory
+            path = 1,           -- 0: just name, 1: relative path, 2: absolute path, 3: absolute path with ~ as home directory
             symbols = {
               unnamed = "",
               readonly = "",
@@ -125,6 +125,7 @@ return {
         "fzf",
         "quickfix",
         "man",
+        "lazy",
         extensions.telescope,
         extensions.lspinfo,
         extensions.saga,

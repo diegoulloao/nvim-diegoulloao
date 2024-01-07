@@ -14,6 +14,7 @@ return {
     "ahmedkhalf/project.nvim",
     "olimorris/persisted.nvim",
   },
+  cmd = "Telescope",
   config = function()
     -- require telescope
     local telescope = require("telescope")

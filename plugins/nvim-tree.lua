@@ -15,7 +15,6 @@ vim.g.loaded_netrwPlugin = 1
 return {
   "nvim-tree/nvim-tree.lua",
   version = "*",
-  lazy = false,
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },
@@ -26,7 +25,7 @@ return {
     renderer = {
       root_folder_label = false, -- hide root directory at the top
       indent_markers = {
-        enable = enable, -- folder level guide
+        enable = enable,         -- folder level guide
         icons = {
           corner = "└",
           edge = settings.indentChar,

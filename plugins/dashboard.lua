@@ -14,11 +14,11 @@ local logo = [[
 return {
   "nvimdev/dashboard-nvim",
   event = "VimEnter",
-  priority = 900,
+  priority = 1000,
   dependencies = { "nvim-tree/nvim-web-devicons" },
   opts = {
     config = {
-      header = vim.split(string.rep("\n", 2) .. logo, "\n"),
+      header = vim.split(string.rep("\n", 1) .. logo, "\n"),
       shortcut = {
         { desc = "[ Github]", group = "DashboardShortCut" },
         { desc = "[diegoulloao]", group = "DashboardShortCut" },
