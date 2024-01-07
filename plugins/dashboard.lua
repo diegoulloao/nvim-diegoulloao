@@ -14,7 +14,7 @@ local logo = [[
 return {
   "nvimdev/dashboard-nvim",
   event = "VimEnter",
-  priority = 1000,
+  priority = 900,
   dependencies = { "nvim-tree/nvim-web-devicons" },
   opts = {
     config = {

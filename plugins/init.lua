@@ -1,10 +1,12 @@
 return {
   { "nvim-telescope/telescope-fzf-native.nvim", build = "make" }, -- fzf sorter for telescope
-  "hrsh7th/cmp-nvim-lsp", -- lsp servers integration with cmp autocompletion
-  "onsails/lspkind.nvim", -- vscode like icons for the cmp autocompletion window
-  "L3MON4D3/LuaSnip", -- snippet engine
-  "nvim-lua/plenary.nvim", -- lua functions library
-  "gpanders/editorconfig.nvim", -- editor config
-  { "windwp/nvim-ts-autotag", dependencies = "nvim-treesitter" }, -- auto close html tags
+  { "hrsh7th/cmp-nvim-lsp", event = "InsertEnter" }, -- lsp servers integration with cmp autocompletion
+  { "onsails/lspkind.nvim", event = { "BufReadPre", "BufNewFile" } }, -- vscode like icons for the cmp autocompletion window
+  { "L3MON4D3/LuaSnip", event = { "BufReadPre", "BufNewFile" } }, -- snippet engine
+  { "nvim-lua/plenary.nvim", event = { "BufReadPre", "BufNewFile" } }, -- lua functions library
+  { "windwp/nvim-ts-autotag", dependencies = "nvim-treesitter", event = "InsertEnter" }, -- auto close html tags
+  { "almo7aya/openingh.nvim", cmd = { "OpenInGHFile", "OpenInGHFileLines" } }, -- open buffer in github
   { "nvim-tree/nvim-web-devicons", lazy = true }, -- devicons
+  { "tpope/vim-surround", event = { "BufReadPre", "BufNewFile" } }, -- surround words by characters
+  "gpanders/editorconfig.nvim", -- editor config
 }
