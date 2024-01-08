@@ -38,14 +38,13 @@ return {
         completion = {
           border = "rounded", -- rounded|none
           -- custom colors
-          winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:CursorLineBG,Search:None", -- BorderBG|FloatBorder
+          winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:CursorLineBG,Search:None", -- BorderBG|FloatBorder
           side_padding = 0,
-          col_offset = -3,
         },
         documentation = {
           border = "rounded", -- rounded|none
           -- custom colors
-          winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:CursorLineBG,Search:None", -- BorderBG|FloatBorder
+          winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:CursorLineBG,Search:None", -- BorderBG|FloatBorder
           side_padding = 1,
         },
       },
@@ -86,7 +85,7 @@ return {
           -- customize lspkind format
           local strings = vim.split(kind_fmt.kind, "%s", { trimempty = true })
           kind_fmt.kind = " " .. (strings[1] or "") .. " "
-          kind_fmt.menu = strings[2] ~= nil and "  [" .. (strings[2] or "") .. "]" or ""
+          kind_fmt.menu = strings[2] ~= nil and (" " .. (strings[2] or "")) or ""
 
           return kind_fmt
         end,
