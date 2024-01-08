@@ -123,7 +123,7 @@ return {
           if style == "default" then
             kind_fmt.kind = " " .. (strings[1] or "") .. " " -- default icons
           else
-            kind_fmt.kind = " " .. (cmp_kinds[strings[2]] or "") .. " " -- vscode like icons
+            kind_fmt.kind = "  " .. (cmp_kinds[strings[2]] or "") .. " " -- vscode like icons
           end
 
           kind_fmt.menu = strings[2] ~= nil and (" " .. (strings[2] or "")) or ""
