@@ -130,9 +130,13 @@ return {
     -- diagnostics config
     vim.diagnostic.config({
       -- virtual_text = false, -- disable inline diagnostics globally
+      -- severity = { min = vim.diagnostic.severity.WARN },
       virtual_text = {
-        prefix = " ", -- ■ 
-        suffix = " ",
+        prefix = "", -- ■ 
+        suffix = "",
+        format = function(diagnostic)
+          return " " .. diagnostic.message .. " "
+        end,
       },
     })
 
