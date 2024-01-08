@@ -129,15 +129,14 @@ return {
 
     -- diagnostics config
     vim.diagnostic.config({
+      underline = false,
       -- severity = { min = vim.diagnostic.severity.WARN },
-      -- virtual_text = false, -- disable inline diagnostics
-      virtual_text = {
-        prefix = "", -- ■  󰊠
+      virtual_text = { -- or false for disable
+        prefix = "",   -- ■  󰊠
         suffix = "",
         format = function(diagnostic)
           local prefix = "󰊠 "
           local suffix = " "
-
           -- return full message with custom prefix & suffix
           return prefix .. diagnostic.message .. suffix
         end,

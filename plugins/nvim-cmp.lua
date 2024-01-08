@@ -71,12 +71,12 @@ return {
         { name = "path" }, -- file system paths
       }),
       formatting = {
-        -- vscode like icons for cmp autocompletion
+        -- vscode like icons for cmp autocompletion | format = function(entry, item)
         format = lspkind.cmp_format({
+          -- with_text = false, -- hide kind beside the icon
           maxwidth = 50,
           ellipsis_char = "...",
-          -- prepend tailwindcss-colorizer
-          before = tailwindcss_colorizer_cmp.formatter,
+          before = tailwindcss_colorizer_cmp.formatter, -- prepend tailwindcss-colorizer
         }),
       },
     })
