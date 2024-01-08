@@ -1,8 +1,43 @@
+-- configuration instructions
+-- source: https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#how-to-get-types-on-the-left-and-offset-the-menu
+
+-- options
+local style = "vscode" -- vscode|default
+
 -- for conciseness
 local opt = vim.opt -- vim options
 
 -- set options
 opt.completeopt = "menu,menuone,noselect"
+
+-- vscode like icons
+local cmp_kinds = {
+  Text = "",
+  Method = "",
+  Function = "",
+  Constructor = "",
+  Field = "",
+  Variable = "",
+  Class = "",
+  Interface = "",
+  Module = "",
+  Property = "",
+  Unit = "",
+  Value = "",
+  Enum = "",
+  Keyword = "",
+  Snippet = "",
+  Color = "",
+  File = "",
+  Reference = "",
+  Folder = "",
+  EnumMember = "",
+  Constant = "",
+  Struct = "",
+  Event = "",
+  Operator = "",
+  TypeParameter = "",
+}
 
 return {
   "hrsh7th/nvim-cmp",
@@ -84,7 +119,13 @@ return {
 
           -- customize lspkind format
           local strings = vim.split(kind_fmt.kind, "%s", { trimempty = true })
-          kind_fmt.kind = " " .. (strings[1] or "") .. " "
+
+          if style == "default" then
+            kind_fmt.kind = " " .. (strings[1] or "") .. " " -- default icons
+          else
+            kind_fmt.kind = " " .. (cmp_kinds[strings[2]] or "") .. " " -- vscode like icons
+          end
+
           kind_fmt.menu = strings[2] ~= nil and (" " .. (strings[2] or "")) or ""
 
           return kind_fmt
