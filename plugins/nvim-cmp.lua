@@ -39,7 +39,8 @@ return {
           border = "rounded", -- rounded|none
           -- custom colors
           winhighlight = "Normal:Normal,FloatBorder:BorderBG,CursorLine:CursorLineBG,Search:None", -- BorderBG|FloatBorder
-          side_padding = 1,
+          side_padding = 0,
+          col_offset = -3,
         },
         documentation = {
           border = "rounded", -- rounded|none
@@ -71,13 +72,24 @@ return {
         { name = "path" }, -- file system paths
       }),
       formatting = {
-        -- vscode like icons for cmp autocompletion | format = function(entry, item)
-        format = lspkind.cmp_format({
-          -- with_text = false, -- hide kind beside the icon
-          maxwidth = 50,
-          ellipsis_char = "...",
-          before = tailwindcss_colorizer_cmp.formatter, -- prepend tailwindcss-colorizer
-        }),
+        fields = { "kind", "abbr", "menu" },
+        format = function(entry, item)
+          -- vscode like icons for cmp autocompletion
+          local kind_fmt = lspkind.cmp_format({
+            -- with_text = false, -- hide kind beside the icon
+            mode = "symbol_text",
+            maxwidth = 50,
+            ellipsis_char = "...",
+            before = tailwindcss_colorizer_cmp.formatter, -- prepend tailwindcss-colorizer
+          })(entry, item)
+
+          -- customize lspkind format
+          local strings = vim.split(kind_fmt.kind, "%s", { trimempty = true })
+          kind_fmt.kind = " " .. (strings[1] or "") .. " "
+          kind_fmt.menu = strings[2] ~= nil and "  [" .. (strings[2] or "") .. "]" or ""
+
+          return kind_fmt
+        end,
       },
     })
   end,
