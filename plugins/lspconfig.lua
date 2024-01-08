@@ -127,8 +127,14 @@ return {
       filetypes = { "sh", "zsh", "bash" },
     })
 
-    -- disable inline diagnostics globally
-    -- vim.diagnostic.config({ virtual_text = false })
+    -- diagnostics config
+    vim.diagnostic.config({
+      -- virtual_text = false, -- disable inline diagnostics globally
+      virtual_text = {
+        prefix = " ", -- ■ 
+        suffix = " ",
+      },
+    })
 
     -- add borders to lsp info window
     require("lspconfig.ui.windows").default_options.border = "single"

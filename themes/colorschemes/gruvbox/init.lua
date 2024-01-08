@@ -58,6 +58,13 @@ return {
     -- general
     vim.cmd([[ hi! NormalFloat guibg=#282828 ]]) -- fixes git blame float bg
 
+    -- diagnostics
+    vim.cmd([[ hi! DiagnosticVirtualTextError guibg=#1d2021 guifg=#e85741 ]])
+    vim.cmd([[ hi! DiagnosticVirtualTextWarn guibg=#1d2021 guifg=#f1bf50 ]])
+    vim.cmd([[ hi! DiagnosticVirtualTextOk guibg=#1d2021 guifg=#b8bb26 ]])
+    vim.cmd([[ hi! DiagnosticVirtualTextInfo guibg=#1d2021 guifg=#83a598 ]])
+    vim.cmd([[ hi! DiagnosticVirtualTextHint guibg=#1d2021 guifg=#8ec07c ]])
+
     -- treesitter
     vim.cmd([[ hi clear link TreesitterContext NormalFloat ]])
     vim.cmd([[ hi! TreesitterContext guibg=#32302f ]])
