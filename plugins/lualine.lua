@@ -33,6 +33,7 @@ return {
     "folke/noice.nvim",
     "nvim-tree/nvim-web-devicons",
   },
+  priority = 1000,
   config = function()
     -- lualine theme
     local lualine_theme = require("diegoulloao.themes.lualine")
@@ -69,12 +70,13 @@ return {
             "filetype",
             icon_only = true,
             padding = { left = 2, right = 0 },
+            color = "_lualine_c_filetype",
           },
           -- filename
           {
             "filename",
             file_status = true, -- display file status (read only, modified)
-            path = 1,           -- 0: just name, 1: relative path, 2: absolute path, 3: absolute path with ~ as home directory
+            path = 1, -- 0: just name, 1: relative path, 2: absolute path, 3: absolute path with ~ as home directory
             symbols = {
               unnamed = "",
               readonly = "",

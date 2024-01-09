@@ -55,6 +55,26 @@ local set_hi_groups = function()
   vim.cmd([[ hi clear link TreesitterContext NormalFloat ]])
   vim.cmd([[ hi! TreesitterContext guibg=#32302f ]])
 
+  -- lualine
+  vim.cmd([[ hi! lualine_a_insert guibg=#83a598 ]]) -- document % [insert]
+  vim.cmd([[ hi! lualine_b_insert guibg=#504945 ]]) -- branch [insert]
+  vim.cmd([[ hi! lualine_c_insert guibg=#3c3836 ]]) -- all bar [insert]
+  vim.cmd([[ hi! lualine_c_visual guibg=#3c3836 ]]) -- all bar [visual]
+  vim.cmd([[ hi! lualine_c_command guibg=#3c3836 ]]) -- all bar [command]
+  vim.cmd([[ hi! lualine_c_filename_insert guibg=#3c3836 guifg=#a89984 ]]) -- filename [insert]
+  vim.cmd([[ hi! lualine_c_filename_visual guibg=#3c3836 guifg=#a89984 ]]) -- filename [visual]
+  vim.cmd([[ hi! lualine_c_filename_command guibg=#3c3836 guifg=#a89984 ]]) -- filename [command]
+  vim.cmd([[ hi! _lualine_c_filetype guibg=#3c3836 ]]) -- filetype icon
+  vim.cmd([[ hi! lualine_x_diff_added_insert guibg=#3c3836 ]]) -- diff added [insert]
+  vim.cmd([[ hi! lualine_x_diff_modified_insert guibg=#3c3836 ]]) -- diff modified [insert]
+  vim.cmd([[ hi! lualine_x_diff_removed_insert guibg=#3c3836 ]]) --diff removed [insert]
+  vim.cmd([[ hi! lualine_x_diff_added_visual guibg=#3c3836 ]]) -- diff added [visual]
+  vim.cmd([[ hi! lualine_x_diff_modified_visual guibg=#3c3836 ]]) -- diff modified [visual]
+  vim.cmd([[ hi! lualine_x_diff_removed_visual guibg=#3c3836 ]]) --diff removed [visual]
+  vim.cmd([[ hi! lualine_x_diff_added_command guibg=#3c3836 ]]) -- diff added [command]
+  vim.cmd([[ hi! lualine_x_diff_modified_command guibg=#3c3836 ]]) -- diff modified [command]
+  vim.cmd([[ hi! lualine_x_diff_removed_command guibg=#3c3836 ]]) --diff removed [command]
+
   -- telescope
   vim.cmd([[ hi! TelescopeNormal guibg=#32302f ]])
   vim.cmd([[ hi! TelescopeResultsNormal guibg=#32302f ]])
@@ -91,7 +111,8 @@ local set_hi_groups = function()
   -- dashboard
   vim.cmd([[ hi! DashboardHeader guifg=#d65d0e ]])
 
-  -- @only nvchad cmp style
+  -- @only
+  -- nvchad cmp style
   if settings.cmp_style == "nvchad" then
     -- cmp
     vim.cmd([[
@@ -132,8 +153,8 @@ vim.opt.background = "dark"
 
 return {
   "ellisonleao/gruvbox.nvim",
-  priority = 1000,
   lazy = false,
+  priority = 999,
   enabled = settings.theme == "gruvbox",
   config = function()
     -- custom setup
