@@ -37,8 +37,7 @@ return {
         layout_strategy = "vertical", -- vertical layout
         sorting_strategy = "ascending",
         results_title = "",
-        -- prompt_prefix = " › ",
-        prompt_prefix = "  ",
+        prompt_prefix = "  ", --  ›
         selection_caret = " › ",
         entry_prefix = "   ", -- each entry result prefix
         -- winblend = 10, -- transparency: 0-100 | recommended: 10
@@ -54,7 +53,7 @@ return {
             ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
           },
         },
-        -- result numbers at the right: matches/total
+        -- result numbers at the right: matches|total
         get_status_text = function(picker)
           local total = picker.stats.processed or 0
           local matches = total - (picker.stats.filtered or 0)
