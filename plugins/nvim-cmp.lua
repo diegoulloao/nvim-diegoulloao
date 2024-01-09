@@ -2,7 +2,7 @@
 -- source: https://github.com/hrsh7th/nvim-cmp/wiki/Menu-Appearance#how-to-get-types-on-the-left-and-offset-the-menu
 
 -- options
-local style = "vscode" -- vscode|default
+local settings = require("diegoulloao.settings")
 
 -- for conciseness
 local opt = vim.opt -- vim options
@@ -71,16 +71,17 @@ return {
     cmp.setup({
       window = {
         completion = {
-          border = "rounded", -- rounded|none
+          border = "rounded", -- single|rounded|none
           -- custom colors
           winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:CursorLineBG,Search:None", -- BorderBG|FloatBorder
-          side_padding = 0,
+          side_padding = settings.cmp_style == "default" and 1 or 0, -- padding at sides
+          col_offset = settings.cmp_style == "default" and -1 or -4, -- move floating box left or right
         },
         documentation = {
-          border = "rounded", -- rounded|none
+          border = "rounded", -- single|rounded|none
           -- custom colors
           winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:CursorLineBG,Search:None", -- BorderBG|FloatBorder
-          side_padding = 1,
+          side_padding = 2, -- NOTE: not working
         },
       },
       snippet = {
@@ -106,7 +107,7 @@ return {
         { name = "path" }, -- file system paths
       }),
       formatting = {
-        fields = { "kind", "abbr", "menu" },
+        fields = settings.cmp_style == "nvchad" and { "kind", "abbr", "menu" } or nil,
         format = function(entry, item)
           -- vscode like icons for cmp autocompletion
           local kind_fmt = lspkind.cmp_format({
@@ -118,15 +119,24 @@ return {
           })(entry, item)
 
           -- customize lspkind format
+          -- strings[1] -> default icon
+          -- strings[2] -> kind
           local strings = vim.split(kind_fmt.kind, "%s", { trimempty = true })
 
-          if style == "default" then
-            kind_fmt.kind = " " .. (strings[1] or "") .. " " -- default icons
+          -- set different styles
+          if settings.cmp_icons_style == "vscode" then
+            kind_fmt.kind = " " .. (cmp_kinds[strings[2]] or "") -- vscode like icons
           else
-            kind_fmt.kind = "  " .. (cmp_kinds[strings[2]] or "") .. " " -- vscode like icons
+            kind_fmt.kind = " " .. (strings[1] or "") -- default icons
           end
 
-          kind_fmt.menu = strings[2] ~= nil and (" " .. (strings[2] or "")) or ""
+          -- append customized kind text
+          if settings.cmp_style == "nvchad" then
+            kind_fmt.kind = kind_fmt.kind .. " "
+            kind_fmt.menu = strings[2] ~= nil and ("  " .. (strings[2] or "")) or ""
+          else
+            kind_fmt.menu = strings[2] ~= nil and (strings[2] or "") or ""
+          end
 
           return kind_fmt
         end,

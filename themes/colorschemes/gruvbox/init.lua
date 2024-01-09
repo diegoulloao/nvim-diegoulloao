@@ -7,6 +7,9 @@
   -- Letter spacing: 100
 ]]
 
+-- settings
+local settings = require("diegoulloao.settings")
+
 -- set dark background
 vim.opt.background = "dark"
 
@@ -104,5 +107,39 @@ return {
 
     -- dashboard
     vim.cmd([[ hi! DashboardHeader guifg=#d65d0e ]])
+
+    if settings.cmp_style == "nvchad" then
+      -- cmp
+      vim.cmd([[
+        hi! PmenuSel guibg=#32302f guifg=NONE
+        hi! Pmenu guibg=#32302f guifg=#d5c4a1
+        hi! CmpItemAbbrDeprecated guibg=#32302f guifg=#83a598 gui=strikethrough
+        hi! CmpItemKindField guibg=#32302f guifg=#bdae93
+        hi! CmpItemKindProperty guibg=#32302f guifg=#fbf1c7
+        hi! CmpItemKindEvent guibg=#32302f guifg=#e1dbac
+        hi! CmpItemKindText guibg=#32302f guifg=#83a598
+        hi! CmpItemKindEnum guibg=#32302f guifg=#076678
+        hi! CmpItemKindKeyword guibg=#32302f guifg=#8ec07c
+        hi! CmpItemKindConstant guibg=#32302f guifg=#665c54
+        hi! CmpItemKindConstructor guibg=#32302f guifg=#98971a
+        hi! CmpItemKindReference guibg=#32302f guifg=#b16286
+        hi! CmpItemKindFunction guibg=#32302f guifg=#fe8019
+        hi! CmpItemKindStruct guibg=#32302f guifg=#d79921
+        hi! CmpItemKindClass guibg=#32302f guifg=#b16286
+        hi! CmpItemKindModule guibg=#32302f guifg=#bdae93
+        hi! CmpItemKindOperator guibg=#32302f guifg=#fabd2f
+        hi! CmpItemKindVariable guibg=#32302f guifg=#8ec07c
+        hi! CmpItemKindFile guibg=#32302f guifg=#fabd2f
+        hi! CmpItemKindUnit guibg=#32302f guifg=#427b58
+        hi! CmpItemKindSnippet guibg=#32302f guifg=#458588
+        hi! CmpItemKindFolder guibg=#32302f guifg=#fb4934
+        hi! CmpItemKindMethod guibg=#32302f guifg=#d79921
+        hi! CmpItemKindValue guibg=#32302f guifg=#fc9487
+        hi! CmpItemKindEnumMember guibg=#32302f guifg=#d65d0e
+        hi! CmpItemKindInterface guibg=#32302f guifg=#8ec07c
+        hi! CmpItemKindColor guibg=#32302f guifg=#d3d6a5
+        hi! CmpItemKindTypeParameter guibg=#32302f guifg=#cecb94
+      ]])
+    end
   end,
 }
