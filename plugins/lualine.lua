@@ -45,7 +45,6 @@ return {
     "folke/noice.nvim",
     "nvim-tree/nvim-web-devicons",
   },
-  priority = 1000,
   config = function()
     -- require noice
     local noice = require("noice")

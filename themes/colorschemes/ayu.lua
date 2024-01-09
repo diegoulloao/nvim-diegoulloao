@@ -84,7 +84,7 @@ vim.opt.background = "dark"
 return {
   "Shatur/neovim-ayu",
   lazy = false,
-  priority = 999,
+  priority = 1000,
   enabled = settings.theme == "ayu",
   config = function()
     -- require ayu
