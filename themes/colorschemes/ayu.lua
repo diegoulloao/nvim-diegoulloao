@@ -1,8 +1,26 @@
+--[[
+  -- NOTE: RECOMMENDED SETTINGS
+  -- Terminal scheme: --
+  -- Font: Geist Mono
+  -- Size: 15
+  -- Line height: 122
+  -- Letter spacing: 100
+]]
+
+-- require palette
+local palette = require("diegoulloao.themes.palettes.ayu")
+
+-- settings
+local settings = require("diegoulloao.settings")
+
+-- set dark background
+vim.opt.background = "dark"
+
 --------
 -- hi groups: ayu theme
 -- @param palette table
 -- @return nil
-local function hi_groups(palette)
+local function hi_groups()
   -- alias for formatting
   local f = string.format
 
@@ -72,4 +90,24 @@ local function hi_groups(palette)
   vim.cmd(f([[ hi ToggleTermFloatBorder guifg=%s ]], palette.secondary))
 end
 
-return hi_groups
+return {
+  "Shatur/neovim-ayu",
+  priority = 1000,
+  lazy = false,
+  enabled = settings.theme == "ayu",
+  config = function()
+    -- require ayu
+    local ayu = require("ayu")
+
+    -- custom setup
+    ayu.setup({
+      mirage = false, -- set true to use 'mirage' version instead of 'dark'
+    })
+
+    -- apply colorscheme
+    ayu.colorscheme()
+
+    -- highlight groups
+    hi_groups()
+  end,
+}

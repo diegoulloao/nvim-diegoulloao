@@ -17,6 +17,7 @@ return {
   "ellisonleao/gruvbox.nvim",
   priority = 1000,
   lazy = false,
+  enabled = settings.theme == "gruvbox",
   config = function()
     -- custom setup
     require("gruvbox").setup({

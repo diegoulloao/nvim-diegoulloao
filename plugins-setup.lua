@@ -6,7 +6,7 @@ end
 
 -- load with lazy
 lazy.setup({
-  { import = "diegoulloao.core.theme-loader" },
+  { import = "diegoulloao.themes.colorschemes" },
   { import = "diegoulloao.plugins" },
 }, {
   -- options
