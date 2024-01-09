@@ -3,7 +3,7 @@
   -- Terminal scheme: --
   -- Font: Geist Mono
   -- Size: 15
-  -- Line height: 122
+  -- Line height: 137
   -- Letter spacing: 100
 ]]
 
