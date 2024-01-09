@@ -110,7 +110,7 @@ return {
         fields = settings.cmp_style == "nvchad" and { "kind", "abbr", "menu" } or nil,
         format = function(entry, item)
           -- vscode like icons for cmp autocompletion
-          local kind_fmt = lspkind.cmp_format({
+          local fmt = lspkind.cmp_format({
             -- with_text = false, -- hide kind beside the icon
             mode = "symbol_text",
             maxwidth = 50,
@@ -119,26 +119,27 @@ return {
           })(entry, item)
 
           -- customize lspkind format
+          local strings = vim.split(fmt.kind, "%s", { trimempty = true })
+
           -- strings[1] -> default icon
           -- strings[2] -> kind
-          local strings = vim.split(kind_fmt.kind, "%s", { trimempty = true })
 
-          -- set different styles
+          -- set different icon styles
           if settings.cmp_icons_style == "vscode" then
-            kind_fmt.kind = " " .. (cmp_kinds[strings[2]] or "") -- vscode like icons
+            fmt.kind = " " .. (cmp_kinds[strings[2]] or "")
           else
-            kind_fmt.kind = " " .. (strings[1] or "") -- default icons
+            fmt.kind = " " .. (strings[1] or "")
           end
 
           -- append customized kind text
           if settings.cmp_style == "nvchad" then
-            kind_fmt.kind = kind_fmt.kind .. " "
-            kind_fmt.menu = strings[2] ~= nil and ("  " .. (strings[2] or "")) or ""
+            fmt.kind = fmt.kind .. " "
+            fmt.menu = strings[2] ~= nil and ("  " .. (strings[2] or "")) or ""
           else
-            kind_fmt.menu = strings[2] ~= nil and (strings[2] or "") or ""
+            fmt.menu = strings[2] ~= nil and (strings[2] or "") or ""
           end
 
-          return kind_fmt
+          return fmt
         end,
       },
     })
