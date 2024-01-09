@@ -1,9 +1,6 @@
 -- require custom extensions
 local extensions = require("diegoulloao.extensions.lualine")
 
--- require current theme palette
-local theme_palette = require("diegoulloao.themes.palettes")
-
 -- require settings
 local settings = require("diegoulloao.settings")
 
@@ -108,7 +105,7 @@ return {
           {
             noice.api.statusline.mode.get,
             cond = noice.api.statusline.mode.has,
-            color = { fg = theme_palette.primary },
+            -- color = { fg = "" },
           },
           -- "encoding",
           -- "filetype",

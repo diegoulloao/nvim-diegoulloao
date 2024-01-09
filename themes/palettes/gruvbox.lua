@@ -1,5 +1,5 @@
 --[[
--- Gruvbox Palette
+  -- Gruvbox Palette
   #1d2021
   #282828
   #32302f
@@ -55,6 +55,3 @@
   #e1dbac
   #928374
 ]]
-
--- no palette (for now)
-return {}

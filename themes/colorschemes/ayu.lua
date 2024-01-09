@@ -7,88 +7,11 @@
   -- Letter spacing: 100
 ]]
 
--- require palette
-local palette = require("diegoulloao.themes.palettes.ayu")
-
 -- settings
 local settings = require("diegoulloao.settings")
 
 -- set dark background
 vim.opt.background = "dark"
-
---------
--- hi groups: ayu theme
--- @param palette table
--- @return nil
-local function hi_groups()
-  -- alias for formatting
-  local f = string.format
-
-  -- line number
-  vim.cmd(f([[ hi! LineNr guifg=%s ]], palette.dark4))
-
-  -- comments color
-  vim.cmd(f([[ hi! Comment guifg=%s ]], palette.dimmed2))
-
-  -- selection color
-  vim.cmd(f([[ hi! Visual guibg=%s gui=none ]], palette.dark3))
-
-  -- general border color
-  vim.cmd(f([[ hi! FloatBorder guibg=NONE guifg=%s ]], palette.secondary))
-
-  -- indent blankline
-  vim.cmd(f([[ hi! IblIndent  guifg=%s gui=nocombine ]], palette.dark2))
-
-  -- nvim-tree arrows color
-  vim.cmd(f([[ hi! NvimTreeIndentMarker guifg=%s ]], palette.dark2))
-  vim.cmd(f([[ hi! NvimTreeFolderArrowClosed guifg=%s gui=bold ]], palette.dimmed))
-  vim.cmd(f([[ hi! NvimTreeFolderArrowOpen guifg=%s gui=bold ]], palette.dimmed))
-
-  -- nvim-cmp custom colors
-  vim.cmd(f([[ hi! CursorLineBG guibg=%s guifg=%s ]], palette.dark, palette.light))
-
-  -- statusline msg area text color
-  vim.cmd(f([[ hi! MsgArea guifg=%s ]], palette.dimmed2))
-
-  -- nvim-cmp custom colors
-  vim.cmd(f([[ hi! BorderBG guibg=NONE guifg=%s ]], palette.primary))
-  vim.cmd(f([[ hi! CursorLineBG guibg=%s guifg=%s ]], palette.primary, palette.dark))
-
-  -- telescope custom colors
-  vim.cmd(f([[ hi! TelescopeNormal guifg=%s ]], palette.dimmed3))
-  vim.cmd(f([[ hi! TelescopePromptNormal guifg=%s ]], palette.secondary))
-  vim.cmd(f([[ hi! TelescopePromptBorder guifg=%s]], palette.primary))
-  vim.cmd(f([[ hi! TelescopeSelection guibg=%s guifg=%s ]], palette.dark3, palette.dimmed))
-  vim.cmd(f([[ hi! TelescopeSelectionCaret guifg=%s ]], palette.primary))
-  vim.cmd(f([[ hi! TelescopeMatching gui=bold guifg=%s ]], palette.primary))
-  vim.cmd(f([[ hi! TelescopePromptTitle guibg=%s guifg=%s ]], palette.primary, palette.dark))
-  vim.cmd(f([[ hi! TelescopeResultsTitle guibg=%s guifg=%s ]], palette.dimmed3, palette.dark))
-  vim.cmd(f([[ hi! TelescopeResultsBorder guifg=%s ]], palette.dark4))
-
-  -- lsp saga colors
-  vim.cmd(f([[ hi! SagaBorder guifg=%s]], palette.primary))
-
-  -- dashboard
-  vim.cmd(f([[ hi! DashboardHeader guifg=%s ]], palette.primary))
-  vim.cmd(f([[ hi! DashboardShortCut guifg=%s ]], palette.accent))
-  vim.cmd(f([[ hi! DashboardFooter guifg=%s ]], palette.primary))
-  vim.cmd(f([[ hi! DashboardFiles guifg=%s ]], palette.secondary))
-  vim.cmd(f([[ hi! DashboardRecentTitle guifg=%s ]], palette.dimmed4))
-  vim.cmd(f([[ hi! DashboardRecentProject guifg=%s ]], palette.dimmed4))
-  vim.cmd(f([[ hi! DashboardProjectIcon guifg=%s ]], palette.accent))
-
-  -- null-ls
-  vim.cmd(f([[ hi! NullLsInfoBorder guifg=%s ]], palette.primary))
-
-  -- treesitter context border bottom color
-  vim.cmd(f([[ hi! TreesitterContextSeparator gui=none guifg=%s ]], palette.dark4))
-
-  -- mini.indentscope line color
-  vim.cmd(f([[ hi! MiniIndentscopeSymbol guifg=%s ]], palette.dark4))
-
-  -- toggleterm
-  vim.cmd(f([[ hi ToggleTermFloatBorder guifg=%s ]], palette.secondary))
-end
 
 return {
   "Shatur/neovim-ayu",
@@ -108,6 +31,69 @@ return {
     ayu.colorscheme()
 
     -- highlight groups
-    hi_groups()
+    -- line number
+    vim.cmd([[ hi! LineNr guifg=#253340 ]])
+
+    -- comments color
+    vim.cmd([[ hi! Comment guifg=#393F4D ]])
+
+    -- selection color
+    vim.cmd([[ hi! Visual guibg=#151A1E gui=none ]])
+
+    -- general border color
+    vim.cmd([[ hi! FloatBorder guibg=NONE guifg=#59C2FF ]])
+
+    -- indent blankline
+    vim.cmd([[ hi! IblIndent  guifg=#14191F gui=nocombine ]])
+
+    -- nvim-tree arrows color
+    vim.cmd([[ hi! NvimTreeIndentMarker guifg=#14191F ]])
+    vim.cmd([[ hi! NvimTreeFolderArrowClosed guifg=#ACB4C2 gui=bold ]])
+    vim.cmd([[ hi! NvimTreeFolderArrowOpen guifg=#ACB4C2 gui=bold ]])
+
+    -- nvim-cmp custom colors
+    vim.cmd([[ hi! CursorLineBG guibg=#000000 guifg=#FFFFFF ]])
+
+    -- statusline msg area text color
+    vim.cmd([[ hi! MsgArea guifg=#393F4D ]])
+
+    -- nvim-cmp custom colors
+    vim.cmd([[ hi! BorderBG guibg=NONE guifg=#FFB454 ]])
+    vim.cmd([[ hi! CursorLineBG guibg=#FFB454 guifg=#000000 ]])
+
+    -- telescope custom colors
+    vim.cmd([[ hi! TelescopeNormal guifg=#3E4B59 ]])
+    vim.cmd([[ hi! TelescopePromptNormal guifg=#59C2FF ]])
+    vim.cmd([[ hi! TelescopePromptBorder guifg=#FFB454]])
+    vim.cmd([[ hi! TelescopeSelection guibg=#151A1E guifg=#ACB4C2 ]])
+    vim.cmd([[ hi! TelescopeSelectionCaret guifg=#FFB454 ]])
+    vim.cmd([[ hi! TelescopeMatching gui=bold guifg=#FFB454 ]])
+    vim.cmd([[ hi! TelescopePromptTitle guibg=#FFB454 guifg=#000000 ]])
+    vim.cmd([[ hi! TelescopeResultsTitle guibg=#3E4B59 guifg=#000000 ]])
+    vim.cmd([[ hi! TelescopeResultsBorder guifg=#253340 ]])
+
+    -- lsp saga colors
+    vim.cmd([[ hi! SagaBorder guifg=#FFB454]])
+
+    -- dashboard
+    vim.cmd([[ hi! DashboardHeader guifg=#FFB454 ]])
+    vim.cmd([[ hi! DashboardShortCut guifg=#C2D94C ]])
+    vim.cmd([[ hi! DashboardFooter guifg=#FFB454 ]])
+    vim.cmd([[ hi! DashboardFiles guifg=#59C2FF ]])
+    vim.cmd([[ hi! DashboardRecentTitle guifg=#4D5566 ]])
+    vim.cmd([[ hi! DashboardRecentProject guifg=#4D5566 ]])
+    vim.cmd([[ hi! DashboardProjectIcon guifg=#C2D94C ]])
+
+    -- null-ls
+    vim.cmd([[ hi! NullLsInfoBorder guifg=#FFB454 ]])
+
+    -- treesitter context border bottom color
+    vim.cmd([[ hi! TreesitterContextSeparator gui=none guifg=#253340 ]])
+
+    -- mini.indentscope line color
+    vim.cmd([[ hi! MiniIndentscopeSymbol guifg=#253340 ]])
+
+    -- toggleterm
+    vim.cmd([[ hi ToggleTermFloatBorder guifg=#59C2FF ]])
   end,
 }
