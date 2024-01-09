@@ -56,24 +56,24 @@ local set_hi_groups = function()
   vim.cmd([[ hi! TreesitterContext guibg=#32302f ]])
 
   -- lualine
-  vim.cmd([[ hi! lualine_a_insert guibg=#83a598 ]]) -- document % [insert]
-  vim.cmd([[ hi! lualine_b_insert guibg=#504945 ]]) -- branch [insert]
-  vim.cmd([[ hi! lualine_c_insert guibg=#3c3836 ]]) -- all bar [insert]
-  vim.cmd([[ hi! lualine_c_visual guibg=#3c3836 ]]) -- all bar [visual]
-  vim.cmd([[ hi! lualine_c_command guibg=#3c3836 ]]) -- all bar [command]
-  vim.cmd([[ hi! lualine_c_filename_insert guibg=#3c3836 guifg=#a89984 ]]) -- filename [insert]
-  vim.cmd([[ hi! lualine_c_filename_visual guibg=#3c3836 guifg=#a89984 ]]) -- filename [visual]
-  vim.cmd([[ hi! lualine_c_filename_command guibg=#3c3836 guifg=#a89984 ]]) -- filename [command]
-  vim.cmd([[ hi! _lualine_c_filetype guibg=#3c3836 ]]) -- filetype icon
-  vim.cmd([[ hi! lualine_x_diff_added_insert guibg=#3c3836 ]]) -- diff added [insert]
-  vim.cmd([[ hi! lualine_x_diff_modified_insert guibg=#3c3836 ]]) -- diff modified [insert]
-  vim.cmd([[ hi! lualine_x_diff_removed_insert guibg=#3c3836 ]]) --diff removed [insert]
-  vim.cmd([[ hi! lualine_x_diff_added_visual guibg=#3c3836 ]]) -- diff added [visual]
-  vim.cmd([[ hi! lualine_x_diff_modified_visual guibg=#3c3836 ]]) -- diff modified [visual]
-  vim.cmd([[ hi! lualine_x_diff_removed_visual guibg=#3c3836 ]]) --diff removed [visual]
-  vim.cmd([[ hi! lualine_x_diff_added_command guibg=#3c3836 ]]) -- diff added [command]
-  vim.cmd([[ hi! lualine_x_diff_modified_command guibg=#3c3836 ]]) -- diff modified [command]
-  vim.cmd([[ hi! lualine_x_diff_removed_command guibg=#3c3836 ]]) --diff removed [command]
+  vim.cmd([[ hi! lualine_a_insert guibg=#83a598 ]])
+  vim.cmd([[ hi! lualine_b_insert guibg=#504945 ]])
+  vim.cmd([[ hi! lualine_c_insert guibg=#3c3836 ]])
+  vim.cmd([[ hi! lualine_c_visual guibg=#3c3836 ]])
+  vim.cmd([[ hi! lualine_c_command guibg=#3c3836 ]])
+  vim.cmd([[ hi! lualine_c_filename_insert guibg=#3c3836 guifg=#a89984 ]])
+  vim.cmd([[ hi! lualine_c_filename_visual guibg=#3c3836 guifg=#a89984 ]])
+  vim.cmd([[ hi! lualine_c_filename_command guibg=#3c3836 guifg=#a89984 ]])
+  vim.cmd([[ hi! _lualine_c_filetype guibg=#3c3836 ]])
+  vim.cmd([[ hi! lualine_x_diff_added_insert guibg=#3c3836 ]])
+  vim.cmd([[ hi! lualine_x_diff_modified_insert guibg=#3c3836 ]])
+  vim.cmd([[ hi! lualine_x_diff_removed_insert guibg=#3c3836 ]])
+  vim.cmd([[ hi! lualine_x_diff_added_visual guibg=#3c3836 ]])
+  vim.cmd([[ hi! lualine_x_diff_modified_visual guibg=#3c3836 ]])
+  vim.cmd([[ hi! lualine_x_diff_removed_visual guibg=#3c3836 ]])
+  vim.cmd([[ hi! lualine_x_diff_added_command guibg=#3c3836 ]])
+  vim.cmd([[ hi! lualine_x_diff_modified_command guibg=#3c3836 ]])
+  vim.cmd([[ hi! lualine_x_diff_removed_command guibg=#3c3836 ]])
 
   -- telescope
   vim.cmd([[ hi! TelescopeNormal guibg=#32302f ]])
@@ -115,36 +115,34 @@ local set_hi_groups = function()
   -- nvchad cmp style
   if settings.cmp_style == "nvchad" then
     -- cmp
-    vim.cmd([[
-      hi! PmenuSel guibg=#32302f guifg=NONE
-      hi! Pmenu guibg=#32302f guifg=#d5c4a1
-      hi! CmpItemAbbrDeprecated guibg=#32302f guifg=#83a598 gui=strikethrough
-      hi! CmpItemKindField guibg=#32302f guifg=#bdae93
-      hi! CmpItemKindProperty guibg=#32302f guifg=#fbf1c7
-      hi! CmpItemKindEvent guibg=#32302f guifg=#e1dbac
-      hi! CmpItemKindText guibg=#32302f guifg=#83a598
-      hi! CmpItemKindEnum guibg=#32302f guifg=#076678
-      hi! CmpItemKindKeyword guibg=#32302f guifg=#8ec07c
-      hi! CmpItemKindConstant guibg=#32302f guifg=#665c54
-      hi! CmpItemKindConstructor guibg=#32302f guifg=#98971a
-      hi! CmpItemKindReference guibg=#32302f guifg=#b16286
-      hi! CmpItemKindFunction guibg=#32302f guifg=#fe8019
-      hi! CmpItemKindStruct guibg=#32302f guifg=#d79921
-      hi! CmpItemKindClass guibg=#32302f guifg=#b16286
-      hi! CmpItemKindModule guibg=#32302f guifg=#bdae93
-      hi! CmpItemKindOperator guibg=#32302f guifg=#fabd2f
-      hi! CmpItemKindVariable guibg=#32302f guifg=#8ec07c
-      hi! CmpItemKindFile guibg=#32302f guifg=#fabd2f
-      hi! CmpItemKindUnit guibg=#32302f guifg=#427b58
-      hi! CmpItemKindSnippet guibg=#32302f guifg=#458588
-      hi! CmpItemKindFolder guibg=#32302f guifg=#fb4934
-      hi! CmpItemKindMethod guibg=#32302f guifg=#d79921
-      hi! CmpItemKindValue guibg=#32302f guifg=#fc9487
-      hi! CmpItemKindEnumMember guibg=#32302f guifg=#d65d0e
-      hi! CmpItemKindInterface guibg=#32302f guifg=#8ec07c
-      hi! CmpItemKindColor guibg=#32302f guifg=#d3d6a5
-      hi! CmpItemKindTypeParameter guibg=#32302f guifg=#cecb94
-    ]])
+    vim.cmd([[ hi! PmenuSel guibg=#32302f guifg=NONE ]])
+    vim.cmd([[ hi! Pmenu guibg=#32302f guifg=#d5c4a1 ]])
+    vim.cmd([[ hi! CmpItemAbbrDeprecated guibg=#32302f guifg=#83a598 gui=strikethrough ]])
+    vim.cmd([[ hi! CmpItemKindField guibg=#32302f guifg=#bdae93 ]])
+    vim.cmd([[ hi! CmpItemKindProperty guibg=#32302f guifg=#fbf1c7 ]])
+    vim.cmd([[ hi! CmpItemKindEvent guibg=#32302f guifg=#e1dbac ]])
+    vim.cmd([[ hi! CmpItemKindText guibg=#32302f guifg=#83a598 ]])
+    vim.cmd([[ hi! CmpItemKindEnum guibg=#32302f guifg=#076678 ]])
+    vim.cmd([[ hi! CmpItemKindKeyword guibg=#32302f guifg=#8ec07c ]])
+    vim.cmd([[ hi! CmpItemKindConstant guibg=#32302f guifg=#665c54 ]])
+    vim.cmd([[ hi! CmpItemKindConstructor guibg=#32302f guifg=#98971a ]])
+    vim.cmd([[ hi! CmpItemKindReference guibg=#32302f guifg=#b16286 ]])
+    vim.cmd([[ hi! CmpItemKindFunction guibg=#32302f guifg=#fe8019 ]])
+    vim.cmd([[ hi! CmpItemKindStruct guibg=#32302f guifg=#d79921 ]])
+    vim.cmd([[ hi! CmpItemKindClass guibg=#32302f guifg=#b16286 ]])
+    vim.cmd([[ hi! CmpItemKindModule guibg=#32302f guifg=#bdae93 ]])
+    vim.cmd([[ hi! CmpItemKindOperator guibg=#32302f guifg=#fabd2f ]])
+    vim.cmd([[ hi! CmpItemKindVariable guibg=#32302f guifg=#8ec07c ]])
+    vim.cmd([[ hi! CmpItemKindFile guibg=#32302f guifg=#fabd2f ]])
+    vim.cmd([[ hi! CmpItemKindUnit guibg=#32302f guifg=#427b58 ]])
+    vim.cmd([[ hi! CmpItemKindSnippet guibg=#32302f guifg=#458588 ]])
+    vim.cmd([[ hi! CmpItemKindFolder guibg=#32302f guifg=#fb4934 ]])
+    vim.cmd([[ hi! CmpItemKindMethod guibg=#32302f guifg=#d79921 ]])
+    vim.cmd([[ hi! CmpItemKindValue guibg=#32302f guifg=#fc9487 ]])
+    vim.cmd([[ hi! CmpItemKindEnumMember guibg=#32302f guifg=#d65d0e ]])
+    vim.cmd([[ hi! CmpItemKindInterface guibg=#32302f guifg=#8ec07c ]])
+    vim.cmd([[ hi! CmpItemKindColor guibg=#32302f guifg=#d3d6a5 ]])
+    vim.cmd([[ hi! CmpItemKindTypeParameter guibg=#32302f guifg=#cecb94 ]])
   end
 end
 
