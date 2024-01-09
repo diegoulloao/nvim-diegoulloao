@@ -4,6 +4,18 @@ local extensions = require("diegoulloao.extensions.lualine")
 -- require settings
 local settings = require("diegoulloao.settings")
 
+-- theme
+local get_lualine_theme = function()
+  -- require lualine theme
+  local status, lualine_theme = pcall(require, "lualine.themes." .. settings.theme)
+  if not status then
+    return require("lualine.themes.auto")
+  end
+
+  -- export lualine theme
+  return lualine_theme
+end
+
 -- customized separators
 local lualine_separators = {
   ["rect"] = {
@@ -35,9 +47,6 @@ return {
   },
   priority = 1000,
   config = function()
-    -- lualine theme
-    local lualine_theme = require("diegoulloao.themes.lualine")
-
     -- require noice
     local noice = require("noice")
 
@@ -47,7 +56,7 @@ return {
     -- custom setup
     require("lualine").setup({
       options = {
-        theme = lualine_theme,
+        theme = get_lualine_theme(),
         globalstatus = true,
         component_separators = separators.component,
         section_separators = separators.section,
@@ -76,7 +85,7 @@ return {
           {
             "filename",
             file_status = true, -- display file status (read only, modified)
-            path = 1, -- 0: just name, 1: relative path, 2: absolute path, 3: absolute path with ~ as home directory
+            path = 1,           -- 0: just name, 1: relative path, 2: absolute path, 3: absolute path with ~ as home directory
             symbols = {
               unnamed = "",
               readonly = "",
