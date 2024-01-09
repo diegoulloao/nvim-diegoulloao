@@ -81,7 +81,6 @@ return {
           border = "rounded", -- single|rounded|none
           -- custom colors
           winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:CursorLineBG,Search:None", -- BorderBG|FloatBorder
-          side_padding = 2, -- NOTE: not working
         },
       },
       snippet = {
@@ -126,16 +125,17 @@ return {
 
           -- set different icon styles
           if settings.cmp_icons_style == "vscode" then
-            fmt.kind = " " .. (cmp_kinds[strings[2]] or "")
+            fmt.kind = " " .. (cmp_kinds[strings[2]] or "") -- concatenate icon based on kind
           else
-            fmt.kind = " " .. (strings[1] or "")
+            fmt.kind = " " .. (strings[1] or "") -- just use the default icon
           end
 
           -- append customized kind text
           if settings.cmp_style == "nvchad" then
-            fmt.kind = fmt.kind .. " "
+            fmt.kind = fmt.kind .. " " -- just an extra space at the end
             fmt.menu = strings[2] ~= nil and ("  " .. (strings[2] or "")) or ""
           else
+            -- default and others
             fmt.menu = strings[2] ~= nil and (strings[2] or "") or ""
           end
 
