@@ -25,7 +25,7 @@ return {
     renderer = {
       root_folder_label = false, -- hide root directory at the top
       indent_markers = {
-        enable = enable,         -- folder level guide
+        enable = enable, -- folder level guide
         icons = {
           corner = "└",
           edge = settings.indentChar,
@@ -36,6 +36,12 @@ return {
       },
       icons = {
         glyphs = {
+          folder = {
+            default = "",
+            open = "",
+            empty = "",
+            empty_open = "",
+          },
           git = {
             unstaged = "",
             staged = "",
