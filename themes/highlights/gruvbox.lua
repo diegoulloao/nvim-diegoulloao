@@ -90,8 +90,10 @@ local set_hi_groups = function()
   -- bufferline
   vim.cmd([[ hi! BufferLineOffsetSeparator guibg=#282828 guifg=#665c54 ]])
 
+  -- @fix
   -- general
   vim.cmd([[ hi! NormalFloat guibg=#282828 ]]) -- fixes git blame float bg
+  vim.cmd([[ hi! FoldColumn guibg=#282828 ]]) -- fold column bg on diff
 
   -- diagnostics
   vim.cmd([[ hi! DiagnosticVirtualTextError guibg=#1d2021 guifg=#e85741 ]])
