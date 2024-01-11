@@ -69,7 +69,7 @@ return {
           {
             "branch",
             icon = "", -- disable icon
-            padding = { left = 0, right = 1 },
+            padding = { left = 1, right = 1 },
           },
         },
         lualine_c = {

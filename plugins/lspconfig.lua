@@ -130,9 +130,8 @@ return {
     -- diagnostics config
     vim.diagnostic.config({
       underline = false,
-      -- severity = { min = vim.diagnostic.severity.WARN },
       virtual_text = { -- or false for disable
-        prefix = "",   -- ■  󰊠
+        prefix = "", -- ■  󰊠
         suffix = "",
         format = function(diagnostic)
           local prefix = "󰊠 "

@@ -108,7 +108,10 @@ local set_hi_groups = function()
 
   -- lualine
   vim.cmd([[ hi! lualine_a_insert guibg=#83a598 ]])
-  vim.cmd([[ hi! lualine_b_insert guibg=#504945 ]])
+  vim.cmd([[ hi! lualine_b_insert guibg=#3c3836 ]])
+  vim.cmd([[ hi! lualine_b_normal guibg=#3c3836 ]])
+  vim.cmd([[ hi! lualine_b_visual guibg=#3c3836 ]])
+  vim.cmd([[ hi! lualine_b_command guibg=#3c3836 ]])
   vim.cmd([[ hi! lualine_c_insert guibg=#3c3836 ]])
   vim.cmd([[ hi! lualine_c_visual guibg=#3c3836 ]])
   vim.cmd([[ hi! lualine_c_command guibg=#3c3836 ]])
