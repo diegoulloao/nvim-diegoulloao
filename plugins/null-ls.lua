@@ -1,12 +1,15 @@
 return {
   "nvimtools/none-ls.nvim",
+  dependencies = {
+    "nvimtools/none-ls-extras.nvim",
+  },
   lazy = true,
   event = { "BufReadPre", "BufNewFile" },
   config = function()
     local null_ls = require("null-ls")
 
     local formatting = null_ls.builtins.formatting
-    local diagnostics = null_ls.builtins.diagnostics
+    local eslint_d = require("none-ls.diagnostics.eslint_d")
     local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
     -- custom setup
@@ -17,7 +20,7 @@ return {
           extra_filetypes = { "svelte", "astro" },
         }),
         formatting.stylua,
-        diagnostics.eslint_d,
+        eslint_d,
       },
       -- configure format on save
       on_attach = function(current_client, bufnr)
