@@ -136,6 +136,7 @@ return {
         extensions.telescope,
         extensions.lspinfo,
         extensions.saga,
+        extensions.btw,
       },
     })
   end,
