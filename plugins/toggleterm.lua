@@ -30,7 +30,7 @@ return {
 
     -- main terminal
     local main_term = Terminal:new({
-      display_name = "terminal",
+      display_name = "TERMINAL",
       on_open = function()
         vim.cmd([[ startinsert! ]])
       end,
