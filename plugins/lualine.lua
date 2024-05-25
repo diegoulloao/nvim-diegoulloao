@@ -6,6 +6,10 @@ local settings = require("diegoulloao.settings")
 
 -- theme
 local get_lualine_theme = function()
+  if settings.theme == "neofusion" then
+    return require("neofusion.lualine")
+  end
+
   -- require lualine theme
   local status, lualine_theme = pcall(require, "lualine.themes." .. settings.theme)
   if not status then
@@ -60,7 +64,7 @@ return {
         component_separators = separators.component,
         section_separators = separators.section,
         disabled_filetypes = { "dashboard", "packer", "help" },
-        ignore_focus = {}, -- add filetypes inside
+        ignore_focus = {}, -- add filetypes
       },
       -- man:124 for sections doc
       sections = {
@@ -84,7 +88,7 @@ return {
           {
             "filename",
             file_status = true, -- display file status (read only, modified)
-            path = 1,           -- 0: just name, 1: relative path, 2: absolute path, 3: absolute path with ~ as home directory
+            path = 1, -- 0: just name, 1: relative path, 2: absolute path, 3: absolute path with ~ as home directory
             symbols = {
               unnamed = "",
               readonly = "",
