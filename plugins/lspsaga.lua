@@ -15,6 +15,9 @@ return {
         edit = "<CR>",
       },
     },
+    diagnostic = {
+      auto_preview = false,
+    },
     definition = {
       keys = {
         edit = "<CR>",
@@ -38,6 +41,7 @@ return {
       collapse = "", -- shown in sagaoutline
       code_action = "👾",
       lines = { "└", "├", "│", "─", "┌" },
+      button = { "", "" },
     },
     outline = {
       win_width = 35,

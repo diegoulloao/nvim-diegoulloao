@@ -1,5 +1,5 @@
 -- require keybindings for lsp server
-local on_attach = require("diegoulloao.core.keymaps.lsp")
+local attach_keymaps = require("diegoulloao.core.keymaps.lsp")
 
 return {
   "neovim/nvim-lspconfig",
@@ -14,6 +14,22 @@ return {
 
     -- for emmet support
     capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+    -- attach keymaps
+    local on_attach = function(client, bufnr)
+      if client.name == "svelte" then
+        vim.api.nvim_create_autocmd("BufWritePost", {
+          pattern = { "*.js", "*.ts" },
+          group = vim.api.nvim_create_augroup("svelte_ondidchangetsorjsfile", { clear = true }),
+          callback = function(ctx)
+            -- Here use ctx.match instead of ctx.file
+            client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
+          end,
+        })
+      end
+
+      attach_keymaps(client, bufnr)
+    end
 
     -- html
     lspconfig["html"].setup({

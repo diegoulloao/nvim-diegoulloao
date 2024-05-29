@@ -92,7 +92,7 @@ local set_hi_groups = function()
 
   -- @fix
   -- general
-  vim.cmd([[ hi! NormalFloat guibg=#282828 ]]) -- fixes git blame float bg
+  vim.cmd([[ hi! NormalFloat guifg=#665c54 guibg=#282828 ]]) -- fixes git blame float bg
   vim.cmd([[ hi! FoldColumn guibg=#282828 ]]) -- fold column bg on diff
 
   -- diagnostics

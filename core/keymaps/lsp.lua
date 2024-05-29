@@ -2,7 +2,7 @@
 local keymap = vim.keymap
 
 -- keybindings for lsp
-local on_attach = function(client, bufnr)
+local attach_keymaps = function(client, bufnr)
   local opts = { noremap = true, silent = true, buffer = bufnr }
 
   -- set go to keybinds
@@ -36,4 +36,4 @@ local on_attach = function(client, bufnr)
 end
 
 -- export the function
-return on_attach
+return attach_keymaps
