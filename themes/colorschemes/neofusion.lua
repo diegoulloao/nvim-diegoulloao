@@ -20,6 +20,8 @@ return {
       transparent_mode = settings.transparent_mode,
     })
 
+    local palette = require("neofusion.palette")
+
     vim.cmd([[ colorscheme neofusion ]])
   end,
 }
