@@ -83,5 +83,5 @@ keymap.set({ "n", "t" }, "<C-ç>", "<cmd>lua secondary_term_toggle()<CR>")
 keymap.set("n", "<leader>gf", "<cmd>OpenInGHFile<CR>") -- open current buffer in github
 keymap.set("v", "<leader>gf", "<cmd>OpenInGHFileLines<CR>") -- open current buffer in github + line
 
--- twilight
-keymap.set("n", "<leader>e", "<cmd>Twilight<CR>")
+-- zen mode
+keymap.set("n", "<leader>z", "<cmd>ZenMode<CR>")
