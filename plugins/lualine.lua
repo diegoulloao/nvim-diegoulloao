@@ -7,7 +7,14 @@ local settings = require("diegoulloao.settings")
 -- theme
 local get_lualine_theme = function()
   if settings.theme == "neofusion" then
-    return require("neofusion.lualine")
+    local lualine_neofusion = require("neofusion.lualine")
+
+    -- swap modes
+    local tmp_mode = lualine_neofusion.normal
+    lualine_neofusion.normal = lualine_neofusion.visual
+    lualine_neofusion.visual = tmp_mode
+
+    return lualine_neofusion
   end
 
   -- require lualine theme
