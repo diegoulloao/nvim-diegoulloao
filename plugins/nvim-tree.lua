@@ -20,12 +20,12 @@ return {
   },
   opts = {
     view = {
-      width = 38,
+      width = 39,
     },
     renderer = {
       root_folder_label = false, -- hide root directory at the top
       indent_markers = {
-        enable = enable, -- folder level guide
+        enable = enable,         -- folder level guide
         icons = {
           corner = "└",
           edge = settings.indentChar,
@@ -37,6 +37,8 @@ return {
       icons = {
         glyphs = {
           folder = {
+            arrow_closed = "",
+            arrow_open = "",
             default = "",
             open = "",
             empty = "",
@@ -52,6 +54,7 @@ return {
             ignored = "◌",
           },
         },
+        padding = " ",
       },
     },
     actions = {
