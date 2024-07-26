@@ -20,6 +20,15 @@ return {
         -- disable sign column (annoying black space at the left)
         vim.cmd([[ setlocal signcolumn=no ]])
       end,
+      size = function(term)
+        -- secondary terminal
+        if term.display_name == "[terminal]" then
+          return 8
+        end
+
+        -- default
+        return vim.o.columns * 0.7
+      end,
     })
 
     -- require toggleterm:terminal instance
@@ -30,7 +39,7 @@ return {
 
     -- main terminal
     local main_term = Terminal:new({
-      display_name = " TERMINAL ",
+      display_name = "  TERMINAL ",
       on_open = function()
         vim.cmd([[ startinsert! ]])
       end,
@@ -40,10 +49,9 @@ return {
     local secondary_term = Terminal:new({
       -- cmd = "<cmd>",
       -- dir = "~/",
-      display_name = "secondary terminal",
+      display_name = "[terminal]",
       hidden = false,
       direction = "horizontal",
-      size = 18,
       on_open = function()
         vim.cmd([[ startinsert! ]])
       end,

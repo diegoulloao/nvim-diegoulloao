@@ -9,7 +9,6 @@ end
 
 return {
   "nvim-treesitter/nvim-treesitter-context",
-  -- event = { "BufReadPre", "BufNewFile" },
   cmd = { "TSContextToggle" },
   opts = {
     enable = false, -- enable on all buffers by default

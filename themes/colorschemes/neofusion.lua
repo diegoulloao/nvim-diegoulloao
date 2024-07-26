@@ -6,6 +6,8 @@ vim.opt.background = "dark"
 
 return {
   "diegoulloao/neofusion.nvim",
+  -- dir = "~/Projects/neofusion.nvim",
+  -- dev = true,
   lazy = false,
   enabled = settings.theme == "neofusion",
   priority = 1000,
@@ -17,11 +19,10 @@ return {
       italic = {
         strings = false,
       },
-      transparent_mode = settings.transparent_mode,
+      transparent_mode = true, -- settings.transparent_mode,
     })
 
-    local palette = require("neofusion.palette")
-
+    -- local palette = require("neofusion.palette")
     vim.cmd([[ colorscheme neofusion ]])
   end,
 }

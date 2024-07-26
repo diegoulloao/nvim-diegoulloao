@@ -37,8 +37,8 @@ return {
         layout_strategy = "vertical", -- vertical layout
         sorting_strategy = "ascending",
         results_title = "",
-        prompt_prefix = "  ", --  ›
-        selection_caret = " › ",
+        prompt_prefix = " 󱐋 ", --  | › | 󱐋
+        selection_caret = " 󰢚 ", -- › |  | 󰢚
         entry_prefix = "   ", -- each entry result prefix
         -- winblend = 10, -- transparency: 0-100 | recommended: 10
         layout_config = {
