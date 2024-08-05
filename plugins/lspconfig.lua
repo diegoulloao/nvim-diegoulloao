@@ -150,7 +150,7 @@ return {
         prefix = "", -- ■  󰊠
         suffix = "",
         format = function(diagnostic)
-          local prefix = "󰊠 "
+          local prefix = "󰅪 " -- 󰅪 | 󰅩
           local suffix = " "
           -- return full message with custom prefix & suffix
           return prefix .. diagnostic.message .. suffix

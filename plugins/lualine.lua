@@ -10,9 +10,9 @@ local get_lualine_theme = function()
     local lualine_neofusion = require("neofusion.lualine")
 
     -- swap modes
-    -- local tmp_mode = lualine_neofusion.normal
-    -- lualine_neofusion.normal = lualine_neofusion.visual
-    -- lualine_neofusion.visual = tmp_mode
+    local tmp_mode = lualine_neofusion.normal
+    lualine_neofusion.normal = lualine_neofusion.visual
+    lualine_neofusion.visual = tmp_mode
 
     return lualine_neofusion
   end
@@ -148,6 +148,7 @@ return {
         extensions.lspinfo,
         extensions.saga,
         extensions.btw,
+        extensions.gitgraph,
       },
     })
   end,

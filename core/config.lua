@@ -1,5 +1,6 @@
 -- set diagnostic signs
-local signs = { Error = " ", Warn = " ", Hint = "󰛩 ", Info = " " }
+-- local signs = { Error = " ", Warn = " ", Hint = "󰛩 ", Info = " " }
+local signs = { Error = "󰊠 ", Warn = "󰈅 ", Hint = "󰛩 ", Info = " " }
 for type, icon in pairs(signs) do
   -- define diagnostic type
   local hl = "DiagnosticSign" .. type

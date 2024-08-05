@@ -7,6 +7,10 @@ return {
   opts = {
     progress = {
       ignore = { "null-ls" },
+      display = {
+        progress_icon = { pattern = "dots", period = 1 },
+        done_icon = "",
+      },
     },
     notification = {
       window = {

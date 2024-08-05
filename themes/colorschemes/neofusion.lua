@@ -24,5 +24,8 @@ return {
 
     -- local palette = require("neofusion.palette")
     vim.cmd([[ colorscheme neofusion ]])
+
+    vim.cmd([[ hi! WinBar guibg=NONE ]])
+    vim.cmd([[ hi! WinBarNC guibg=NONE ]])
   end,
 }
