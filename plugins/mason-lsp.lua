@@ -4,7 +4,7 @@ return {
   lazy = true,
   opts = {
     ensure_installed = {
-      "tsserver",
+      "ts_ls",
       "html",
       "emmet_ls",
       "cssls",

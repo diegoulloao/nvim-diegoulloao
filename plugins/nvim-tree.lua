@@ -20,12 +20,12 @@ return {
   },
   opts = {
     view = {
-      width = 39,
+      width = 45,
     },
     renderer = {
       root_folder_label = false, -- hide root directory at the top
       indent_markers = {
-        enable = enable,         -- folder level guide
+        enable = enable, -- folder level guide
         icons = {
           corner = "└",
           edge = settings.indentChar,

@@ -1,6 +1,7 @@
 -- extension: telescope
 local function get_display_name()
-  return "BTW bitch."
+  return "BTW."
+  -- return "BTW bitch."
 end
 
 -- custom extension

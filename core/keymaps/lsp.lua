@@ -30,7 +30,7 @@ local attach_keymaps = function(client, bufnr)
   end, opts) -- format code
 
   -- typescript specific keybinds
-  if client.name == "tsserver" then
+  if client.name == "ts_ls" then
     keymap.set("n", "<leader>mv", "<cmd>TypescriptRenameFile<CR>") -- rename ts symbol
   end
 end
