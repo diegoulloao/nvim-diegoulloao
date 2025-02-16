@@ -12,16 +12,16 @@ return {
     -- custom setup
     bufferline.setup({
       options = {
-        mode = "tabs",                                      -- only show tabs and not all buffers
-        numbers = "ordinal",                                -- add tabs ordinal numbers
-        style_preset = bufferline.style_preset.default,     -- default|minimal
+        mode = "tabs", -- only show tabs and not all buffers
+        numbers = "ordinal", -- add tabs ordinal numbers
+        style_preset = bufferline.style_preset.default, -- default|minimal
         color_icons = settings.theme ~= "gruvbox",
         tab_size = settings.aspect == "clean" and 22 or 18, -- default: 18
         close_icon = "",
         show_buffer_icons = true,
         show_duplicate_prefix = true, -- show base path if tabs have the same name
-        separator_style = "thick",    -- slant|slope|thick|thin|{"|", "|"}
-        diagnostics = "nvim_lsp",     -- nvim lsp diagnostics integration in tabs or false
+        separator_style = "thick", -- slant|slope|thick|thin|{"|", "|"}
+        diagnostics = "nvim_lsp", -- nvim lsp diagnostics integration in tabs or false
         indicator = {
           -- icon = "", -- ▎
           style = "icon", -- icon|underline|none
@@ -32,7 +32,7 @@ return {
             filetype = "NvimTree",
             text = "File Explorer", -- title on top
             highlight = "Directory",
-            separator = true,       -- true is the default, or set custom
+            separator = true, -- true is the default, or set custom
           },
           -- avoid to show bufferline on top saga outline symbols
           {

@@ -48,7 +48,7 @@ keymap.set("n", "<leader>gh", "<cmd>Telescope git_bcommits<CR>") -- git commit f
 keymap.set("n", "<leader>gB", "<cmd>Telescope git_branches<CR>") -- git branches
 
 -- git signs keymaps
-keymap.set("n", "<leader>gd", "<cmd>Gitsigns diffthis<CR><C-W><C-H>") -- git diff
+keymap.set("n", "<leader>gd", "<cmd>vert Gitsigns diffthis<CR><C-W><C-H>") -- git diff
 keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame_line<CR>") -- git blame
 keymap.set("n", "<leader>b", "<cmd>Gitsigns toggle_current_line_blame<CR>") -- current line blame
 keymap.set("n", "<leader>h", "<cmd>Gitsigns preview_hunk<CR>") -- preview change inline
@@ -77,7 +77,7 @@ keymap.set("n", "<leader><leader>l", "<cmd>SessionLoad<CR>") -- load current ses
 
 -- toggleterm
 keymap.set({ "n", "t" }, "<C-t>", "<cmd>lua main_term_toggle()<CR>")
-keymap.set({ "n", "t" }, "<C-ç>", "<cmd>lua secondary_term_toggle()<CR>")
+-- keymap.set({ "n", "t" }, "", "<cmd>lua secondary_term_toggle()<CR>") -- TODO: need key map
 
 -- github files
 keymap.set("n", "<leader>gf", "<cmd>OpenInGHFile<CR>") -- open current buffer in github
@@ -85,3 +85,6 @@ keymap.set("n", "<leader>gF", "<cmd>OpenInGHFileLines<CR>") -- open current buff
 
 -- zen mode
 keymap.set("n", "<leader>z", "<cmd>ZenMode<CR>")
+
+-- avante
+keymap.set("n", "<leader>ai", "<cmd>AvanteAsk<CR>")

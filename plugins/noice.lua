@@ -58,7 +58,10 @@ return {
         -- lspsaga: avoids annoying messages in notify
         filter = {
           event = "notify",
-          find = "No information available",
+          any = {
+            { find = "No information available" },
+            { find = "No diagnostics found" },
+          },
         },
         opts = { skip = true },
       },
@@ -97,6 +100,8 @@ return {
             { find = "E21: Cannot make changes, 'modifiable' is off" },
             { find = "E78: Unknown mark" },
             { find = "E20: Mark not set" },
+            { find = "response of request method textDocument/definition is empty" },
+            { find = "Client with id 2 not attached to buffer 9" },
           },
         },
         view = "mini",

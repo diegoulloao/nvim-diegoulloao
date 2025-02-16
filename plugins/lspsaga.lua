@@ -40,7 +40,8 @@ return {
       expand = "", -- shown in sagaoutline
       collapse = "", -- shown in sagaoutline
       code_action = "👾",
-      lines = { "└", "├", "│", "─", "┌" },
+      -- lines = { "└", "├", "│", "─", "┌" },
+      lines = { "", "", "", "", "" },
       button = { "", "" },
     },
     outline = {

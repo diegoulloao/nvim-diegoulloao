@@ -23,7 +23,7 @@ return {
       size = function(term)
         -- secondary terminal
         if term.display_name == "[terminal]" then
-          return 8
+          return 10
         end
 
         -- default

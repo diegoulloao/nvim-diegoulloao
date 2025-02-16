@@ -48,13 +48,11 @@ return {
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
     "rafamadriz/friendly-snippets",
+    "mlaursen/vim-react-snippets",
     "roobert/tailwindcss-colorizer-cmp.nvim",
   },
   event = "InsertEnter",
   config = function()
-    -- load friendly-snippets
-    require("luasnip.loaders.from_vscode").lazy_load()
-
     -- require cmp
     local cmp = require("cmp")
 
@@ -66,6 +64,12 @@ return {
 
     -- require tailwind colorizer for cmp
     local tailwindcss_colorizer_cmp = require("tailwindcss-colorizer-cmp")
+
+    -- load friendly-snippets
+    require("luasnip.loaders.from_vscode").lazy_load()
+
+    -- require react-snippets
+    require("vim-react-snippets").lazy_load()
 
     -- custom setup
     cmp.setup({
@@ -100,8 +104,8 @@ return {
         ["<CR>"] = cmp.mapping.confirm({ select = false }), -- confirm suggestion
       }),
       sources = cmp.config.sources({
-        { name = "nvim_lsp" }, -- lsp
         { name = "luasnip" }, -- luasnips
+        { name = "nvim_lsp" }, -- lsp
         { name = "buffer" }, -- text within the current buffer
         { name = "path" }, -- file system paths
       }),
