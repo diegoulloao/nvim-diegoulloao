@@ -88,3 +88,11 @@ keymap.set("n", "<leader>z", "<cmd>ZenMode<CR>")
 
 -- avante
 keymap.set("n", "<leader>ai", "<cmd>AvanteAsk<CR>")
+
+-- copilot
+keymap.set(
+  "i",
+  "<C-a>",
+  "copilot#Accept('<CR>')",
+  { expr = true, noremap = true, silent = true, replace_keycodes = false }
+)
