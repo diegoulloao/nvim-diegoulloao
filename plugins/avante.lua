@@ -1,30 +1,8 @@
 return {
   "yetone/avante.nvim",
-  -- enabled = false,
-  event = "VeryLazy",
+  version = false, -- "*" to latest release, or false to latest code changes
   lazy = false,
-  version = false, -- Set this to "*" to always pull the latest release version, or set it to false to update to the latest code changes.
-  opts = {
-    provider = "openai",
-    openai = {
-      model = "gpt-4", -- your desired model (or use gpt-4o, etc.)
-    },
-    hints = { enabled = false },
-    mappings = {
-      submit = {
-        insert = "<C-CR>",
-      },
-    },
-    windows = {
-      width = 40,
-      sidebar_header = {
-        rounded = false,
-      },
-      input = {
-        height = 6,
-      },
-    },
-  },
+  event = "VeryLazy",
   build = "make",
   dependencies = {
     "stevearc/dressing.nvim",
@@ -56,6 +34,33 @@ return {
         file_types = { "markdown", "Avante" },
       },
       ft = { "markdown", "Avante" },
+    },
+  },
+  opts = {
+    provider = "copilot",
+    --[[ openai = {
+      model = "gpt-4", -- gpt-4 | gpt-4o | gpt-4o-mini | copilot
+    }, ]]
+    hints = { enabled = false },
+    behavior = {
+      auto_suggestions = false,
+    },
+    mappings = {
+      submit = {
+        insert = "<C-CR>",
+      },
+    },
+    windows = {
+      width = 40,
+      sidebar_header = {
+        rounded = false,
+      },
+      input = {
+        height = 6,
+      },
+      ask = {
+        -- floating = true,
+      },
     },
   },
 }
