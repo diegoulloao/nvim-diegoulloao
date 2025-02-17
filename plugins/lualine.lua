@@ -71,6 +71,7 @@ return {
         component_separators = separators.component,
         section_separators = separators.section,
         disabled_filetypes = { "dashboard", "packer", "help" },
+        -- ignore_focus = { "Avante", "AvanteSelectedFiles", "AvanteInput" }, -- add filetypes
         ignore_focus = {}, -- add filetypes
       },
       -- man:124 for sections doc
@@ -149,6 +150,7 @@ return {
         extensions.saga,
         extensions.btw,
         extensions.gitgraph,
+        extensions.avante,
       },
     })
   end,

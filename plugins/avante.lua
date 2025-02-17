@@ -63,6 +63,7 @@ return {
         height = 6,
       },
       ask = {
+        start_insert = false,
         -- floating = true,
       },
     },
