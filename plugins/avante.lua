@@ -38,7 +38,11 @@ return {
   },
   opts = {
     provider = "copilot",
-    --[[ openai = {
+    copilot = {
+      model = "claude-3.5-sonnet",
+    },
+    --[[ provider = "openai",
+    openai = {
       model = "gpt-4", -- gpt-4 | gpt-4o | gpt-4o-mini | copilot
     }, ]]
     hints = { enabled = false },
@@ -51,7 +55,7 @@ return {
       },
     },
     windows = {
-      width = 40,
+      width = 38,
       sidebar_header = {
         rounded = false,
       },
