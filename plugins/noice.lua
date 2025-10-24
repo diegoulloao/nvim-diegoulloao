@@ -106,6 +106,15 @@ return {
         },
         view = "mini",
       },
+      {
+        filter = {
+          event = "msg_show",
+          any = {
+            { find = "vim.lsp.buf_get_clients%(%) is deprecated" },
+          },
+        },
+        opts = { skip = true },
+      },
     },
   },
 }

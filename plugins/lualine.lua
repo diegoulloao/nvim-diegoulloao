@@ -9,10 +9,10 @@ local get_lualine_theme = function()
   if settings.theme == "neofusion" then
     local lualine_neofusion = require("neofusion.lualine")
 
-    -- swap modes
-    local tmp_mode = lualine_neofusion.normal
+    -- swap mode colors
+    --[[ local tmp_mode = lualine_neofusion.normal
     lualine_neofusion.normal = lualine_neofusion.visual
-    lualine_neofusion.visual = tmp_mode
+    lualine_neofusion.visual = tmp_mode ]]
 
     return lualine_neofusion
   end
@@ -96,7 +96,7 @@ return {
           {
             "filename",
             file_status = true, -- display file status (read only, modified)
-            path = 1,           -- 0: just name, 1: relative path, 2: absolute path, 3: absolute path with ~ as home directory
+            path = 1, -- 0: just name, 1: relative path, 2: absolute path, 3: absolute path with ~ as home directory
             symbols = {
               unnamed = "",
               readonly = "",

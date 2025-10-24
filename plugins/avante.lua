@@ -38,13 +38,14 @@ return {
   },
   opts = {
     provider = "copilot",
-    copilot = {
-      model = "claude-3.5-sonnet",
+    providers = {
+      copilot = {
+        model = "claude-3.7-sonnet",
+      },
+      openai = {
+        model = "gpt-4", -- gpt-4 | gpt-4o | gpt-4o-mini | copilot
+      },
     },
-    --[[ provider = "openai",
-    openai = {
-      model = "gpt-4", -- gpt-4 | gpt-4o | gpt-4o-mini | copilot
-    }, ]]
     hints = { enabled = false },
     behavior = {
       auto_suggestions = false,
@@ -60,10 +61,10 @@ return {
         rounded = false,
       },
       input = {
-        height = 6,
+        height = 5,
       },
       ask = {
-        start_insert = false,
+        start_insert = true,
         -- floating = true,
       },
     },

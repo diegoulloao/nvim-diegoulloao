@@ -6,7 +6,7 @@ local settings = {
   lualine_separator = "rect", -- rect|triangle|semitriangle|curve
   cmp_style = "nvchad", -- default|nvchad
   cmp_icons_style = "vscode", -- devicons|vscode
-  transparent_mode = true,
+  transparent_mode = false,
 }
 
 return settings
