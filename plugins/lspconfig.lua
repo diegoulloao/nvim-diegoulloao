@@ -6,9 +6,6 @@ return {
   dependencies = { "hrsh7th/cmp-nvim-lsp" },
   event = { "BufReadPre", "BufNewFile" },
   config = function()
-    -- require lspconfig
-    local lspconfig = require("lspconfig")
-
     -- used to enable autocompletion
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
@@ -31,123 +28,102 @@ return {
       attach_keymaps(client, bufnr)
     end
 
-    -- html
-    lspconfig["html"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
+    -- List of servers to setup
+    local servers = {
+      "html",
+      "cssls",
+      "ts_ls",
+      "tailwindcss",
+      "svelte",
+      "emmet_language_server",
+      "jsonls",
+      "astro",
+      "lua_ls",
+      "bashls",
+    }
 
-    -- css/sass
-    lspconfig["cssls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = {
-        css = {
-          lint = {
-            -- fixes unknown @tailwind rule for css files
-            unknownAtRules = "ignore",
-          },
-        },
-        scss = {
-          lint = {
-            -- fixes unknown @tailwind rule for sass files
-            unknownAtRules = "ignore",
-          },
-        },
-      },
-    })
-
-    -- typescript
-    lspconfig["ts_ls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
-    -- tailwind css
-    lspconfig["tailwindcss"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
-    -- svelte
-    lspconfig["svelte"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-      filetypes = { "svelte" },
-    })
-
-    -- emmet
-    lspconfig["emmet_ls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-      filetypes = {
-        "html",
-        "typescriptreact",
-        "javascriptreact",
-        "css",
-        "sass",
-        "scss",
-        "svelte",
-      },
-      init_options = {
-        html = {
-          options = {
-            ["bem.enabled"] = true,
-          },
-        },
-      },
-    })
-
-    -- json
-    lspconfig["jsonls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
-    -- astro
-    lspconfig["astro"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
-    -- lua
-    lspconfig["lua_ls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-      -- custom settings for lua
-      settings = {
-        Lua = {
-          -- make the language server recognize "vim" global
-          diagnostics = {
-            globals = { "vim" },
-            disable = { "missing-fields" },
-          },
-          workspace = {
-            -- make the language server aware of runtime files
-            library = {
-              [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-              [vim.fn.stdpath("config") .. "/lua"] = true,
+    -- server-specific settings
+    local server_settings = {
+      cssls = {
+        settings = {
+          css = {
+            lint = {
+              -- fixes unknown @tailwind rule for css files
+              unknownAtRules = "ignore",
             },
           },
-          completion = {
-            callSnippet = "Replace",
+          scss = {
+            lint = {
+              -- fixes unknown @tailwind rule for sass files
+              unknownAtRules = "ignore",
+            },
           },
         },
       },
-    })
+      lua_ls = {
+        settings = {
+          Lua = {
+            -- make the language server recognize "vim" global
+            diagnostics = {
+              globals = { "vim" },
+              disable = { "missing-fields" },
+            },
+            workspace = {
+              -- make the language server aware of runtime files
+              library = {
+                [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                [vim.fn.stdpath("config") .. "/lua"] = true,
+              },
+            },
+            completion = {
+              callSnippet = "Replace",
+            },
+          },
+        },
+      },
+      svelte = {
+        filetypes = { "svelte" },
+      },
+      emmet_language_server = {
+        filetypes = {
+          "html",
+          "typescriptreact",
+          "javascriptreact",
+          "css",
+          "sass",
+          "scss",
+          "svelte",
+        },
+        init_options = {
+          html = {
+            options = {
+              ["bem.enabled"] = true,
+            },
+          },
+        },
+      },
+      bashls = {
+        filetypes = { "sh", "zsh", "bash" },
+      },
+    }
 
-    -- zsh, bash, sh
-    lspconfig["bashls"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-      filetypes = { "sh", "zsh", "bash" },
-    })
+    -- Setup each server using new interface
+    for _, srv in ipairs(servers) do
+      vim.lsp.config(
+        srv,
+        vim.tbl_extend("force", {
+          capabilities = capabilities,
+          on_attach = on_attach,
+        }, server_settings[srv] or {})
+      )
+      vim.lsp.enable(srv)
+    end
 
     -- diagnostics config
     vim.diagnostic.config({
       underline = false,
       virtual_text = { -- or false for disable
-        prefix = "", -- ■  󰊠
+        prefix = "",   -- ■  󰊠
         suffix = "",
         format = function(diagnostic)
           local prefix = "󰅪 " -- 󰅪 | 󰅩
