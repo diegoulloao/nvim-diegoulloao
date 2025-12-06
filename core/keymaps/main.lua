@@ -16,6 +16,8 @@ keymap.set("n", "<leader>rr", "<cmd>luafile %<CR>") -- reload lua configuration
 keymap.set("n", "<leader>v", "<cmd>vsplit<CR>")     -- copy buffer in right panel
 keymap.set("n", "<leader>t", "<cmd>tabnew %<CR>")   -- copy buffer in new tab
 keymap.set("n", "<leader><CR>", "<cmd>noh<CR>")     -- clean status bar
+keymap.set("i", "<C-h>", "<Left>")                  -- move cursor left
+keymap.set("i", "<C-l>", "<Right>")                 -- move cursor right
 
 -- nvim-tree keymaps
 keymap.set("n", "<leader>nt", "<cmd>NvimTreeToggle<CR>") -- nvim tree toggle

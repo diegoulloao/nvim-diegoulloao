@@ -14,4 +14,12 @@ return {
     enable = false, -- enable on all buffers by default
     separator = separator,
   },
+  config = function(_, opts)
+    local tcontext = require("treesitter-context")
+    tcontext.setup(opts)
+
+    vim.api.nvim_create_user_command("TSContextToggle", function()
+      tcontext.toggle()
+    end, {})
+  end,
 }
