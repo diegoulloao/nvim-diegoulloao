@@ -66,10 +66,7 @@ return {
     local tailwindcss_colorizer_cmp = require("tailwindcss-colorizer-cmp")
 
     -- load friendly-snippets
-    require("luasnip.loaders.from_vscode").lazy_load()
-
-    -- require react-snippets
-    require("vim-react-snippets").lazy_load()
+    require("luasnip.loaders.from_vscode").load()
 
     -- custom setup
     cmp.setup({
