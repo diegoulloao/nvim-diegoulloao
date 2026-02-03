@@ -40,6 +40,7 @@ return {
       "astro",
       "lua_ls",
       "bashls",
+      "yamlls",
     }
 
     -- server-specific settings
@@ -123,7 +124,7 @@ return {
     vim.diagnostic.config({
       underline = false,
       virtual_text = { -- or false for disable
-        prefix = "",   -- ■  󰊠
+        prefix = "", -- ■  󰊠
         suffix = "",
         format = function(diagnostic)
           local prefix = "󰅪 " -- 󰅪 | 󰅩
