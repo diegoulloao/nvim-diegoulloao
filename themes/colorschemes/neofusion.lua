@@ -31,11 +31,6 @@ return {
     vim.cmd([[ hi! WinBar guibg=NONE ]])
     vim.cmd([[ hi! WinBarNC guibg=NONE ]])
 
-    -- avante customization
-    vim.cmd(string.format([[ hi! AvanteTitle guibg=%s guifg=%s ]], palette.bright_red, palette.dark0))
-    vim.cmd(string.format([[ hi! AvanteSubtitle guibg=%s guifg=%s ]], palette.bright_green, palette.dark0))
-    vim.cmd(string.format([[ hi! AvanteThirdTitle guibg=%s guifg=%s ]], palette.dark4, palette.bright_aqua))
-
     -- experimental
     if settings.transparent_mode then
       vim.cmd([[ hi! BufferLineFill guibg=NONE ]])

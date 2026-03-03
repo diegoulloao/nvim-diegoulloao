@@ -89,9 +89,6 @@ keymap.set("n", "<leader>gF", "<cmd>OpenInGHFileLines<CR>") -- open current buff
 -- zen mode
 keymap.set("n", "<leader>z", "<cmd>ZenMode<CR>")
 
--- avante
-keymap.set("n", "<leader>ai", "<cmd>AvanteAsk<CR>")
-
 -- copilot
 keymap.set(
   "i",
