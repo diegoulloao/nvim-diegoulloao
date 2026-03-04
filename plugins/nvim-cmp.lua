@@ -53,14 +53,20 @@ return {
   },
   event = "InsertEnter",
   config = function()
+    -- require lspkind
+    local lspkind = require("lspkind")
+
+    -- initialize lspkind before cmp reads completion kinds
+    lspkind.init({
+      mode = "symbol_text",
+      preset = "codicons",
+    })
+
     -- require cmp
     local cmp = require("cmp")
 
     -- require luasnip
     local luasnip = require("luasnip")
-
-    -- require lspkind
-    local lspkind = require("lspkind")
 
     -- require tailwind colorizer for cmp
     local tailwindcss_colorizer_cmp = require("tailwindcss-colorizer-cmp")
@@ -120,13 +126,14 @@ return {
 
           -- customize lspkind format
           local strings = vim.split(fmt.kind, "%s", { trimempty = true })
+          local kind = strings[2] or strings[1] or ""
 
           -- strings[1] -> default icon
           -- strings[2] -> kind
 
           -- set different icon styles
           if settings.cmp_icons_style == "vscode" then
-            fmt.kind = " " .. (cmp_kinds[strings[2]] or "") -- concatenate icon based on kind
+            fmt.kind = " " .. (cmp_kinds[kind] or "") -- concatenate icon based on kind
           else
             fmt.kind = " " .. (strings[1] or "") -- just use the default icon
           end
@@ -134,10 +141,10 @@ return {
           -- append customized kind text
           if settings.cmp_style == "nvchad" then
             fmt.kind = fmt.kind .. " " -- just an extra space at the end
-            fmt.menu = strings[2] ~= nil and ("  " .. (strings[2] or "")) or ""
+            fmt.menu = kind ~= "" and ("  " .. kind) or ""
           else
             -- default and others
-            fmt.menu = strings[2] ~= nil and (strings[2] or "") or ""
+            fmt.menu = kind
           end
 
           return fmt
