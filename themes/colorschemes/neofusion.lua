@@ -31,6 +31,9 @@ return {
     vim.cmd([[ hi! WinBar guibg=NONE ]])
     vim.cmd([[ hi! WinBarNC guibg=NONE ]])
 
+    -- cmp
+    vim.cmd(string.format([[ hi! CmpBorder guifg=%s guibg=NONE ]], palette.gray))
+
     -- experimental
     if settings.transparent_mode then
       vim.cmd([[ hi! BufferLineFill guibg=NONE ]])
