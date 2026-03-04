@@ -55,8 +55,8 @@ keymap.set("n", "<leader>gd", "<cmd>vert Gitsigns diffthis<CR><C-W><C-H>") -- gi
 keymap.set("n", "<leader>gb", "<cmd>Gitsigns blame_line<CR>") -- git blame
 keymap.set("n", "<leader>b", "<cmd>Gitsigns toggle_current_line_blame<CR>") -- current line blame
 keymap.set("n", "<leader>h", "<cmd>Gitsigns preview_hunk<CR>") -- preview change inline
-keymap.set("n", "<C-a>", "<cmd>Gitsigns prev_hunk<CR>") -- go to prev change
-keymap.set("n", "<C-s>", "<cmd>Gitsigns next_hunk<CR>") -- go to next change
+keymap.set("n", "<C-s>", "<cmd>Gitsigns prev_hunk<CR>") -- go to prev change
+keymap.set("n", "<C-a>", "<cmd>Gitsigns next_hunk<CR>") -- go to next change
 
 -- indent blanklines keymaps
 keymap.set("n", "<leader>l", "<cmd>IBLToggle<CR>") -- toggle indent lines
@@ -75,8 +75,8 @@ keymap.set("n", "<leader><leader>m", "<cmd>MarkdownPreviewToggle<CR>") -- toggle
 
 -- persisted (session management)
 keymap.set("n", "<leader>S", "<cmd>Telescope persisted<CR>") -- display persisted session manager
-keymap.set("n", "<leader><leader>s", "<cmd>SessionSave<CR>") -- save current session
-keymap.set("n", "<leader><leader>l", "<cmd>SessionLoad<CR>") -- load current session
+keymap.set("n", "<leader><leader>s", "<cmd>Persisted save<CR>") -- save current session
+keymap.set("n", "<leader><leader>l", "<cmd>Persisted load<CR>") -- load current session
 
 -- toggleterm
 keymap.set({ "n", "t" }, "<C-t>", "<cmd>lua main_term_toggle()<CR>")
