@@ -45,7 +45,7 @@ return {
       button = { "", "" },
     },
     outline = {
-      win_width = 35,
+      win_width = 60,
     },
   },
 }
